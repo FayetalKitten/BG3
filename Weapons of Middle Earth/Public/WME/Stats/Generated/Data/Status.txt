@@ -1,0 +1,51 @@
+
+//  --------------------------------------------------------  \\
+//  -----                Isildur's Bane                 ----  \\
+//  --------------------------------------------------------  \\
+
+    new entry "WME_DOMINATE"
+    type "StatusData"
+    data "StatusType" "BOOST"
+    using "DOMINATE_MONSTER"
+    data "DisplayName" "h6d41bdedg0fffg43b7g88c7g13e0cb53f2dc"
+
+    new entry "WME_DOMINATE_TECHNICAL"
+    type "StatusData"
+    data "StatusType" "BOOST"
+    data "StackId" "WME_DOMINATE_TECHNICAL"
+
+    new entry "WME_DOMINATE_TOTAL_CONTROL"
+    type "StatusData"
+    data "StatusType" "BOOST"
+    data "StackId" "WME_DOMINATE_TOTAL_CONTROL"
+    data "DisplayName" "h5b564ca9ge783g4240gb44egd8d9031f6fdc;1"
+    data "Description" "hd5b42943gf374g4445gb3cag47f572e2d4db;1"
+    data "Icon" "Spell_Enchantment_DominateMonster"
+    data "TickType" "EndTurn"
+    data "StatusPropertyFlags" "TickingWithSource"
+
+    new entry "WME_SHIFT"
+    type "StatusData"
+    data "StatusType" "INVISIBLE"
+    using "GREATER_INVISIBILITY"
+    data "DisplayName" "h1a084266g5011g4115g82f2g2e802d93ef66"
+    data "Description" "h500f4d26gdb38g44cfg8e3cgfef153732f48"
+    data "OnApplyFunctors" "ApplyStatus(WME_SHIFT_SUCCESS,100,-1)"
+    data "RemoveEvents" ""
+    data "RemoveConditions" ""
+    data "OnRemoveFunctors" "RemoveStatus(WME_SHIFT_TRACKER);RemoveStatus(WME_SHIFT_SUCCESS)"
+    data "RemoveEvents" ""
+    data "RemoveConditions" ""
+
+    new entry "WME_SHIFT_TRACKER"
+    type "StatusData"
+    data "StatusType" "BOOST"
+    using "GREATER_INVISIBILITY_TRACKER"
+    data "RemoveConditions" "not (IsStatusEvent(StatusEvent.OnSpellCast) and HasSpellFlag(SpellFlags.Invisible)) and HasStatus('WME_SHIFT')"
+    data "RemoveEvents" ""
+    data "OnRemoveFunctors" "IF(HasStatus('WME_SHIFT')):ApplyStatus(WME_SHIFT_TRACKER,100,-1);IF(HasStatus('WME_SHIFT') and not HasStatus('WME_SHIFT_SUCCESS')):ApplyStatus(WME_SHIFT_SUCCESS,100,1);IF(HasStatus('WME_SHIFT') and HasStatus('WME_SHIFT_SUCCESS')):SetStatusDuration(WME_SHIFT_SUCCESS,1,Add)"
+
+    new entry "WME_SHIFT_SUCCESS"
+    type "StatusData"
+    data "StatusType" "BOOST"
+    using "GREATER_INVISIBILITY_SUCCESS"

@@ -1,0 +1,20 @@
+new entry "MAG_TheClover_Mainhand_Passive"
+type "PassiveData"
+using "MAG_TheClover_Mainhand_Passive"
+data "StatsFunctors" "ApplyStatus(MAG_BHAALIST_AURA_OF_MURDER, 100, -1)"
+
+//  --------------------------------------------------------  \\
+//  -----                Isildur's Bane                 ----  \\
+//  --------------------------------------------------------  \\
+
+    new entry "WME_Shift_Passive"
+    type "PassiveData"
+    data "DisplayName" "h1a084266g5011g4115g82f2g2e802d93ef66"
+    data "Description" "h500f4d26gdb38g44cfg8e3cgfef153732f48"
+    data "Icon" "Spell_Illusion_GreaterInvisibility"
+    data "EnabledConditions" ""
+    data "EnabledContext" "OnCreate"
+    data "Properties" "Highlighted;ToggledDefaultAddToHotbar;Temporary;IsToggled"
+    data "StatsFunctorContext" "OnStatusApplied;OnStatusRemoved"
+    data "ToggleOnFunctors" "ApplyStatus(WME_SHIFT,100,-1)"
+    data "ToggleOffFunctors" "RemoveStatus(WME_SHIFT)"

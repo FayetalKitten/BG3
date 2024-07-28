@@ -1,0 +1,247 @@
+
+//  --------------------------------------------------------  \\
+//  -----              Commune with Nature              ----  \\
+//  --------------------------------------------------------  \\
+
+    new entry "Shout_CommuneWithNature"
+    type "SpellData"
+    data "SpellType" "Shout"
+    using "Shout_CommuneWithNature"
+    data "RitualCosts" "ActionPoint:1"
+
+//  --------------------------------------------------------  \\
+//  -----               Conjure Elemental               ----  \\
+//  --------------------------------------------------------  \\
+
+    new entry "Target_ConjureElemental_Container"
+    type "SpellData"
+    data "SpellType" "Target"
+    using "Target_ConjureElemental_Container"
+    data "RitualCosts" "ActionPoint:1"
+
+//  --------------------------------------------------------  \\
+//  -----              Greater Restoration              ----  \\
+//  --------------------------------------------------------  \\
+
+    new entry "Target_GreaterRestoration"
+    type "SpellData"
+    data "SpellType" "Target"
+    using "Target_GreaterRestoration"
+    data "RitualCosts" "ActionPoint:1"
+
+//  --------------------------------------------------------  \\
+//  -----                  Holy Weapon                  ----  \\
+//  --------------------------------------------------------  \\
+
+    new entry "Target_HolyWeapon"
+    type "SpellData"
+    data "SpellType" "Target"
+    using "Target_HolyWeapon"
+    data "SpellProperties" "IF(not Item()):ApplyEquipmentStatus(MainHand, HOLY_WEAPON,100, -1);IF(Item()):ApplyStatus(HOLY_WEAPON,100, -1);ApplyStatus(SELF,HOLY_WEAPON_TECHNICAL,100, -1)"
+    data "TooltipStatusApply" "ApplyStatus(PLANAR_BINDING,100,-1);"
+    data "SpellFlags" "IsSpell;HasVerbalComponent;HasSomaticComponent;IsMelee"
+
+//  --------------------------------------------------------  \\
+//  -----                 Planar Binding                ----  \\
+//  --------------------------------------------------------  \\
+
+    new entry "Target_PlanarBinding"
+    type "SpellData"
+    data "SpellType" "Target"
+    using "Target_PlanarBinding"
+    data "SpellSuccess" "ApplyStatus(PLANAR_BINDING,100,-1);"
+    data "TooltipStatusApply" "ApplyStatus(PLANAR_BINDING,100,10);"
+    data "SpellFlags" "HasVerbalComponent;HasSomaticComponent;HasHighGroundRangeExtension;IsSpell;IsHarmful"
+
+//  --------------------------------------------------------  \\
+//  -----            Rary's Telepathic Bond             ----  \\
+//  --------------------------------------------------------  \\
+
+    new entry "Target_RarysTelepathicBond"
+    type "SpellData"
+    data "SpellType" "Target"
+    using "Target_RarysTelepathicBond"
+    data "SpellProperties" "IF(not Self()):ApplyStatus(TELEPATHIC_BOND,100,-1);ApplyStatus(SELF,TELEPATHIC_BOND_TECHNICAL,100,-1)"
+    
+//  --------------------------------------------------------  \\
+//  -----               Skill Empowerment               ----  \\
+//  --------------------------------------------------------  \\
+
+    new entry "Target_SkillEmpowerment"
+    type "SpellData"
+    data "SpellType" "Target"
+    using "Target_SkillEmpowerment"
+    data "TooltipStatusApply" "ApplyStatus(SKILL_EMPOWERMENT_ACROBATICS,100,-1)"
+
+    new entry "Target_SkillEmpowerment_Acrobatics"
+    type "SpellData"
+    data "SpellType" "Target"
+    using "Target_SkillEmpowerment_Acrobatics"
+    data "SpellProperties" "ApplyStatus(SKILL_EMPOWERMENT_ACROBATICS,100,-1)"
+
+    new entry "Target_SkillEmpowerment_AnimalHandling"
+    type "SpellData"
+    data "SpellType" "Target"
+    using "Target_SkillEmpowerment_AnimalHandling"
+    data "SpellProperties" "ApplyStatus(SKILL_EMPOWERMENT_ANIMALHANDLING,100,-1)"
+
+    new entry "Target_SkillEmpowerment_Arcana"
+    type "SpellData"
+    data "SpellType" "Target"
+    using "Target_SkillEmpowerment_Arcana"
+    data "SpellProperties" "ApplyStatus(SKILL_EMPOWERMENT_ARCANA,100,-1)"
+
+    new entry "Target_SkillEmpowerment_Athletics"
+    type "SpellData"
+    data "SpellType" "Target"
+    using "Target_SkillEmpowerment_Athletics"
+    data "SpellProperties" "ApplyStatus(SKILL_EMPOWERMENT_ATHLETICS,100,-1)"
+
+    new entry "Target_SkillEmpowerment_Deception"
+    type "SpellData"
+    data "SpellType" "Target"
+    using "Target_SkillEmpowerment_Deception"
+    data "SpellProperties" "ApplyStatus(SKILL_EMPOWERMENT_DECEPTION,100,-1)"
+
+    new entry "Target_SkillEmpowerment_History"
+    type "SpellData"
+    data "SpellType" "Target"
+    using "Target_SkillEmpowerment_History"
+    data "SpellProperties" "ApplyStatus(SKILL_EMPOWERMENT_HISTORY,100,-1)"
+
+    new entry "Target_SkillEmpowerment_Insight"
+    type "SpellData"
+    data "SpellType" "Target"
+    using "Target_SkillEmpowerment_Insight"
+    data "SpellProperties" "ApplyStatus(SKILL_EMPOWERMENT_INSIGHT,100,-1)"
+
+    new entry "Target_SkillEmpowerment_Intimidation"
+    type "SpellData"
+    data "SpellType" "Target"
+    using "Target_SkillEmpowerment_Intimidation"
+    data "SpellProperties" "ApplyStatus(SKILL_EMPOWERMENT_INTIMIDATION,100,-1)"
+
+    new entry "Target_SkillEmpowerment_Investigation"
+    type "SpellData"
+    data "SpellType" "Target"
+    using "Target_SkillEmpowerment_Investigation"
+    data "SpellProperties" "ApplyStatus(SKILL_EMPOWERMENT_INVESTIGATION,100,-1)"
+
+    new entry "Target_SkillEmpowerment_Medicine"
+    type "SpellData"
+    data "SpellType" "Target"
+    using "Target_SkillEmpowerment_Medicine"
+    data "SpellProperties" "ApplyStatus(SKILL_EMPOWERMENT_MEDICINE,100,-1)"
+
+    new entry "Target_SkillEmpowerment_Nature"
+    type "SpellData"
+    data "SpellType" "Target"
+    using "Target_SkillEmpowerment_Nature"
+    data "SpellProperties" "ApplyStatus(SKILL_EMPOWERMENT_NATURE,100,-1)"
+
+    new entry "Target_SkillEmpowerment_Perception"
+    type "SpellData"
+    data "SpellType" "Target"
+    using "Target_SkillEmpowerment_Perception"
+    data "SpellProperties" "ApplyStatus(SKILL_EMPOWERMENT_PERCEPTION,100,-1)"
+
+    new entry "Target_SkillEmpowerment_Performance"
+    type "SpellData"
+    data "SpellType" "Target"
+    using "Target_SkillEmpowerment_Performance"
+    data "SpellProperties" "ApplyStatus(SKILL_EMPOWERMENT_PERFORMANCE,100,-1)"
+
+    new entry "Target_SkillEmpowerment_Persuasion"
+    type "SpellData"
+    data "SpellType" "Target"
+    using "Target_SkillEmpowerment_Persuasion"
+    data "SpellProperties" "ApplyStatus(SKILL_EMPOWERMENT_PERSUASION,100,-1)"
+
+    new entry "Target_SkillEmpowerment_Religion"
+    type "SpellData"
+    data "SpellType" "Target"
+    using "Target_SkillEmpowerment_Religion"
+    data "SpellProperties" "ApplyStatus(SKILL_EMPOWERMENT_RELIGION,100,-1)"
+
+    new entry "Target_SkillEmpowerment_SleightOfHand"
+    type "SpellData"
+    data "SpellType" "Target"
+    using "Target_SkillEmpowerment_SleightOfHand"
+    data "SpellProperties" "ApplyStatus(SKILL_EMPOWERMENT_SLEIGHTOFHAND,100,-1)"
+
+    new entry "Target_SkillEmpowerment_Stealth"
+    type "SpellData"
+    data "SpellType" "Target"
+    using "Target_SkillEmpowerment_Stealth"
+    data "SpellProperties" "ApplyStatus(SKILL_EMPOWERMENT_STEALTH,100,-1)"
+
+    new entry "Target_SkillEmpowerment_Survival"
+    type "SpellData"
+    data "SpellType" "Target"
+    using "Target_SkillEmpowerment_Survival"
+    data "SpellProperties" "ApplyStatus(SKILL_EMPOWERMENT_SURVIVAL,100,-1)"
+
+//  --------------------------------------------------------  \\
+//  -----            Summon Draconic Spirit             ----  \\
+//  --------------------------------------------------------  \\
+
+    new entry "Target_SummonDraconicSpirit_Chromatic"
+    type "SpellData"
+    data "SpellType" "Target"
+    using "Target_SummonDraconicSpirit_Chromatic"
+    data "SpellProperties" "GROUND:IF(ConditionResult(context.Source.ProficiencyBonus < 5)):Summon(db1af04e-ce16-4395-b9fc-1d1a3af7716d, -1,,,'DraconicSpiritStack',DRACONIC_SPIRIT_CHROMATIC);GROUND:IF(ConditionResult(context.Source.ProficiencyBonus == 5)):Summon(db1af04e-ce16-4395-b9fc-1d1a3af7716d, -1,,,'DraconicSpiritStack',DRACONIC_SPIRIT_CHROMATIC_13TH);GROUND:IF(ConditionResult(context.Source.ProficiencyBonus == 6)):Summon(db1af04e-ce16-4395-b9fc-1d1a3af7716d, -1,,,'DraconicSpiritStack',DRACONIC_SPIRIT_CHROMATIC_17TH)"
+
+    new entry "Target_SummonDraconicSpirit_Chromatic_9"
+    type "SpellData"
+    data "SpellType" "Target"
+    using "Target_SummonDraconicSpirit_Chromatic_9"
+    data "SpellProperties" "GROUND:IF(ConditionResult(context.Source.ProficiencyBonus < 5)):Summon(db1af04e-ce16-4395-b9fc-1d1a3af7716d, -1,,,'DraconicSpiritStack',DRACONIC_SPIRIT_CHROMATIC_9);GROUND:IF(ConditionResult(context.Source.ProficiencyBonus == 5)):Summon(db1af04e-ce16-4395-b9fc-1d1a3af7716d, -1,,,'DraconicSpiritStack',DRACONIC_SPIRIT_CHROMATIC_9_13TH);GROUND:IF(ConditionResult(context.Source.ProficiencyBonus == 6)):Summon(db1af04e-ce16-4395-b9fc-1d1a3af7716d, -1,,,'DraconicSpiritStack',DRACONIC_SPIRIT_CHROMATIC_9_17TH)"
+ 
+    new entry "Target_SummonDraconicSpirit_Chromatic_8"
+    type "SpellData"
+    data "SpellType" "Target"
+    using "Target_SummonDraconicSpirit_Chromatic_8"
+    data "SpellProperties" "GROUND:IF(ConditionResult(context.Source.ProficiencyBonus < 5)):Summon(db1af04e-ce16-4395-b9fc-1d1a3af7716d, -1,,,'DraconicSpiritStack',DRACONIC_SPIRIT_CHROMATIC_8);GROUND:IF(ConditionResult(context.Source.ProficiencyBonus == 5)):Summon(db1af04e-ce16-4395-b9fc-1d1a3af7716d, -1,,,'DraconicSpiritStack',DRACONIC_SPIRIT_CHROMATIC_8_13TH);GROUND:IF(ConditionResult(context.Source.ProficiencyBonus == 6)):Summon(db1af04e-ce16-4395-b9fc-1d1a3af7716d, -1,,,'DraconicSpiritStack',DRACONIC_SPIRIT_CHROMATIC_8_17TH)"
+
+    new entry "Target_SummonDraconicSpirit_Chromatic_7"
+    type "SpellData"
+    data "SpellType" "Target"
+    using "Target_SummonDraconicSpirit_Chromatic_7"
+    data "SpellProperties" "GROUND:IF(ConditionResult(context.Source.ProficiencyBonus < 5)):Summon(db1af04e-ce16-4395-b9fc-1d1a3af7716d, -1,,,'DraconicSpiritStack',DRACONIC_SPIRIT_CHROMATIC_7);GROUND:IF(ConditionResult(context.Source.ProficiencyBonus == 5)):Summon(db1af04e-ce16-4395-b9fc-1d1a3af7716d, -1,,,'DraconicSpiritStack',DRACONIC_SPIRIT_CHROMATIC_7_13TH);GROUND:IF(ConditionResult(context.Source.ProficiencyBonus == 6)):Summon(db1af04e-ce16-4395-b9fc-1d1a3af7716d, -1,,,'DraconicSpiritStack',DRACONIC_SPIRIT_CHROMATIC_7_17TH)"
+
+    new entry "Target_SummonDraconicSpirit_Chromatic_6"
+    type "SpellData"
+    data "SpellType" "Target"
+    using "Target_SummonDraconicSpirit_Chromatic_6"
+    data "SpellProperties" "GROUND:IF(ConditionResult(context.Source.ProficiencyBonus < 5)):Summon(db1af04e-ce16-4395-b9fc-1d1a3af7716d, -1,,,'DraconicSpiritStack',DRACONIC_SPIRIT_CHROMATIC_6);GROUND:IF(ConditionResult(context.Source.ProficiencyBonus == 5)):Summon(db1af04e-ce16-4395-b9fc-1d1a3af7716d, -1,,,'DraconicSpiritStack',DRACONIC_SPIRIT_CHROMATIC_6_13TH);GROUND:IF(ConditionResult(context.Source.ProficiencyBonus == 6)):Summon(db1af04e-ce16-4395-b9fc-1d1a3af7716d, -1,,,'DraconicSpiritStack',DRACONIC_SPIRIT_CHROMATIC_6_17TH)"
+
+    new entry "Target_SummonDraconicSpirit_Gem"
+    type "SpellData"
+    data "SpellType" "Target"
+    using "Target_SummonDraconicSpirit_Gem"
+    data "SpellProperties" "GROUND:IF(ConditionResult(context.Source.ProficiencyBonus < 5)):Summon(db1af04e-ce16-4395-b9fc-1d1a3af7716d, -1,,,'DraconicSpiritStack',DRACONIC_SPIRIT_GEM);GROUND:IF(ConditionResult(context.Source.ProficiencyBonus == 5)):Summon(db1af04e-ce16-4395-b9fc-1d1a3af7716d, -1,,,'DraconicSpiritStack',DRACONIC_SPIRIT_GEM_13TH);GROUND:IF(ConditionResult(context.Source.ProficiencyBonus == 6)):Summon(db1af04e-ce16-4395-b9fc-1d1a3af7716d, -1,,,'DraconicSpiritStack',DRACONIC_SPIRIT_GEM_17TH)"
+
+    new entry "Target_SummonDraconicSpirit_Gem_9"
+    type "SpellData"
+    data "SpellType" "Target"
+    using "Target_SummonDraconicSpirit_Gem_9"
+    data "SpellProperties" "GROUND:IF(ConditionResult(context.Source.ProficiencyBonus < 5)):Summon(db1af04e-ce16-4395-b9fc-1d1a3af7716d, -1,,,'DraconicSpiritStack',DRACONIC_SPIRIT_GEM_9);GROUND:IF(ConditionResult(context.Source.ProficiencyBonus == 5)):Summon(db1af04e-ce16-4395-b9fc-1d1a3af7716d, -1,,,'DraconicSpiritStack',DRACONIC_SPIRIT_GEM_9_13TH);GROUND:IF(ConditionResult(context.Source.ProficiencyBonus == 6)):Summon(db1af04e-ce16-4395-b9fc-1d1a3af7716d, -1,,,'DraconicSpiritStack',DRACONIC_SPIRIT_GEM_9_17TH)"
+
+    new entry "Target_SummonDraconicSpirit_Gem_8"
+    type "SpellData"
+    data "SpellType" "Target"
+    using "Target_SummonDraconicSpirit_Gem_8"
+    data "SpellProperties" "GROUND:IF(ConditionResult(context.Source.ProficiencyBonus < 5)):Summon(db1af04e-ce16-4395-b9fc-1d1a3af7716d, -1,,,'DraconicSpiritStack',DRACONIC_SPIRIT_GEM_8);GROUND:IF(ConditionResult(context.Source.ProficiencyBonus == 5)):Summon(db1af04e-ce16-4395-b9fc-1d1a3af7716d, -1,,,'DraconicSpiritStack',DRACONIC_SPIRIT_GEM_8_13TH);GROUND:IF(ConditionResult(context.Source.ProficiencyBonus == 6)):Summon(db1af04e-ce16-4395-b9fc-1d1a3af7716d, -1,,,'DraconicSpiritStack',DRACONIC_SPIRIT_GEM_8_17TH)"
+
+    new entry "Target_SummonDraconicSpirit_Gem_7"
+    type "SpellData"
+    data "SpellType" "Target"
+    using "Target_SummonDraconicSpirit_Gem_7"
+    data "SpellProperties" "GROUND:IF(ConditionResult(context.Source.ProficiencyBonus < 5)):Summon(db1af04e-ce16-4395-b9fc-1d1a3af7716d, -1,,,'DraconicSpiritStack',DRACONIC_SPIRIT_GEM_7);GROUND:IF(ConditionResult(context.Source.ProficiencyBonus == 5)):Summon(db1af04e-ce16-4395-b9fc-1d1a3af7716d, -1,,,'DraconicSpiritStack',DRACONIC_SPIRIT_GEM_7_13TH);GROUND:IF(ConditionResult(context.Source.ProficiencyBonus == 6)):Summon(db1af04e-ce16-4395-b9fc-1d1a3af7716d, -1,,,'DraconicSpiritStack',DRACONIC_SPIRIT_GEM_7_17TH)"
+
+    new entry "Target_SummonDraconicSpirit_Gem_6"
+    type "SpellData"
+    data "SpellType" "Target"
+    using "Target_SummonDraconicSpirit_Gem_6"
+    data "SpellProperties" "GROUND:IF(ConditionResult(context.Source.ProficiencyBonus < 5)):Summon(db1af04e-ce16-4395-b9fc-1d1a3af7716d, -1,,,'DraconicSpiritStack',DRACONIC_SPIRIT_GEM_6);GROUND:IF(ConditionResult(context.Source.ProficiencyBonus == 5)):Summon(db1af04e-ce16-4395-b9fc-1d1a3af7716d, -1,,,'DraconicSpiritStack',DRACONIC_SPIRIT_GEM_6_13TH);GROUND:IF(ConditionResult(context.Source.ProficiencyBonus == 6)):Summon(db1af04e-ce16-4395-b9fc-1d1a3af7716d, -1,,,'DraconicSpiritStack',DRACONIC_SPIRIT_GEM_6_17TH)"
+ 

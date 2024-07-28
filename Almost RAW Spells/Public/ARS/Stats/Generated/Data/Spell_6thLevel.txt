@@ -1,0 +1,32 @@
+
+//  --------------------------------------------------------  \\
+//  -----                 Create Undead                 ----  \\
+//  --------------------------------------------------------  \\
+
+    new entry "Target_CreateUndead"
+    type "SpellData"
+    data "SpellType" "Target"
+    using "Target_CreateUndead"
+    data "RitualCosts" "ActionPoint:1"
+
+//  --------------------------------------------------------  \\
+//  -----                 Heroes' Feast                 ----  \\
+//  --------------------------------------------------------  \\
+
+    new entry "Shout_HeroesFeast"
+    type "SpellData"
+    data "SpellType" "Shout"
+    using "Shout_HeroesFeast"
+    data "RitualCosts" "ActionPoint:1"
+
+//  --------------------------------------------------------  \\
+//  -----                  True Seeing                  ----  \\
+//  --------------------------------------------------------  \\
+    
+    new entry "Target_TrueSeeing"
+    type "SpellData"
+    data "SpellType" "Target"
+    using "Target_TrueSeeing"
+    data "SpellProperties" "ApplyStatus(TRUESIGHT,100,-1)"
+    data "TooltipStatusApply" "ApplyStatus(TRUESIGHT,100,-1)"
+    

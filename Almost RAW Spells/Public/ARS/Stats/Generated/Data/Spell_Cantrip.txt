@@ -1,0 +1,23 @@
+
+//  --------------------------------------------------------  \\
+//  -----                  True Strike                  ----  \\
+//  --------------------------------------------------------  \\
+
+    new entry "Target_TrueStrike"
+    type "SpellData"
+    data "SpellType" "Target"
+    using "Target_TrueStrike"
+    data "UseCosts" "BonusActionPoint:1"
+
+//  --------------------------------------------------------  \\
+//  -----                Vicious Mockery                ----  \\
+//  --------------------------------------------------------  \\
+
+    new entry "Target_ViciousMockery"
+    type "SpellData"
+    data "SpellType" "Target"
+    using "Target_ViciousMockery"
+    data "SpellSuccess" "ApplyStatus(VICIOUSMOCKERY,100,1);DealDamage(LevelMapValue(D4Cantrip)+2,Psychic,Magical)"
+    data "SpellFail" "IF(HasPassive('PotentCantrip',context.Source)):DealDamage((LevelMapValue(D4Cantrip)/2)+2,Psychic,Magical)"
+    data "TooltipDamageList" "DealDamage(LevelMapValue(D4Cantrip)+2,Psychic)"
+    

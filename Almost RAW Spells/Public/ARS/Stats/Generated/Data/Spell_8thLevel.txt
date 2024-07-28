@@ -1,0 +1,22 @@
+
+//  --------------------------------------------------------  \\
+//  -----               Dominate Monster                ----  \\
+//  --------------------------------------------------------  \\
+
+    new entry "Target_DominateMonster"
+    type "SpellData"
+    data "SpellType" "Target"
+    using "Target_DominateMonster"
+    data "SpellSuccess" "ApplyStatus(DOMINATE_MONSTER,100,-1);ApplyStatus(SELF,DOMINATE_MONSTER_TECHNICAL,100,-1)"
+    data "TooltipStatusApply" "ApplyStatus(DOMINATE_MONSTER,100,-1)"
+
+    new entry "Target_DominateMonster_TotalControl"
+    type "SpellData"
+    data "SpellType" "Target"
+    using "Target_DominateMonster_TotalControl"
+    data "SpellProperties" "ApplyStatus(DOMINATE_MONSTER_TOTAL_CONTROL,100,-1)"
+    data "TooltipStatusApply" "ApplyStatus(DOMINATE_MONSTER_TOTAL_CONTROL,100,-1)"
+
+//  --------------------------------------------------------  \\
+//  ----- Mind Blank ----  \\
+//  --------------------------------------------------------  \\

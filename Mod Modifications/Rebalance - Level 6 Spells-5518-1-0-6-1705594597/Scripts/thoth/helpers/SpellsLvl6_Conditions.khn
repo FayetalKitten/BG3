@@ -1,0 +1,39 @@
+function SYR_SummonersBestDC()
+	local spellDC = 10
+	local ability = context.PreferredCastingAbility
+	local summonsSpellDC = SourceSpellDC()
+	local summonerINT = GetModifier(GetSummoner(context.Source).Intelligence)
+	local summonerWIS = GetModifier(GetSummoner(context.Source).Wisdom)
+	local summonerCHA = GetModifier(GetSummoner(context.Source).Charisma)
+	if (summonerINT > summonerWIS) and (summonerINT > summonerCHA) then
+		ability = Ability.Intelligence
+	elseif (summonerWIS > summonerINT) and (summonerWIS > summonerCHA) then
+		ability = Ability.Wisdom
+	elseif (summonerCHA > summonerINT) and (summonerCHA > summonerWIS) then
+		ability = Ability.Charisma
+	else
+		ability = context.PreferredCastingAbility
+	end
+	spellDC = CalculateSpellDC(ability, GetSummoner(context.Source))
+	return math.max(spellDC,summonsSpellDC)
+end
+
+function SYR_SummonersBestDCTopLevel()
+local spellDC = 10
+local ability = context.PreferredCastingAbility
+local summonsSpellDC = SourceSpellDC()
+local summonerINT = GetModifier(GetSummoner(context.Source,true).Intelligence)
+local summonerWIS = GetModifier(GetSummoner(context.Source,true).Wisdom)
+local summonerCHA = GetModifier(GetSummoner(context.Source,true).Charisma)
+if (summonerINT > summonerWIS) and (summonerINT > summonerCHA) then
+	ability = Ability.Intelligence
+elseif (summonerWIS > summonerINT) and (summonerWIS > summonerCHA) then
+	ability = Ability.Wisdom
+elseif (summonerCHA > summonerINT) and (summonerCHA > summonerWIS) then
+	ability = Ability.Charisma
+else
+	ability = context.PreferredCastingAbility
+end
+spellDC = CalculateSpellDC(ability, GetSummoner(context.Source))
+return math.max(spellDC,summonsSpellDC)
+end

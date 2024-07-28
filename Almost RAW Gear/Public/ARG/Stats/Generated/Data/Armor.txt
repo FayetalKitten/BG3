@@ -1,0 +1,19 @@
+
+//  --------------------------------------------------------  \\
+//  -----            Adamantine Scale Armour            ----  \\
+//  --------------------------------------------------------  \\
+
+    new entry "MAG_MeleeDebuff_AttackDebuff1_OnDamage_ScaleMail"
+    type "Armor"  
+    using "MAG_MeleeDebuff_AttackDebuff1_OnDamage_ScaleMail"
+    data "ArmorClass" "18"
+    data "Boosts" "IF(not HasPassive('MediumArmorMaster', context.Source));CriticalHit(AttackTarget,Success,Never)"
+
+//  --------------------------------------------------------  \\
+//  -----            Adamantine Splint Armour           ----  \\
+//  --------------------------------------------------------  \\
+
+    new entry "MAG_MeleeDebuff_AttackDebuff2_OnDamage_SplintMail"
+    type "Armor"  
+    using "MAG_MeleeDebuff_AttackDebuff2_OnDamage_SplintMail"
+    data "ArmorClass" "20"

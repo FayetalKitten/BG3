@@ -1,0 +1,41 @@
+
+//  --------------------------------------------------------  \\
+//  -----           Gandalf the White's Robe            ----  \\
+//  --------------------------------------------------------  \\
+
+    new entry "WME_WhiteRobe_Spell"
+    type "SpellData"
+    data "SpellType" "Target"
+    using "Target_GlobeOfInvulnerability"
+    data "Cooldown" "OncePerCombat"
+    data "UseCosts" "ActionPoint:1"
+    data "SpellFlags" "HasVerbalComponent;HasSomaticComponent;IsSpell"
+    data "MemoryCost" ""
+
+//  --------------------------------------------------------  \\
+//  -----                Isildur's Bane                 ----  \\
+//  --------------------------------------------------------  \\
+
+    new entry "WME_OneRing_Spell"
+    type "SpellData"
+    data "SpellType" "Target"
+    using "Target_DominateMonster_9"
+    data "DisplayName" "h6d41bdedg0fffg43b7g88c7g13e0cb53f2dc"
+    data "Description" "h6d41bdedg0fffg43b7g88c7g13e0cb53f2dc"
+    data "TooltipStatusApply" "ApplyStatus(WME_DOMINATE,100,-1)"
+    data "Cooldown" "OncePerCombat"
+    data "UseCosts" "ActionPoint:1"
+    data "MemoryCost" ""
+    data "SpellFlags" "HasVerbalComponent;HasSomaticComponent;IsSpell;IsHarmful"
+
+    new entry "WME_OneRing_Shift"
+    type "SpellData"
+    data "SpellType" "Target"
+    using "Target_Invisibility_Greater"
+    data "DisplayName" "h1a084266g5011g4115g82f2g2e802d93ef66"
+    data "Description" "h500f4d26gdb38g44cfg8e3cgfef153732f48"
+    data "SpellProperties" "AI_IGNORE:ApplyStatus(GREATER_INVISIBILITY,100,-1);AI_ONLY:ApplyStatus(GREATER_INVISIBILITY,100,2)"
+    data "TooltipStatusApply" "ApplyStatus(GREATER_INVISIBILITY,100,-1)"
+    data "UseCosts" ""
+    data "MemoryCost" ""
+    data "SpellFlags" "HasVerbalComponent;HasSomaticComponent;IsMelee;IsSpell"

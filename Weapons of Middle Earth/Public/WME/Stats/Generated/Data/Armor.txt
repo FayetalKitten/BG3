@@ -1,0 +1,100 @@
+
+//  --------------------------------------------------------  \\
+//  -----                  Mithril Coat                 ----  \\
+//  --------------------------------------------------------  \\
+
+    new entry "WME_MithrilCoat"
+    type "Armor"  
+    using "ARM_Leather_Body"
+    data "RootTemplate" "0beff66f-c32c-4ed4-90cc-157497b5b41f"
+    data "ArmorClass" "14"
+    data "ValueOverride" "100"
+    data "Rarity" "VeryRare"
+    data "Boosts" "Advantage(AllSavingThrows);CriticalHit(AttackTarget,Success,Never);"
+
+//  --------------------------------------------------------  \\
+//  -----            Gandalf the Grey's Robe           ----  \\
+//  --------------------------------------------------------  \\
+
+    new entry "WME_GreyRobe"
+    type "Armor"  
+    using "_Armor_Magic_Robe"
+    data "RootTemplate" "baa6fbd5-f538-45f4-b45b-4ca8c808ffc9"
+    data "ValueOverride" "100"
+    data "Rarity" "VeryRare"
+    data "Boosts" "AC(1);Advantage(SavingThrow, Constitution);UnlockSpell(Shout_MAG_Selunite_MageArmor)"
+    data "PassivesOnEquip" "MAG_ArcaneEnchantment_Lesser_Passive"
+    data "StatusOnEquip" "MAG_SELUNITE_ARMOR_MAGE_ARMOR_TECHNICAL"
+
+//  --------------------------------------------------------  \\
+//  -----           Gandalf the White's Robe            ----  \\
+//  --------------------------------------------------------  \\
+
+    new entry "WME_WhiteRobe"
+    type "Armor"  
+    using "_Armor_Magic_Robe"
+    data "RootTemplate" "46a3c7a9-16db-4bbb-8e55-2b8c4fb0b466"
+    data "ValueOverride" "100"
+    data "Rarity" "Legendary"
+    data "Boosts" "AC(2);Advantage(SavingThrow, Constitution);UnlockSpell(Shout_MAG_Selunite_MageArmor);UnlockSpell(WME_Target_GlobeOfInvulnerability)"
+    data "PassivesOnEquip" "MAG_ArcaneEnchantment_Passive"
+    data "StatusOnEquip" "MAG_SELUNITE_ARMOR_MAGE_ARMOR_TECHNICAL"
+
+//  --------------------------------------------------------  \\
+//  -----                  Wizard Hat                   ----  \\
+//  --------------------------------------------------------  \\
+
+    new entry "WME_WizardHat"
+    type "Armor"  
+    using "MAG_EndGameCaster_Hood"
+    data "RootTemplate" "de897ce6-696f-41d7-8ff0-31dbdaa2def4"
+    data "ValueOverride" "100"
+    data "PassivesOnEquip" "MAG_ArcaneEnchantment_Lesser_Passive"
+    data "Boosts" "Ability(Intelligence, 1)"
+
+//  --------------------------------------------------------  \\
+//  -----                  Gandalf's Hat                   ----  \\
+//  --------------------------------------------------------  \\
+
+    new entry "WME_GandalfHat"
+    type "Armor"  
+    using "MAG_EndGameCaster_Hood"
+    data "RootTemplate" "f88d1af9-06e5-415b-9bed-69c4774915b2"
+    data "ValueOverride" "100"
+    data "Rarity" "Legendary"
+    data "Boosts" "Ability(Intelligence, 2)"
+
+//  --------------------------------------------------------  \\
+//  -----                  The Elessar                  ----  \\
+//  --------------------------------------------------------  \\
+
+    new entry "WME_Elessar"
+    type "Armor"  
+    using "_Amulet_Magic"
+    data "RootTemplate" "28372c22-1223-4a79-afca-7a9a17de16a1"
+    data "Rarity" "Legendary"
+    data "Boosts" "Ability(Charisma, 2);Advantage(Ability, Charisma);UnlockSpell(Shout_MAG_SpellSlotRestoration)"
+
+//  --------------------------------------------------------  \\
+//  -----                  Elven Cloak                  ----  \\
+//  --------------------------------------------------------  \\
+
+    new entry "WME_ElvenCloak"
+    type "Armor"  
+    using "ARM_Cloak"
+    data "RootTemplate" "ce99d6be-3fc9-4117-afe1-ad076b4ebc5e"
+    data "Rarity" "VeryRare"
+    data "Boosts" "Advantage(Ability, Dexterity);Advantage(SavingThrow, Dexterity);"
+
+//  --------------------------------------------------------  \\
+//  -----                Isildur's Bane                 ----  \\
+//  --------------------------------------------------------  \\
+
+    new entry "WME_OneRing"
+    type "Armor"  
+    using "_Ring"
+    data "RootTemplate" "da534188-db23-4cb3-9631-77cc72cca3e7"
+    data "ObjectCategory" "Jewelry"
+    data "Rarity" "Legendary"
+    data "Boosts" "UnlockSpell(WME_OneRing_Spell)"
+    data "PassivesOnEquip" "WME_Shift_Passive"

@@ -1,0 +1,590 @@
+
+//  --------------------------------------------------------  \\
+//  -----              Borrowed Knowledge               ----  \\
+//  --------------------------------------------------------  \\
+
+    new entry "Shout_BorrowedKnowledge"
+    type "SpellData"
+    data "SpellType" "Shout"
+    using "Shout_BorrowedKnowledge"
+    data "TargetRadius" "36"
+    data "SpellProperties" "ApplyStatus(BORROWED_KNOWLEDGE_REMOVAL,100,0);ApplyStatus(BORROWED_KNOWLEDGE,100,-1)"
+
+//  --------------------------------------------------------  \\
+//  -----               Crown of Madness                ----  \\
+//  --------------------------------------------------------  \\
+
+    new entry "Target_CrownOfMadness"
+    type "SpellData"
+    data "SpellType" "Target"
+    using "Target_CrownOfMadness"
+    data "TargetRadius" "36"
+    data "RitualCosts" "ActionPoint:1"
+    data "SpellSuccess" "ApplyStatus(CROWN_OF_MADNESS,100,10)"
+    data "TooltipStatusApply" "ApplyStatus(CROWN_OF_MADNESS,100,10)"
+
+//  --------------------------------------------------------  \\
+//  -----              Flock of Familiars               ----  \\
+//  --------------------------------------------------------  \\
+
+    new entry "Target_FlockOfFamiliars"
+    type "SpellData"
+    data "SpellType" "Target"
+    using "Target_FlockOfFamiliars"
+    data "RitualCosts" "ActionPoint:1"
+
+    new entry "Target_FlockOfFamiliars_Cat"
+    type "SpellData"
+    data "SpellType" "Target"
+    using "Target_FlockOfFamiliars_Cat"
+    data "SpellProperties" "GROUND:Summon(be212ed5-a622-4560-96be-0ee27ea1f913, -1,,,'FamiliarSummonStack',UNSUMMON_ABLE,SHADOWCURSE_SUMMON_CHECK);GROUND:Summon(be212ed5-a622-4560-96be-0ee27ea1f913, -1,,,,UNSUMMON_ABLE,SHADOWCURSE_SUMMON_CHECK);GROUND:Summon(be212ed5-a622-4560-96be-0ee27ea1f913, -1,,,,UNSUMMON_ABLE,SHADOWCURSE_SUMMON_CHECK)"
+
+    new entry "Target_FlockOfFamiliars_Crab"
+    type "SpellData"
+    data "SpellType" "Target"
+    using "Target_FlockOfFamiliars_Crab"
+    data "SpellProperties" "GROUND:Summon(48cda2b7-04bc-40c2-81f5-1dddabcd15ab, -1,,,'FamiliarSummonStack',UNSUMMON_ABLE,SHADOWCURSE_SUMMON_CHECK);GROUND:Summon(48cda2b7-04bc-40c2-81f5-1dddabcd15ab, -1,,,,UNSUMMON_ABLE,SHADOWCURSE_SUMMON_CHECK);GROUND:Summon(48cda2b7-04bc-40c2-81f5-1dddabcd15ab, -1,,,,UNSUMMON_ABLE,SHADOWCURSE_SUMMON_CHECK)"
+
+    new entry "Target_FlockOfFamiliars_Frog"
+    type "SpellData"
+    data "SpellType" "Target"
+    using "Target_FlockOfFamiliars_Frog"
+    data "SpellProperties" "GROUND:Summon(4521a4d1-0940-41de-b4c2-0314b8c8f32d, -1,,,'FamiliarSummonStack',UNSUMMON_ABLE,SHADOWCURSE_SUMMON_CHECK);GROUND:Summon(4521a4d1-0940-41de-b4c2-0314b8c8f32d, -1,,,,UNSUMMON_ABLE,SHADOWCURSE_SUMMON_CHECK);GROUND:Summon(4521a4d1-0940-41de-b4c2-0314b8c8f32d, -1,,,,UNSUMMON_ABLE,SHADOWCURSE_SUMMON_CHECK)"
+
+    new entry "Target_FlockOfFamiliars_Rat"
+    type "SpellData"
+    data "SpellType" "Target"
+    using "Target_FlockOfFamiliars_Rat"
+    data "SpellProperties" "GROUND:Summon(d779b7f9-2c7b-4f85-b914-f09e00c117f2, -1,,,'FamiliarSummonStack',UNSUMMON_ABLE,SHADOWCURSE_SUMMON_CHECK);GROUND:Summon(d779b7f9-2c7b-4f85-b914-f09e00c117f2, -1,,,,UNSUMMON_ABLE,SHADOWCURSE_SUMMON_CHECK);GROUND:Summon(d779b7f9-2c7b-4f85-b914-f09e00c117f2, -1,,,,UNSUMMON_ABLE,SHADOWCURSE_SUMMON_CHECK)"
+
+    new entry "Target_FlockOfFamiliars_Raven"
+    type "SpellData"
+    data "SpellType" "Target"
+    using "new entry "Target_FlockOfFamiliars_Raven"
+    data "SpellProperties" "GROUND:Summon(ecdffa46-80bd-41d2-8a50-4460a2810672, -1,,,'FamiliarSummonStack',UNSUMMON_ABLE,SHADOWCURSE_SUMMON_CHECK);GROUND:Summon(ecdffa46-80bd-41d2-8a50-4460a2810672, -1,,,,UNSUMMON_ABLE,SHADOWCURSE_SUMMON_CHECK);GROUND:Summon(ecdffa46-80bd-41d2-8a50-4460a2810672, -1,,,,UNSUMMON_ABLE,SHADOWCURSE_SUMMON_CHECK)"
+
+    new entry "Target_FlockOfFamiliars_Spider"
+    type "SpellData"
+    data "SpellType" "Target"
+    using "Target_FlockOfFamiliars_Spider"
+    data "SpellProperties" "GROUND:Summon(739b8af1-643d-4cc9-b5bd-3628cd3acc40, -1,,,'FamiliarSummonStack',UNSUMMON_ABLE,SHADOWCURSE_SUMMON_CHECK);GROUND:Summon(739b8af1-643d-4cc9-b5bd-3628cd3acc40, -1,,,,UNSUMMON_ABLE,SHADOWCURSE_SUMMON_CHECK);GROUND:Summon(739b8af1-643d-4cc9-b5bd-3628cd3acc40, -1,,,,UNSUMMON_ABLE,SHADOWCURSE_SUMMON_CHECK)"
+
+    new entry "Target_FlockOfFamiliars_Imp"
+    type "SpellData"
+    data "SpellType" "Target"
+    using "Target_FlockOfFamiliars_Imp"
+    data "SpellProperties" "GROUND:IF(IsImprovedPactOfTheChain()):Summon(308da8fd-fb8e-4078-8991-a8ee678b49da, -1,,,'FindFamiliarStack',UNSUMMON_ABLE,EXTRA_ATTACK_THIRSTING_BLADE,SHADOWCURSE_SUMMON_CHECK);GROUND:IF(not IsImprovedPactOfTheChain()):Summon(308da8fd-fb8e-4078-8991-a8ee678b49da, -1,,,'FindFamiliarStack',UNSUMMON_ABLE,SHADOWCURSE_SUMMON_CHECK);GROUND:IF(IsImprovedPactOfTheChain()):Summon(308da8fd-fb8e-4078-8991-a8ee678b49da, -1,,,,UNSUMMON_ABLE,EXTRA_ATTACK_THIRSTING_BLADE,SHADOWCURSE_SUMMON_CHECK);GROUND:IF(not IsImprovedPactOfTheChain()):Summon(308da8fd-fb8e-4078-8991-a8ee678b49da, -1,,,,UNSUMMON_ABLE,SHADOWCURSE_SUMMON_CHECK);GROUND:IF(IsImprovedPactOfTheChain()):Summon(308da8fd-fb8e-4078-8991-a8ee678b49da, -1,,,,UNSUMMON_ABLE,EXTRA_ATTACK_THIRSTING_BLADE,SHADOWCURSE_SUMMON_CHECK);GROUND:IF(not IsImprovedPactOfTheChain()):Summon(308da8fd-fb8e-4078-8991-a8ee678b49da, -1,,,,UNSUMMON_ABLE,SHADOWCURSE_SUMMON_CHECK)"
+
+    new entry "Target_FlockOfFamiliars_Quasit"
+    type "SpellData"
+    data "SpellType" "Target"
+    using "Target_FlockOfFamiliars_Quasit"
+    data "SpellProperties" "GROUND:IF(IsImprovedPactOfTheChain()):Summon(03f340c1-a26e-427e-968a-94c795015965, -1,,,'FindFamiliarStack',UNSUMMON_ABLE,EXTRA_ATTACK_THIRSTING_BLADE,SHADOWCURSE_SUMMON_CHECK);GROUND:IF(not IsImprovedPactOfTheChain()):Summon(03f340c1-a26e-427e-968a-94c795015965, -1,,,'FindFamiliarStack',UNSUMMON_ABLE,SHADOWCURSE_SUMMON_CHECK);GROUND:IF(IsImprovedPactOfTheChain()):Summon(03f340c1-a26e-427e-968a-94c795015965, -1,,,,UNSUMMON_ABLE,EXTRA_ATTACK_THIRSTING_BLADE,SHADOWCURSE_SUMMON_CHECK);GROUND:IF(not IsImprovedPactOfTheChain()):Summon(03f340c1-a26e-427e-968a-94c795015965, -1,,,,UNSUMMON_ABLE,SHADOWCURSE_SUMMON_CHECK);GROUND:IF(IsImprovedPactOfTheChain()):Summon(03f340c1-a26e-427e-968a-94c795015965, -1,,,,UNSUMMON_ABLE,EXTRA_ATTACK_THIRSTING_BLADE,SHADOWCURSE_SUMMON_CHECK);GROUND:IF(not IsImprovedPactOfTheChain()):Summon(03f340c1-a26e-427e-968a-94c795015965, -1,,,,UNSUMMON_ABLE,SHADOWCURSE_SUMMON_CHECK)"
+
+    new entry "Target_FlockOfFamiliars_Cat_3"
+    type "SpellData"
+    data "SpellType" "Target"
+    using "Target_FlockOfFamiliars_Cat_3"
+    data "SpellProperties" "GROUND:Summon(be212ed5-a622-4560-96be-0ee27ea1f913, -1,,,'FamiliarSummonStack',UNSUMMON_ABLE,SHADOWCURSE_SUMMON_CHECK);GROUND:Summon(be212ed5-a622-4560-96be-0ee27ea1f913, -1,,,UNSUMMON_ABLE,SHADOWCURSE_SUMMON_CHECK);GROUND:Summon(be212ed5-a622-4560-96be-0ee27ea1f913, -1,,,UNSUMMON_ABLE,SHADOWCURSE_SUMMON_CHECK);GROUND:Summon(be212ed5-a622-4560-96be-0ee27ea1f913, -1,,,UNSUMMON_ABLE,SHADOWCURSE_SUMMON_CHECK)"
+
+    new entry "Target_FlockOfFamiliars_Cat_4"
+    type "SpellData"
+    data "SpellType" "Target"
+    using "Target_FlockOfFamiliars_Cat_4"
+    data "SpellProperties" "GROUND:Summon(be212ed5-a622-4560-96be-0ee27ea1f913, -1,,,'FamiliarSummonStack',UNSUMMON_ABLE,SHADOWCURSE_SUMMON_CHECK);GROUND:Summon(be212ed5-a622-4560-96be-0ee27ea1f913, -1,,,UNSUMMON_ABLE,SHADOWCURSE_SUMMON_CHECK);GROUND:Summon(be212ed5-a622-4560-96be-0ee27ea1f913, -1,,,UNSUMMON_ABLE,SHADOWCURSE_SUMMON_CHECK);GROUND:Summon(be212ed5-a622-4560-96be-0ee27ea1f913, -1,,,UNSUMMON_ABLE,SHADOWCURSE_SUMMON_CHECK);GROUND:Summon(be212ed5-a622-4560-96be-0ee27ea1f913, -1,,,UNSUMMON_ABLE,SHADOWCURSE_SUMMON_CHECK)"
+
+    new entry "Target_FlockOfFamiliars_Cat_5"
+    type "SpellData"
+    data "SpellType" "Target"
+    using "Target_FlockOfFamiliars_Cat_5"
+    data "SpellProperties" "GROUND:Summon(be212ed5-a622-4560-96be-0ee27ea1f913, -1,,,'FamiliarSummonStack',UNSUMMON_ABLE,SHADOWCURSE_SUMMON_CHECK);GROUND:Summon(be212ed5-a622-4560-96be-0ee27ea1f913, -1,,,UNSUMMON_ABLE,SHADOWCURSE_SUMMON_CHECK);GROUND:Summon(be212ed5-a622-4560-96be-0ee27ea1f913, -1,,,UNSUMMON_ABLE,SHADOWCURSE_SUMMON_CHECK);GROUND:Summon(be212ed5-a622-4560-96be-0ee27ea1f913, -1,,,UNSUMMON_ABLE,SHADOWCURSE_SUMMON_CHECK);GROUND:Summon(be212ed5-a622-4560-96be-0ee27ea1f913, -1,,,UNSUMMON_ABLE,SHADOWCURSE_SUMMON_CHECK);GROUND:Summon(be212ed5-a622-4560-96be-0ee27ea1f913, -1,,,UNSUMMON_ABLE,SHADOWCURSE_SUMMON_CHECK)"
+
+    new entry "Target_FlockOfFamiliars_Cat_6"
+    type "SpellData"
+    data "SpellType" "Target"
+    using "Target_FlockOfFamiliars_Cat_6"
+    data "SpellProperties" "GROUND:Summon(be212ed5-a622-4560-96be-0ee27ea1f913, -1,,,'FamiliarSummonStack',UNSUMMON_ABLE,SHADOWCURSE_SUMMON_CHECK);GROUND:Summon(be212ed5-a622-4560-96be-0ee27ea1f913, -1,,,UNSUMMON_ABLE,SHADOWCURSE_SUMMON_CHECK);GROUND:Summon(be212ed5-a622-4560-96be-0ee27ea1f913, -1,,,UNSUMMON_ABLE,SHADOWCURSE_SUMMON_CHECK);GROUND:Summon(be212ed5-a622-4560-96be-0ee27ea1f913, -1,,,UNSUMMON_ABLE,SHADOWCURSE_SUMMON_CHECK);GROUND:Summon(be212ed5-a622-4560-96be-0ee27ea1f913, -1,,,UNSUMMON_ABLE,SHADOWCURSE_SUMMON_CHECK);GROUND:Summon(be212ed5-a622-4560-96be-0ee27ea1f913, -1,,,UNSUMMON_ABLE,SHADOWCURSE_SUMMON_CHECK);GROUND:Summon(be212ed5-a622-4560-96be-0ee27ea1f913, -1,,,UNSUMMON_ABLE,SHADOWCURSE_SUMMON_CHECK)"
+
+    new entry "Target_FlockOfFamiliars_Cat_7"
+    type "SpellData"
+    data "SpellType" "Target"
+    using "Target_FlockOfFamiliars_Cat_7"
+    data "SpellProperties" "GROUND:Summon(be212ed5-a622-4560-96be-0ee27ea1f913, -1,,,'FamiliarSummonStack',UNSUMMON_ABLE,SHADOWCURSE_SUMMON_CHECK);GROUND:Summon(be212ed5-a622-4560-96be-0ee27ea1f913, -1,,,UNSUMMON_ABLE,SHADOWCURSE_SUMMON_CHECK);GROUND:Summon(be212ed5-a622-4560-96be-0ee27ea1f913, -1,,,UNSUMMON_ABLE,SHADOWCURSE_SUMMON_CHECK);GROUND:Summon(be212ed5-a622-4560-96be-0ee27ea1f913, -1,,,UNSUMMON_ABLE,SHADOWCURSE_SUMMON_CHECK);GROUND:Summon(be212ed5-a622-4560-96be-0ee27ea1f913, -1,,,UNSUMMON_ABLE,SHADOWCURSE_SUMMON_CHECK);GROUND:Summon(be212ed5-a622-4560-96be-0ee27ea1f913, -1,,,UNSUMMON_ABLE,SHADOWCURSE_SUMMON_CHECK);GROUND:Summon(be212ed5-a622-4560-96be-0ee27ea1f913, -1,,,UNSUMMON_ABLE,SHADOWCURSE_SUMMON_CHECK);GROUND:Summon(be212ed5-a622-4560-96be-0ee27ea1f913, -1,,,UNSUMMON_ABLE,SHADOWCURSE_SUMMON_CHECK)"
+
+    new entry "Target_FlockOfFamiliars_Cat_8"
+    type "SpellData"
+    data "SpellType" "Target"
+    using "Target_FlockOfFamiliars_Cat_8"
+    data "SpellProperties" "GROUND:Summon(be212ed5-a622-4560-96be-0ee27ea1f913, -1,,,'FamiliarSummonStack',UNSUMMON_ABLE,SHADOWCURSE_SUMMON_CHECK);GROUND:Summon(be212ed5-a622-4560-96be-0ee27ea1f913, -1,,,UNSUMMON_ABLE,SHADOWCURSE_SUMMON_CHECK);GROUND:Summon(be212ed5-a622-4560-96be-0ee27ea1f913, -1,,,UNSUMMON_ABLE,SHADOWCURSE_SUMMON_CHECK);GROUND:Summon(be212ed5-a622-4560-96be-0ee27ea1f913, -1,,,UNSUMMON_ABLE,SHADOWCURSE_SUMMON_CHECK);GROUND:Summon(be212ed5-a622-4560-96be-0ee27ea1f913, -1,,,UNSUMMON_ABLE,SHADOWCURSE_SUMMON_CHECK);GROUND:Summon(be212ed5-a622-4560-96be-0ee27ea1f913, -1,,,UNSUMMON_ABLE,SHADOWCURSE_SUMMON_CHECK);GROUND:Summon(be212ed5-a622-4560-96be-0ee27ea1f913, -1,,,UNSUMMON_ABLE,SHADOWCURSE_SUMMON_CHECK);GROUND:Summon(be212ed5-a622-4560-96be-0ee27ea1f913, -1,,,UNSUMMON_ABLE,SHADOWCURSE_SUMMON_CHECK);GROUND:Summon(be212ed5-a622-4560-96be-0ee27ea1f913, -1,,,UNSUMMON_ABLE,SHADOWCURSE_SUMMON_CHECK)"
+
+    new entry "Target_FlockOfFamiliars_Cat_9"
+    type "SpellData"
+    data "SpellType" "Target"
+    using "Target_FlockOfFamiliars_Cat_9"
+    data "SpellProperties" "GROUND:Summon(be212ed5-a622-4560-96be-0ee27ea1f913, -1,,,'FamiliarSummonStack',UNSUMMON_ABLE,SHADOWCURSE_SUMMON_CHECK);GROUND:Summon(be212ed5-a622-4560-96be-0ee27ea1f913, -1,,,UNSUMMON_ABLE,SHADOWCURSE_SUMMON_CHECK);GROUND:Summon(be212ed5-a622-4560-96be-0ee27ea1f913, -1,,,UNSUMMON_ABLE,SHADOWCURSE_SUMMON_CHECK);GROUND:Summon(be212ed5-a622-4560-96be-0ee27ea1f913, -1,,,UNSUMMON_ABLE,SHADOWCURSE_SUMMON_CHECK);GROUND:Summon(be212ed5-a622-4560-96be-0ee27ea1f913, -1,,,UNSUMMON_ABLE,SHADOWCURSE_SUMMON_CHECK);GROUND:Summon(be212ed5-a622-4560-96be-0ee27ea1f913, -1,,,UNSUMMON_ABLE,SHADOWCURSE_SUMMON_CHECK);GROUND:Summon(be212ed5-a622-4560-96be-0ee27ea1f913, -1,,,UNSUMMON_ABLE,SHADOWCURSE_SUMMON_CHECK);GROUND:Summon(be212ed5-a622-4560-96be-0ee27ea1f913, -1,,,UNSUMMON_ABLE,SHADOWCURSE_SUMMON_CHECK);GROUND:Summon(be212ed5-a622-4560-96be-0ee27ea1f913, -1,,,UNSUMMON_ABLE,SHADOWCURSE_SUMMON_CHECK);GROUND:Summon(be212ed5-a622-4560-96be-0ee27ea1f913, -1,,,UNSUMMON_ABLE,SHADOWCURSE_SUMMON_CHECK)"
+
+    new entry "Target_FlockOfFamiliars_Crab_3"
+    type "SpellData"
+    data "SpellType" "Target"
+    using "Target_FlockOfFamiliars_Crab_3"
+    data "SpellProperties" "GROUND:Summon(48cda2b7-04bc-40c2-81f5-1dddabcd15ab, -1,,,'FamiliarSummonStack',UNSUMMON_ABLE,SHADOWCURSE_SUMMON_CHECK);GROUND:Summon(48cda2b7-04bc-40c2-81f5-1dddabcd15ab, -1,,,UNSUMMON_ABLE,SHADOWCURSE_SUMMON_CHECK);GROUND:Summon(48cda2b7-04bc-40c2-81f5-1dddabcd15ab, -1,,,UNSUMMON_ABLE,SHADOWCURSE_SUMMON_CHECK);GROUND:Summon(48cda2b7-04bc-40c2-81f5-1dddabcd15ab, -1,,,UNSUMMON_ABLE,SHADOWCURSE_SUMMON_CHECK)"
+
+    new entry "Target_FlockOfFamiliars_Crab_4"
+    type "SpellData"
+    data "SpellType" "Target"
+    using "Target_FlockOfFamiliars_Crab_4"
+    data "SpellProperties" "GROUND:Summon(48cda2b7-04bc-40c2-81f5-1dddabcd15ab, -1,,,'FamiliarSummonStack',UNSUMMON_ABLE,SHADOWCURSE_SUMMON_CHECK);GROUND:Summon(48cda2b7-04bc-40c2-81f5-1dddabcd15ab, -1,,,UNSUMMON_ABLE,SHADOWCURSE_SUMMON_CHECK);GROUND:Summon(48cda2b7-04bc-40c2-81f5-1dddabcd15ab, -1,,,UNSUMMON_ABLE,SHADOWCURSE_SUMMON_CHECK);GROUND:Summon(48cda2b7-04bc-40c2-81f5-1dddabcd15ab, -1,,,UNSUMMON_ABLE,SHADOWCURSE_SUMMON_CHECK);GROUND:Summon(48cda2b7-04bc-40c2-81f5-1dddabcd15ab, -1,,,UNSUMMON_ABLE,SHADOWCURSE_SUMMON_CHECK)"
+
+    new entry "Target_FlockOfFamiliars_Crab_5"
+    type "SpellData"
+    data "SpellType" "Target"
+    using "Target_FlockOfFamiliars_Crab_5"
+    data "SpellProperties" "GROUND:Summon(48cda2b7-04bc-40c2-81f5-1dddabcd15ab, -1,,,'FamiliarSummonStack',UNSUMMON_ABLE,SHADOWCURSE_SUMMON_CHECK);GROUND:Summon(48cda2b7-04bc-40c2-81f5-1dddabcd15ab, -1,,,UNSUMMON_ABLE,SHADOWCURSE_SUMMON_CHECK);GROUND:Summon(48cda2b7-04bc-40c2-81f5-1dddabcd15ab, -1,,,UNSUMMON_ABLE,SHADOWCURSE_SUMMON_CHECK);GROUND:Summon(48cda2b7-04bc-40c2-81f5-1dddabcd15ab, -1,,,UNSUMMON_ABLE,SHADOWCURSE_SUMMON_CHECK);GROUND:Summon(48cda2b7-04bc-40c2-81f5-1dddabcd15ab, -1,,,UNSUMMON_ABLE,SHADOWCURSE_SUMMON_CHECK);GROUND:Summon(48cda2b7-04bc-40c2-81f5-1dddabcd15ab, -1,,,UNSUMMON_ABLE,SHADOWCURSE_SUMMON_CHECK)"
+
+    new entry "Target_FlockOfFamiliars_Crab_6"
+    type "SpellData"
+    data "SpellType" "Target"
+    using "Target_FlockOfFamiliars_Crab_6"
+    data "SpellProperties" "GROUND:Summon(48cda2b7-04bc-40c2-81f5-1dddabcd15ab, -1,,,'FamiliarSummonStack',UNSUMMON_ABLE,SHADOWCURSE_SUMMON_CHECK);GROUND:Summon(48cda2b7-04bc-40c2-81f5-1dddabcd15ab, -1,,,UNSUMMON_ABLE,SHADOWCURSE_SUMMON_CHECK);GROUND:Summon(48cda2b7-04bc-40c2-81f5-1dddabcd15ab, -1,,,UNSUMMON_ABLE,SHADOWCURSE_SUMMON_CHECK);GROUND:Summon(48cda2b7-04bc-40c2-81f5-1dddabcd15ab, -1,,,UNSUMMON_ABLE,SHADOWCURSE_SUMMON_CHECK);GROUND:Summon(48cda2b7-04bc-40c2-81f5-1dddabcd15ab, -1,,,UNSUMMON_ABLE,SHADOWCURSE_SUMMON_CHECK);GROUND:Summon(48cda2b7-04bc-40c2-81f5-1dddabcd15ab, -1,,,UNSUMMON_ABLE,SHADOWCURSE_SUMMON_CHECK);GROUND:Summon(48cda2b7-04bc-40c2-81f5-1dddabcd15ab, -1,,,UNSUMMON_ABLE,SHADOWCURSE_SUMMON_CHECK)"
+
+    new entry "Target_FlockOfFamiliars_Crab_7"
+    type "SpellData"
+    data "SpellType" "Target"
+    using "Target_FlockOfFamiliars_Crab_7"
+    data "SpellProperties" "GROUND:Summon(48cda2b7-04bc-40c2-81f5-1dddabcd15ab, -1,,,'FamiliarSummonStack',UNSUMMON_ABLE,SHADOWCURSE_SUMMON_CHECK);GROUND:Summon(48cda2b7-04bc-40c2-81f5-1dddabcd15ab, -1,,,UNSUMMON_ABLE,SHADOWCURSE_SUMMON_CHECK);GROUND:Summon(48cda2b7-04bc-40c2-81f5-1dddabcd15ab, -1,,,UNSUMMON_ABLE,SHADOWCURSE_SUMMON_CHECK);GROUND:Summon(48cda2b7-04bc-40c2-81f5-1dddabcd15ab, -1,,,UNSUMMON_ABLE,SHADOWCURSE_SUMMON_CHECK);GROUND:Summon(48cda2b7-04bc-40c2-81f5-1dddabcd15ab, -1,,,UNSUMMON_ABLE,SHADOWCURSE_SUMMON_CHECK);GROUND:Summon(48cda2b7-04bc-40c2-81f5-1dddabcd15ab, -1,,,UNSUMMON_ABLE,SHADOWCURSE_SUMMON_CHECK);GROUND:Summon(48cda2b7-04bc-40c2-81f5-1dddabcd15ab, -1,,,UNSUMMON_ABLE,SHADOWCURSE_SUMMON_CHECK);GROUND:Summon(48cda2b7-04bc-40c2-81f5-1dddabcd15ab, -1,,,UNSUMMON_ABLE,SHADOWCURSE_SUMMON_CHECK)"
+
+    new entry "Target_FlockOfFamiliars_Crab_8"
+    type "SpellData"
+    data "SpellType" "Target"
+    using "Target_FlockOfFamiliars_Crab_8"
+    data "SpellProperties" "GROUND:Summon(48cda2b7-04bc-40c2-81f5-1dddabcd15ab, -1,,,'FamiliarSummonStack',UNSUMMON_ABLE,SHADOWCURSE_SUMMON_CHECK);GROUND:Summon(48cda2b7-04bc-40c2-81f5-1dddabcd15ab, -1,,,UNSUMMON_ABLE,SHADOWCURSE_SUMMON_CHECK);GROUND:Summon(48cda2b7-04bc-40c2-81f5-1dddabcd15ab, -1,,,UNSUMMON_ABLE,SHADOWCURSE_SUMMON_CHECK);GROUND:Summon(48cda2b7-04bc-40c2-81f5-1dddabcd15ab, -1,,,UNSUMMON_ABLE,SHADOWCURSE_SUMMON_CHECK);GROUND:Summon(48cda2b7-04bc-40c2-81f5-1dddabcd15ab, -1,,,UNSUMMON_ABLE,SHADOWCURSE_SUMMON_CHECK);GROUND:Summon(48cda2b7-04bc-40c2-81f5-1dddabcd15ab, -1,,,UNSUMMON_ABLE,SHADOWCURSE_SUMMON_CHECK);GROUND:Summon(48cda2b7-04bc-40c2-81f5-1dddabcd15ab, -1,,,UNSUMMON_ABLE,SHADOWCURSE_SUMMON_CHECK);GROUND:Summon(48cda2b7-04bc-40c2-81f5-1dddabcd15ab, -1,,,UNSUMMON_ABLE,SHADOWCURSE_SUMMON_CHECK);GROUND:Summon(48cda2b7-04bc-40c2-81f5-1dddabcd15ab, -1,,,UNSUMMON_ABLE,SHADOWCURSE_SUMMON_CHECK)"
+
+    new entry "Target_FlockOfFamiliars_Crab_9"
+    type "SpellData"
+    data "SpellType" "Target"
+    using "Target_FlockOfFamiliars_Crab_9"
+    data "SpellProperties" "GROUND:Summon(48cda2b7-04bc-40c2-81f5-1dddabcd15ab, -1,,,'FamiliarSummonStack',UNSUMMON_ABLE,SHADOWCURSE_SUMMON_CHECK);GROUND:Summon(48cda2b7-04bc-40c2-81f5-1dddabcd15ab, -1,,,UNSUMMON_ABLE,SHADOWCURSE_SUMMON_CHECK);GROUND:Summon(48cda2b7-04bc-40c2-81f5-1dddabcd15ab, -1,,,UNSUMMON_ABLE,SHADOWCURSE_SUMMON_CHECK);GROUND:Summon(48cda2b7-04bc-40c2-81f5-1dddabcd15ab, -1,,,UNSUMMON_ABLE,SHADOWCURSE_SUMMON_CHECK);GROUND:Summon(48cda2b7-04bc-40c2-81f5-1dddabcd15ab, -1,,,UNSUMMON_ABLE,SHADOWCURSE_SUMMON_CHECK);GROUND:Summon(48cda2b7-04bc-40c2-81f5-1dddabcd15ab, -1,,,UNSUMMON_ABLE,SHADOWCURSE_SUMMON_CHECK);GROUND:Summon(48cda2b7-04bc-40c2-81f5-1dddabcd15ab, -1,,,UNSUMMON_ABLE,SHADOWCURSE_SUMMON_CHECK);GROUND:Summon(48cda2b7-04bc-40c2-81f5-1dddabcd15ab, -1,,,UNSUMMON_ABLE,SHADOWCURSE_SUMMON_CHECK);GROUND:Summon(48cda2b7-04bc-40c2-81f5-1dddabcd15ab, -1,,,UNSUMMON_ABLE,SHADOWCURSE_SUMMON_CHECK);GROUND:Summon(48cda2b7-04bc-40c2-81f5-1dddabcd15ab, -1,,,UNSUMMON_ABLE,SHADOWCURSE_SUMMON_CHECK)"
+
+    new entry "Target_FlockOfFamiliars_Frog_3"
+    type "SpellData"
+    data "SpellType" "Target"
+    using "Target_FlockOfFamiliars_Frog_3"
+    data "SpellProperties" "GROUND:Summon(4521a4d1-0940-41de-b4c2-0314b8c8f32d, -1,,,'FamiliarSummonStack',UNSUMMON_ABLE,SHADOWCURSE_SUMMON_CHECK);GROUND:Summon(4521a4d1-0940-41de-b4c2-0314b8c8f32d, -1,,,UNSUMMON_ABLE,SHADOWCURSE_SUMMON_CHECK);GROUND:Summon(4521a4d1-0940-41de-b4c2-0314b8c8f32d, -1,,,UNSUMMON_ABLE,SHADOWCURSE_SUMMON_CHECK);GROUND:Summon(4521a4d1-0940-41de-b4c2-0314b8c8f32d, -1,,,UNSUMMON_ABLE,SHADOWCURSE_SUMMON_CHECK)"
+
+    new entry "Target_FlockOfFamiliars_Frog_4"
+    type "SpellData"
+    data "SpellType" "Target"
+    using "Target_FlockOfFamiliars_Frog_4"
+    data "SpellProperties" "GROUND:Summon(4521a4d1-0940-41de-b4c2-0314b8c8f32d, -1,,,'FamiliarSummonStack',UNSUMMON_ABLE,SHADOWCURSE_SUMMON_CHECK);GROUND:Summon(4521a4d1-0940-41de-b4c2-0314b8c8f32d, -1,,,UNSUMMON_ABLE,SHADOWCURSE_SUMMON_CHECK);GROUND:Summon(4521a4d1-0940-41de-b4c2-0314b8c8f32d, -1,,,UNSUMMON_ABLE,SHADOWCURSE_SUMMON_CHECK);GROUND:Summon(4521a4d1-0940-41de-b4c2-0314b8c8f32d, -1,,,UNSUMMON_ABLE,SHADOWCURSE_SUMMON_CHECK);GROUND:Summon(4521a4d1-0940-41de-b4c2-0314b8c8f32d, -1,,,UNSUMMON_ABLE,SHADOWCURSE_SUMMON_CHECK)"
+
+    new entry "Target_FlockOfFamiliars_Frog_5"
+    type "SpellData"
+    data "SpellType" "Target"
+    using "Target_FlockOfFamiliars_Frog_5"
+    data "SpellProperties" "GROUND:Summon(4521a4d1-0940-41de-b4c2-0314b8c8f32d, -1,,,'FamiliarSummonStack',UNSUMMON_ABLE,SHADOWCURSE_SUMMON_CHECK);GROUND:Summon(4521a4d1-0940-41de-b4c2-0314b8c8f32d, -1,,,UNSUMMON_ABLE,SHADOWCURSE_SUMMON_CHECK);GROUND:Summon(4521a4d1-0940-41de-b4c2-0314b8c8f32d, -1,,,UNSUMMON_ABLE,SHADOWCURSE_SUMMON_CHECK);GROUND:Summon(4521a4d1-0940-41de-b4c2-0314b8c8f32d, -1,,,UNSUMMON_ABLE,SHADOWCURSE_SUMMON_CHECK);GROUND:Summon(4521a4d1-0940-41de-b4c2-0314b8c8f32d, -1,,,UNSUMMON_ABLE,SHADOWCURSE_SUMMON_CHECK);GROUND:Summon(4521a4d1-0940-41de-b4c2-0314b8c8f32d, -1,,,UNSUMMON_ABLE,SHADOWCURSE_SUMMON_CHECK)"
+
+    new entry "Target_FlockOfFamiliars_Frog_6"
+    type "SpellData"
+    data "SpellType" "Target"
+    using "Target_FlockOfFamiliars_Frog_6"
+    data "SpellProperties" "GROUND:Summon(4521a4d1-0940-41de-b4c2-0314b8c8f32d, -1,,,'FamiliarSummonStack',UNSUMMON_ABLE,SHADOWCURSE_SUMMON_CHECK);GROUND:Summon(4521a4d1-0940-41de-b4c2-0314b8c8f32d, -1,,,UNSUMMON_ABLE,SHADOWCURSE_SUMMON_CHECK);GROUND:Summon(4521a4d1-0940-41de-b4c2-0314b8c8f32d, -1,,,UNSUMMON_ABLE,SHADOWCURSE_SUMMON_CHECK);GROUND:Summon(4521a4d1-0940-41de-b4c2-0314b8c8f32d, -1,,,UNSUMMON_ABLE,SHADOWCURSE_SUMMON_CHECK);GROUND:Summon(4521a4d1-0940-41de-b4c2-0314b8c8f32d, -1,,,UNSUMMON_ABLE,SHADOWCURSE_SUMMON_CHECK);GROUND:Summon(4521a4d1-0940-41de-b4c2-0314b8c8f32d, -1,,,UNSUMMON_ABLE,SHADOWCURSE_SUMMON_CHECK);GROUND:Summon(4521a4d1-0940-41de-b4c2-0314b8c8f32d, -1,,,UNSUMMON_ABLE,SHADOWCURSE_SUMMON_CHECK)"
+
+    new entry "Target_FlockOfFamiliars_Frog_7"
+    type "SpellData"
+    data "SpellType" "Target"
+    using "Target_FlockOfFamiliars_Frog_7"
+    data "SpellProperties" "GROUND:Summon(4521a4d1-0940-41de-b4c2-0314b8c8f32d, -1,,,'FamiliarSummonStack',UNSUMMON_ABLE,SHADOWCURSE_SUMMON_CHECK);GROUND:Summon(4521a4d1-0940-41de-b4c2-0314b8c8f32d, -1,,,UNSUMMON_ABLE,SHADOWCURSE_SUMMON_CHECK);GROUND:Summon(4521a4d1-0940-41de-b4c2-0314b8c8f32d, -1,,,UNSUMMON_ABLE,SHADOWCURSE_SUMMON_CHECK);GROUND:Summon(4521a4d1-0940-41de-b4c2-0314b8c8f32d, -1,,,UNSUMMON_ABLE,SHADOWCURSE_SUMMON_CHECK);GROUND:Summon(4521a4d1-0940-41de-b4c2-0314b8c8f32d, -1,,,UNSUMMON_ABLE,SHADOWCURSE_SUMMON_CHECK);GROUND:Summon(4521a4d1-0940-41de-b4c2-0314b8c8f32d, -1,,,UNSUMMON_ABLE,SHADOWCURSE_SUMMON_CHECK);GROUND:Summon(4521a4d1-0940-41de-b4c2-0314b8c8f32d, -1,,,UNSUMMON_ABLE,SHADOWCURSE_SUMMON_CHECK);GROUND:Summon(4521a4d1-0940-41de-b4c2-0314b8c8f32d, -1,,,UNSUMMON_ABLE,SHADOWCURSE_SUMMON_CHECK)"
+
+    new entry "Target_FlockOfFamiliars_Frog_8"
+    type "SpellData"
+    data "SpellType" "Target"
+    using "Target_FlockOfFamiliars_Frog_8"
+    data "SpellProperties" "GROUND:Summon(4521a4d1-0940-41de-b4c2-0314b8c8f32d, -1,,,'FamiliarSummonStack',UNSUMMON_ABLE,SHADOWCURSE_SUMMON_CHECK);GROUND:Summon(4521a4d1-0940-41de-b4c2-0314b8c8f32d, -1,,,UNSUMMON_ABLE,SHADOWCURSE_SUMMON_CHECK);GROUND:Summon(4521a4d1-0940-41de-b4c2-0314b8c8f32d, -1,,,UNSUMMON_ABLE,SHADOWCURSE_SUMMON_CHECK);GROUND:Summon(4521a4d1-0940-41de-b4c2-0314b8c8f32d, -1,,,UNSUMMON_ABLE,SHADOWCURSE_SUMMON_CHECK);GROUND:Summon(4521a4d1-0940-41de-b4c2-0314b8c8f32d, -1,,,UNSUMMON_ABLE,SHADOWCURSE_SUMMON_CHECK);GROUND:Summon(4521a4d1-0940-41de-b4c2-0314b8c8f32d, -1,,,UNSUMMON_ABLE,SHADOWCURSE_SUMMON_CHECK);GROUND:Summon(4521a4d1-0940-41de-b4c2-0314b8c8f32d, -1,,,UNSUMMON_ABLE,SHADOWCURSE_SUMMON_CHECK);GROUND:Summon(4521a4d1-0940-41de-b4c2-0314b8c8f32d, -1,,,UNSUMMON_ABLE,SHADOWCURSE_SUMMON_CHECK);GROUND:Summon(4521a4d1-0940-41de-b4c2-0314b8c8f32d, -1,,,UNSUMMON_ABLE,SHADOWCURSE_SUMMON_CHECK)"
+
+    new entry "Target_FlockOfFamiliars_Frog_9"
+    type "SpellData"
+    data "SpellType" "Target"
+    using "Target_FlockOfFamiliars_Frog_9"
+    data "SpellProperties" "GROUND:Summon(4521a4d1-0940-41de-b4c2-0314b8c8f32d, -1,,,'FamiliarSummonStack',UNSUMMON_ABLE,SHADOWCURSE_SUMMON_CHECK);GROUND:Summon(4521a4d1-0940-41de-b4c2-0314b8c8f32d, -1,,,UNSUMMON_ABLE,SHADOWCURSE_SUMMON_CHECK);GROUND:Summon(4521a4d1-0940-41de-b4c2-0314b8c8f32d, -1,,,UNSUMMON_ABLE,SHADOWCURSE_SUMMON_CHECK);GROUND:Summon(4521a4d1-0940-41de-b4c2-0314b8c8f32d, -1,,,UNSUMMON_ABLE,SHADOWCURSE_SUMMON_CHECK);GROUND:Summon(4521a4d1-0940-41de-b4c2-0314b8c8f32d, -1,,,UNSUMMON_ABLE,SHADOWCURSE_SUMMON_CHECK);GROUND:Summon(4521a4d1-0940-41de-b4c2-0314b8c8f32d, -1,,,UNSUMMON_ABLE,SHADOWCURSE_SUMMON_CHECK);GROUND:Summon(4521a4d1-0940-41de-b4c2-0314b8c8f32d, -1,,,UNSUMMON_ABLE,SHADOWCURSE_SUMMON_CHECK);GROUND:Summon(4521a4d1-0940-41de-b4c2-0314b8c8f32d, -1,,,UNSUMMON_ABLE,SHADOWCURSE_SUMMON_CHECK);GROUND:Summon(4521a4d1-0940-41de-b4c2-0314b8c8f32d, -1,,,UNSUMMON_ABLE,SHADOWCURSE_SUMMON_CHECK);GROUND:Summon(4521a4d1-0940-41de-b4c2-0314b8c8f32d, -1,,,UNSUMMON_ABLE,SHADOWCURSE_SUMMON_CHECK)"
+
+    new entry "Target_FlockOfFamiliars_Rat_3"
+    type "SpellData"
+    data "SpellType" "Target"
+    using "Target_FlockOfFamiliars_Rat_3"
+    data "SpellProperties" "GROUND:Summon(d779b7f9-2c7b-4f85-b914-f09e00c117f2, -1,,,'FamiliarSummonStack',UNSUMMON_ABLE,SHADOWCURSE_SUMMON_CHECK);GROUND:Summon(d779b7f9-2c7b-4f85-b914-f09e00c117f2, -1,,,UNSUMMON_ABLE,SHADOWCURSE_SUMMON_CHECK);GROUND:Summon(d779b7f9-2c7b-4f85-b914-f09e00c117f2, -1,,,UNSUMMON_ABLE,SHADOWCURSE_SUMMON_CHECK);GROUND:Summon(d779b7f9-2c7b-4f85-b914-f09e00c117f2, -1,,,UNSUMMON_ABLE,SHADOWCURSE_SUMMON_CHECK)"
+
+    new entry "Target_FlockOfFamiliars_Rat_4"
+    type "SpellData"
+    data "SpellType" "Target"
+    using "Target_FlockOfFamiliars_Rat_4"
+    data "SpellProperties" "GROUND:Summon(d779b7f9-2c7b-4f85-b914-f09e00c117f2, -1,,,'FamiliarSummonStack',UNSUMMON_ABLE,SHADOWCURSE_SUMMON_CHECK);GROUND:Summon(d779b7f9-2c7b-4f85-b914-f09e00c117f2, -1,,,UNSUMMON_ABLE,SHADOWCURSE_SUMMON_CHECK);GROUND:Summon(d779b7f9-2c7b-4f85-b914-f09e00c117f2, -1,,,UNSUMMON_ABLE,SHADOWCURSE_SUMMON_CHECK);GROUND:Summon(d779b7f9-2c7b-4f85-b914-f09e00c117f2, -1,,,UNSUMMON_ABLE,SHADOWCURSE_SUMMON_CHECK);GROUND:Summon(d779b7f9-2c7b-4f85-b914-f09e00c117f2, -1,,,UNSUMMON_ABLE,SHADOWCURSE_SUMMON_CHECK)"
+
+    new entry "Target_FlockOfFamiliars_Rat_5"
+    type "SpellData"
+    data "SpellType" "Target"
+    using "Target_FlockOfFamiliars_Rat_5"
+    data "SpellProperties" "GROUND:Summon(d779b7f9-2c7b-4f85-b914-f09e00c117f2, -1,,,'FamiliarSummonStack',UNSUMMON_ABLE,SHADOWCURSE_SUMMON_CHECK);GROUND:Summon(d779b7f9-2c7b-4f85-b914-f09e00c117f2, -1,,,UNSUMMON_ABLE,SHADOWCURSE_SUMMON_CHECK);GROUND:Summon(d779b7f9-2c7b-4f85-b914-f09e00c117f2, -1,,,UNSUMMON_ABLE,SHADOWCURSE_SUMMON_CHECK);GROUND:Summon(d779b7f9-2c7b-4f85-b914-f09e00c117f2, -1,,,UNSUMMON_ABLE,SHADOWCURSE_SUMMON_CHECK);GROUND:Summon(d779b7f9-2c7b-4f85-b914-f09e00c117f2, -1,,,UNSUMMON_ABLE,SHADOWCURSE_SUMMON_CHECK);GROUND:Summon(d779b7f9-2c7b-4f85-b914-f09e00c117f2, -1,,,UNSUMMON_ABLE,SHADOWCURSE_SUMMON_CHECK)"
+
+    new entry "Target_FlockOfFamiliars_Rat_6"
+    type "SpellData"
+    data "SpellType" "Target"
+    using "Target_FlockOfFamiliars_Rat_6"
+    data "SpellProperties" "GROUND:Summon(d779b7f9-2c7b-4f85-b914-f09e00c117f2, -1,,,'FamiliarSummonStack',UNSUMMON_ABLE,SHADOWCURSE_SUMMON_CHECK);GROUND:Summon(d779b7f9-2c7b-4f85-b914-f09e00c117f2, -1,,,UNSUMMON_ABLE,SHADOWCURSE_SUMMON_CHECK);GROUND:Summon(d779b7f9-2c7b-4f85-b914-f09e00c117f2, -1,,,UNSUMMON_ABLE,SHADOWCURSE_SUMMON_CHECK);GROUND:Summon(d779b7f9-2c7b-4f85-b914-f09e00c117f2, -1,,,UNSUMMON_ABLE,SHADOWCURSE_SUMMON_CHECK);GROUND:Summon(d779b7f9-2c7b-4f85-b914-f09e00c117f2, -1,,,UNSUMMON_ABLE,SHADOWCURSE_SUMMON_CHECK);GROUND:Summon(d779b7f9-2c7b-4f85-b914-f09e00c117f2, -1,,,UNSUMMON_ABLE,SHADOWCURSE_SUMMON_CHECK);GROUND:Summon(d779b7f9-2c7b-4f85-b914-f09e00c117f2, -1,,,UNSUMMON_ABLE,SHADOWCURSE_SUMMON_CHECK)"
+
+    new entry "Target_FlockOfFamiliars_Rat_7"
+    type "SpellData"
+    data "SpellType" "Target"
+    using "Target_FlockOfFamiliars_Rat_7"
+    data "SpellProperties" "GROUND:Summon(d779b7f9-2c7b-4f85-b914-f09e00c117f2, -1,,,'FamiliarSummonStack',UNSUMMON_ABLE,SHADOWCURSE_SUMMON_CHECK);GROUND:Summon(d779b7f9-2c7b-4f85-b914-f09e00c117f2, -1,,,UNSUMMON_ABLE,SHADOWCURSE_SUMMON_CHECK);GROUND:Summon(d779b7f9-2c7b-4f85-b914-f09e00c117f2, -1,,,UNSUMMON_ABLE,SHADOWCURSE_SUMMON_CHECK);GROUND:Summon(d779b7f9-2c7b-4f85-b914-f09e00c117f2, -1,,,UNSUMMON_ABLE,SHADOWCURSE_SUMMON_CHECK);GROUND:Summon(d779b7f9-2c7b-4f85-b914-f09e00c117f2, -1,,,UNSUMMON_ABLE,SHADOWCURSE_SUMMON_CHECK);GROUND:Summon(d779b7f9-2c7b-4f85-b914-f09e00c117f2, -1,,,UNSUMMON_ABLE,SHADOWCURSE_SUMMON_CHECK);GROUND:Summon(d779b7f9-2c7b-4f85-b914-f09e00c117f2, -1,,,UNSUMMON_ABLE,SHADOWCURSE_SUMMON_CHECK);GROUND:Summon(d779b7f9-2c7b-4f85-b914-f09e00c117f2, -1,,,UNSUMMON_ABLE,SHADOWCURSE_SUMMON_CHECK)"
+
+    new entry "Target_FlockOfFamiliars_Rat_8"
+    type "SpellData"
+    data "SpellType" "Target"
+    using "Target_FlockOfFamiliars_Rat_8"
+    data "SpellProperties" "GROUND:Summon(d779b7f9-2c7b-4f85-b914-f09e00c117f2, -1,,,'FamiliarSummonStack',UNSUMMON_ABLE,SHADOWCURSE_SUMMON_CHECK);GROUND:Summon(d779b7f9-2c7b-4f85-b914-f09e00c117f2, -1,,,UNSUMMON_ABLE,SHADOWCURSE_SUMMON_CHECK);GROUND:Summon(d779b7f9-2c7b-4f85-b914-f09e00c117f2, -1,,,UNSUMMON_ABLE,SHADOWCURSE_SUMMON_CHECK);GROUND:Summon(d779b7f9-2c7b-4f85-b914-f09e00c117f2, -1,,,UNSUMMON_ABLE,SHADOWCURSE_SUMMON_CHECK);GROUND:Summon(d779b7f9-2c7b-4f85-b914-f09e00c117f2, -1,,,UNSUMMON_ABLE,SHADOWCURSE_SUMMON_CHECK);GROUND:Summon(d779b7f9-2c7b-4f85-b914-f09e00c117f2, -1,,,UNSUMMON_ABLE,SHADOWCURSE_SUMMON_CHECK);GROUND:Summon(d779b7f9-2c7b-4f85-b914-f09e00c117f2, -1,,,UNSUMMON_ABLE,SHADOWCURSE_SUMMON_CHECK);GROUND:Summon(d779b7f9-2c7b-4f85-b914-f09e00c117f2, -1,,,UNSUMMON_ABLE,SHADOWCURSE_SUMMON_CHECK);GROUND:Summon(d779b7f9-2c7b-4f85-b914-f09e00c117f2, -1,,,UNSUMMON_ABLE,SHADOWCURSE_SUMMON_CHECK)"
+
+    new entry "Target_FlockOfFamiliars_Rat_9"
+    type "SpellData"
+    data "SpellType" "Target"
+    using "Target_FlockOfFamiliars_Rat_9"
+    data "SpellProperties" "GROUND:Summon(d779b7f9-2c7b-4f85-b914-f09e00c117f2, -1,,,'FamiliarSummonStack',UNSUMMON_ABLE,SHADOWCURSE_SUMMON_CHECK);GROUND:Summon(d779b7f9-2c7b-4f85-b914-f09e00c117f2, -1,,,UNSUMMON_ABLE,SHADOWCURSE_SUMMON_CHECK);GROUND:Summon(d779b7f9-2c7b-4f85-b914-f09e00c117f2, -1,,,UNSUMMON_ABLE,SHADOWCURSE_SUMMON_CHECK);GROUND:Summon(d779b7f9-2c7b-4f85-b914-f09e00c117f2, -1,,,UNSUMMON_ABLE,SHADOWCURSE_SUMMON_CHECK);GROUND:Summon(d779b7f9-2c7b-4f85-b914-f09e00c117f2, -1,,,UNSUMMON_ABLE,SHADOWCURSE_SUMMON_CHECK);GROUND:Summon(d779b7f9-2c7b-4f85-b914-f09e00c117f2, -1,,,UNSUMMON_ABLE,SHADOWCURSE_SUMMON_CHECK);GROUND:Summon(d779b7f9-2c7b-4f85-b914-f09e00c117f2, -1,,,UNSUMMON_ABLE,SHADOWCURSE_SUMMON_CHECK);GROUND:Summon(d779b7f9-2c7b-4f85-b914-f09e00c117f2, -1,,,UNSUMMON_ABLE,SHADOWCURSE_SUMMON_CHECK);GROUND:Summon(d779b7f9-2c7b-4f85-b914-f09e00c117f2, -1,,,UNSUMMON_ABLE,SHADOWCURSE_SUMMON_CHECK);GROUND:Summon(d779b7f9-2c7b-4f85-b914-f09e00c117f2, -1,,,UNSUMMON_ABLE,SHADOWCURSE_SUMMON_CHECK)"
+
+    new entry "Target_FlockOfFamiliars_Raven_3"
+    type "SpellData"
+    data "SpellType" "Target"
+    using "Target_FlockOfFamiliars_Raven_3"
+    data "SpellProperties" "GROUND:Summon(ecdffa46-80bd-41d2-8a50-4460a2810672, -1,,,'FamiliarSummonStack',UNSUMMON_ABLE,SHADOWCURSE_SUMMON_CHECK);GROUND:Summon(ecdffa46-80bd-41d2-8a50-4460a2810672, -1,,,UNSUMMON_ABLE,SHADOWCURSE_SUMMON_CHECK);GROUND:Summon(ecdffa46-80bd-41d2-8a50-4460a2810672, -1,,,UNSUMMON_ABLE,SHADOWCURSE_SUMMON_CHECK);GROUND:Summon(ecdffa46-80bd-41d2-8a50-4460a2810672, -1,,,UNSUMMON_ABLE,SHADOWCURSE_SUMMON_CHECK)"
+
+    new entry "Target_FlockOfFamiliars_Raven_4"
+    type "SpellData"
+    data "SpellType" "Target"
+    using "Target_FlockOfFamiliars_Raven_4"
+    data "SpellProperties" "GROUND:Summon(ecdffa46-80bd-41d2-8a50-4460a2810672, -1,,,'FamiliarSummonStack',UNSUMMON_ABLE,SHADOWCURSE_SUMMON_CHECK);GROUND:Summon(ecdffa46-80bd-41d2-8a50-4460a2810672, -1,,,UNSUMMON_ABLE,SHADOWCURSE_SUMMON_CHECK);GROUND:Summon(ecdffa46-80bd-41d2-8a50-4460a2810672, -1,,,UNSUMMON_ABLE,SHADOWCURSE_SUMMON_CHECK);GROUND:Summon(ecdffa46-80bd-41d2-8a50-4460a2810672, -1,,,UNSUMMON_ABLE,SHADOWCURSE_SUMMON_CHECK);GROUND:Summon(ecdffa46-80bd-41d2-8a50-4460a2810672, -1,,,UNSUMMON_ABLE,SHADOWCURSE_SUMMON_CHECK)"
+
+    new entry "Target_FlockOfFamiliars_Raven_5"
+    type "SpellData"
+    data "SpellType" "Target"
+    using "Target_FlockOfFamiliars_Raven_5"
+    data "SpellProperties" "GROUND:Summon(ecdffa46-80bd-41d2-8a50-4460a2810672, -1,,,'FamiliarSummonStack',UNSUMMON_ABLE,SHADOWCURSE_SUMMON_CHECK);GROUND:Summon(ecdffa46-80bd-41d2-8a50-4460a2810672, -1,,,UNSUMMON_ABLE,SHADOWCURSE_SUMMON_CHECK);GROUND:Summon(ecdffa46-80bd-41d2-8a50-4460a2810672, -1,,,UNSUMMON_ABLE,SHADOWCURSE_SUMMON_CHECK);GROUND:Summon(ecdffa46-80bd-41d2-8a50-4460a2810672, -1,,,UNSUMMON_ABLE,SHADOWCURSE_SUMMON_CHECK);GROUND:Summon(ecdffa46-80bd-41d2-8a50-4460a2810672, -1,,,UNSUMMON_ABLE,SHADOWCURSE_SUMMON_CHECK);GROUND:Summon(ecdffa46-80bd-41d2-8a50-4460a2810672, -1,,,UNSUMMON_ABLE,SHADOWCURSE_SUMMON_CHECK)"
+
+    new entry "Target_FlockOfFamiliars_Raven_6"
+    type "SpellData"
+    data "SpellType" "Target"
+    using "Target_FlockOfFamiliars_Raven_6"
+    data "SpellProperties" "GROUND:Summon(ecdffa46-80bd-41d2-8a50-4460a2810672, -1,,,'FamiliarSummonStack',UNSUMMON_ABLE,SHADOWCURSE_SUMMON_CHECK);GROUND:Summon(ecdffa46-80bd-41d2-8a50-4460a2810672, -1,,,UNSUMMON_ABLE,SHADOWCURSE_SUMMON_CHECK);GROUND:Summon(ecdffa46-80bd-41d2-8a50-4460a2810672, -1,,,UNSUMMON_ABLE,SHADOWCURSE_SUMMON_CHECK);GROUND:Summon(ecdffa46-80bd-41d2-8a50-4460a2810672, -1,,,UNSUMMON_ABLE,SHADOWCURSE_SUMMON_CHECK);GROUND:Summon(ecdffa46-80bd-41d2-8a50-4460a2810672, -1,,,UNSUMMON_ABLE,SHADOWCURSE_SUMMON_CHECK);GROUND:Summon(ecdffa46-80bd-41d2-8a50-4460a2810672, -1,,,UNSUMMON_ABLE,SHADOWCURSE_SUMMON_CHECK);GROUND:Summon(ecdffa46-80bd-41d2-8a50-4460a2810672, -1,,,UNSUMMON_ABLE,SHADOWCURSE_SUMMON_CHECK)"
+
+    new entry "Target_FlockOfFamiliars_Raven_7"
+    type "SpellData"
+    data "SpellType" "Target"
+    using "Target_FlockOfFamiliars_Raven_7"
+    data "SpellProperties" "GROUND:Summon(ecdffa46-80bd-41d2-8a50-4460a2810672, -1,,,'FamiliarSummonStack',UNSUMMON_ABLE,SHADOWCURSE_SUMMON_CHECK);GROUND:Summon(ecdffa46-80bd-41d2-8a50-4460a2810672, -1,,,UNSUMMON_ABLE,SHADOWCURSE_SUMMON_CHECK);GROUND:Summon(ecdffa46-80bd-41d2-8a50-4460a2810672, -1,,,UNSUMMON_ABLE,SHADOWCURSE_SUMMON_CHECK);GROUND:Summon(ecdffa46-80bd-41d2-8a50-4460a2810672, -1,,,UNSUMMON_ABLE,SHADOWCURSE_SUMMON_CHECK);GROUND:Summon(ecdffa46-80bd-41d2-8a50-4460a2810672, -1,,,UNSUMMON_ABLE,SHADOWCURSE_SUMMON_CHECK);GROUND:Summon(ecdffa46-80bd-41d2-8a50-4460a2810672, -1,,,UNSUMMON_ABLE,SHADOWCURSE_SUMMON_CHECK);GROUND:Summon(ecdffa46-80bd-41d2-8a50-4460a2810672, -1,,,UNSUMMON_ABLE,SHADOWCURSE_SUMMON_CHECK);GROUND:Summon(ecdffa46-80bd-41d2-8a50-4460a2810672, -1,,,UNSUMMON_ABLE,SHADOWCURSE_SUMMON_CHECK)"
+
+    new entry "Target_FlockOfFamiliars_Raven_8"
+    type "SpellData"
+    data "SpellType" "Target"
+    using "Target_FlockOfFamiliars_Raven_8"
+    data "SpellProperties" "GROUND:Summon(ecdffa46-80bd-41d2-8a50-4460a2810672, -1,,,'FamiliarSummonStack',UNSUMMON_ABLE,SHADOWCURSE_SUMMON_CHECK);GROUND:Summon(ecdffa46-80bd-41d2-8a50-4460a2810672, -1,,,UNSUMMON_ABLE,SHADOWCURSE_SUMMON_CHECK);GROUND:Summon(ecdffa46-80bd-41d2-8a50-4460a2810672, -1,,,UNSUMMON_ABLE,SHADOWCURSE_SUMMON_CHECK);GROUND:Summon(ecdffa46-80bd-41d2-8a50-4460a2810672, -1,,,UNSUMMON_ABLE,SHADOWCURSE_SUMMON_CHECK);GROUND:Summon(ecdffa46-80bd-41d2-8a50-4460a2810672, -1,,,UNSUMMON_ABLE,SHADOWCURSE_SUMMON_CHECK);GROUND:Summon(ecdffa46-80bd-41d2-8a50-4460a2810672, -1,,,UNSUMMON_ABLE,SHADOWCURSE_SUMMON_CHECK);GROUND:Summon(ecdffa46-80bd-41d2-8a50-4460a2810672, -1,,,UNSUMMON_ABLE,SHADOWCURSE_SUMMON_CHECK);GROUND:Summon(ecdffa46-80bd-41d2-8a50-4460a2810672, -1,,,UNSUMMON_ABLE,SHADOWCURSE_SUMMON_CHECK);GROUND:Summon(ecdffa46-80bd-41d2-8a50-4460a2810672, -1,,,UNSUMMON_ABLE,SHADOWCURSE_SUMMON_CHECK)"
+
+    new entry "Target_FlockOfFamiliars_Raven_9"
+    type "SpellData"
+    data "SpellType" "Target"
+    using "Target_FlockOfFamiliars_Raven_9"
+    data "SpellProperties" "GROUND:Summon(ecdffa46-80bd-41d2-8a50-4460a2810672, -1,,,'FamiliarSummonStack',UNSUMMON_ABLE,SHADOWCURSE_SUMMON_CHECK);GROUND:Summon(ecdffa46-80bd-41d2-8a50-4460a2810672, -1,,,UNSUMMON_ABLE,SHADOWCURSE_SUMMON_CHECK);GROUND:Summon(ecdffa46-80bd-41d2-8a50-4460a2810672, -1,,,UNSUMMON_ABLE,SHADOWCURSE_SUMMON_CHECK);GROUND:Summon(ecdffa46-80bd-41d2-8a50-4460a2810672, -1,,,UNSUMMON_ABLE,SHADOWCURSE_SUMMON_CHECK);GROUND:Summon(ecdffa46-80bd-41d2-8a50-4460a2810672, -1,,,UNSUMMON_ABLE,SHADOWCURSE_SUMMON_CHECK);GROUND:Summon(ecdffa46-80bd-41d2-8a50-4460a2810672, -1,,,UNSUMMON_ABLE,SHADOWCURSE_SUMMON_CHECK);GROUND:Summon(ecdffa46-80bd-41d2-8a50-4460a2810672, -1,,,UNSUMMON_ABLE,SHADOWCURSE_SUMMON_CHECK);GROUND:Summon(ecdffa46-80bd-41d2-8a50-4460a2810672, -1,,,UNSUMMON_ABLE,SHADOWCURSE_SUMMON_CHECK);GROUND:Summon(ecdffa46-80bd-41d2-8a50-4460a2810672, -1,,,UNSUMMON_ABLE,SHADOWCURSE_SUMMON_CHECK);GROUND:Summon(ecdffa46-80bd-41d2-8a50-4460a2810672, -1,,,UNSUMMON_ABLE,SHADOWCURSE_SUMMON_CHECK)"
+
+    new entry "Target_FlockOfFamiliars_Spider_3"
+    type "SpellData"
+    data "SpellType" "Target"
+    using "Target_FlockOfFamiliars_Spider_3"
+    data "SpellProperties" "GROUND:Summon(739b8af1-643d-4cc9-b5bd-3628cd3acc40, -1,,,'FamiliarSummonStack',UNSUMMON_ABLE,SHADOWCURSE_SUMMON_CHECK);GROUND:Summon(739b8af1-643d-4cc9-b5bd-3628cd3acc40, -1,,,UNSUMMON_ABLE,SHADOWCURSE_SUMMON_CHECK);GROUND:Summon(739b8af1-643d-4cc9-b5bd-3628cd3acc40, -1,,,UNSUMMON_ABLE,SHADOWCURSE_SUMMON_CHECK);GROUND:Summon(739b8af1-643d-4cc9-b5bd-3628cd3acc40, -1,,,UNSUMMON_ABLE,SHADOWCURSE_SUMMON_CHECK)"
+
+    new entry "Target_FlockOfFamiliars_Spider_4"
+    type "SpellData"
+    data "SpellType" "Target"
+    using "Target_FlockOfFamiliars_Spider_4"
+    data "SpellProperties" "GROUND:Summon(739b8af1-643d-4cc9-b5bd-3628cd3acc40, -1,,,'FamiliarSummonStack',UNSUMMON_ABLE,SHADOWCURSE_SUMMON_CHECK);GROUND:Summon(739b8af1-643d-4cc9-b5bd-3628cd3acc40, -1,,,UNSUMMON_ABLE,SHADOWCURSE_SUMMON_CHECK);GROUND:Summon(739b8af1-643d-4cc9-b5bd-3628cd3acc40, -1,,,UNSUMMON_ABLE,SHADOWCURSE_SUMMON_CHECK);GROUND:Summon(739b8af1-643d-4cc9-b5bd-3628cd3acc40, -1,,,UNSUMMON_ABLE,SHADOWCURSE_SUMMON_CHECK);GROUND:Summon(739b8af1-643d-4cc9-b5bd-3628cd3acc40, -1,,,UNSUMMON_ABLE,SHADOWCURSE_SUMMON_CHECK)"
+
+    new entry "Target_FlockOfFamiliars_Spider_5"
+    type "SpellData"
+    data "SpellType" "Target"
+    using "Target_FlockOfFamiliars_Spider_5"
+    data "SpellProperties" "GROUND:Summon(739b8af1-643d-4cc9-b5bd-3628cd3acc40, -1,,,'FamiliarSummonStack',UNSUMMON_ABLE,SHADOWCURSE_SUMMON_CHECK);GROUND:Summon(739b8af1-643d-4cc9-b5bd-3628cd3acc40, -1,,,UNSUMMON_ABLE,SHADOWCURSE_SUMMON_CHECK);GROUND:Summon(739b8af1-643d-4cc9-b5bd-3628cd3acc40, -1,,,UNSUMMON_ABLE,SHADOWCURSE_SUMMON_CHECK);GROUND:Summon(739b8af1-643d-4cc9-b5bd-3628cd3acc40, -1,,,UNSUMMON_ABLE,SHADOWCURSE_SUMMON_CHECK);GROUND:Summon(739b8af1-643d-4cc9-b5bd-3628cd3acc40, -1,,,UNSUMMON_ABLE,SHADOWCURSE_SUMMON_CHECK);GROUND:Summon(739b8af1-643d-4cc9-b5bd-3628cd3acc40, -1,,,UNSUMMON_ABLE,SHADOWCURSE_SUMMON_CHECK)"
+
+    new entry "Target_FlockOfFamiliars_Spider_6"
+    type "SpellData"
+    data "SpellType" "Target"
+    using "Target_FlockOfFamiliars_Spider_6"
+    data "SpellProperties" "GROUND:Summon(739b8af1-643d-4cc9-b5bd-3628cd3acc40, -1,,,'FamiliarSummonStack',UNSUMMON_ABLE,SHADOWCURSE_SUMMON_CHECK);GROUND:Summon(739b8af1-643d-4cc9-b5bd-3628cd3acc40, -1,,,UNSUMMON_ABLE,SHADOWCURSE_SUMMON_CHECK);GROUND:Summon(739b8af1-643d-4cc9-b5bd-3628cd3acc40, -1,,,UNSUMMON_ABLE,SHADOWCURSE_SUMMON_CHECK);GROUND:Summon(739b8af1-643d-4cc9-b5bd-3628cd3acc40, -1,,,UNSUMMON_ABLE,SHADOWCURSE_SUMMON_CHECK);GROUND:Summon(739b8af1-643d-4cc9-b5bd-3628cd3acc40, -1,,,UNSUMMON_ABLE,SHADOWCURSE_SUMMON_CHECK);GROUND:Summon(739b8af1-643d-4cc9-b5bd-3628cd3acc40, -1,,,UNSUMMON_ABLE,SHADOWCURSE_SUMMON_CHECK);GROUND:Summon(739b8af1-643d-4cc9-b5bd-3628cd3acc40, -1,,,UNSUMMON_ABLE,SHADOWCURSE_SUMMON_CHECK)"
+
+    new entry "Target_FlockOfFamiliars_Spider_7"
+    type "SpellData"
+    data "SpellType" "Target"
+    using "Target_FlockOfFamiliars_Spider_7"
+    data "SpellProperties" "GROUND:Summon(739b8af1-643d-4cc9-b5bd-3628cd3acc40, -1,,,'FamiliarSummonStack',UNSUMMON_ABLE,SHADOWCURSE_SUMMON_CHECK);GROUND:Summon(739b8af1-643d-4cc9-b5bd-3628cd3acc40, -1,,,UNSUMMON_ABLE,SHADOWCURSE_SUMMON_CHECK);GROUND:Summon(739b8af1-643d-4cc9-b5bd-3628cd3acc40, -1,,,UNSUMMON_ABLE,SHADOWCURSE_SUMMON_CHECK);GROUND:Summon(739b8af1-643d-4cc9-b5bd-3628cd3acc40, -1,,,UNSUMMON_ABLE,SHADOWCURSE_SUMMON_CHECK);GROUND:Summon(739b8af1-643d-4cc9-b5bd-3628cd3acc40, -1,,,UNSUMMON_ABLE,SHADOWCURSE_SUMMON_CHECK);GROUND:Summon(739b8af1-643d-4cc9-b5bd-3628cd3acc40, -1,,,UNSUMMON_ABLE,SHADOWCURSE_SUMMON_CHECK);GROUND:Summon(739b8af1-643d-4cc9-b5bd-3628cd3acc40, -1,,,UNSUMMON_ABLE,SHADOWCURSE_SUMMON_CHECK);GROUND:Summon(739b8af1-643d-4cc9-b5bd-3628cd3acc40, -1,,,UNSUMMON_ABLE,SHADOWCURSE_SUMMON_CHECK)"
+
+    new entry "Target_FlockOfFamiliars_Spider_8"
+    type "SpellData"
+    data "SpellType" "Target"
+    using "Target_FlockOfFamiliars_Spider_8"
+    data "SpellProperties" "GROUND:Summon(739b8af1-643d-4cc9-b5bd-3628cd3acc40, -1,,,'FamiliarSummonStack',UNSUMMON_ABLE,SHADOWCURSE_SUMMON_CHECK);GROUND:Summon(739b8af1-643d-4cc9-b5bd-3628cd3acc40, -1,,,UNSUMMON_ABLE,SHADOWCURSE_SUMMON_CHECK);GROUND:Summon(739b8af1-643d-4cc9-b5bd-3628cd3acc40, -1,,,UNSUMMON_ABLE,SHADOWCURSE_SUMMON_CHECK);GROUND:Summon(739b8af1-643d-4cc9-b5bd-3628cd3acc40, -1,,,UNSUMMON_ABLE,SHADOWCURSE_SUMMON_CHECK);GROUND:Summon(739b8af1-643d-4cc9-b5bd-3628cd3acc40, -1,,,UNSUMMON_ABLE,SHADOWCURSE_SUMMON_CHECK);GROUND:Summon(739b8af1-643d-4cc9-b5bd-3628cd3acc40, -1,,,UNSUMMON_ABLE,SHADOWCURSE_SUMMON_CHECK);GROUND:Summon(739b8af1-643d-4cc9-b5bd-3628cd3acc40, -1,,,UNSUMMON_ABLE,SHADOWCURSE_SUMMON_CHECK);GROUND:Summon(739b8af1-643d-4cc9-b5bd-3628cd3acc40, -1,,,UNSUMMON_ABLE,SHADOWCURSE_SUMMON_CHECK);GROUND:Summon(739b8af1-643d-4cc9-b5bd-3628cd3acc40, -1,,,UNSUMMON_ABLE,SHADOWCURSE_SUMMON_CHECK)"
+
+    new entry "Target_FlockOfFamiliars_Spider_9"
+    type "SpellData"
+    data "SpellType" "Target"
+    using "Target_FlockOfFamiliars_Spider_9"
+    data "SpellProperties" "GROUND:Summon(739b8af1-643d-4cc9-b5bd-3628cd3acc40, -1,,,'FamiliarSummonStack',UNSUMMON_ABLE,SHADOWCURSE_SUMMON_CHECK);GROUND:Summon(739b8af1-643d-4cc9-b5bd-3628cd3acc40, -1,,,UNSUMMON_ABLE,SHADOWCURSE_SUMMON_CHECK);GROUND:Summon(739b8af1-643d-4cc9-b5bd-3628cd3acc40, -1,,,UNSUMMON_ABLE,SHADOWCURSE_SUMMON_CHECK);GROUND:Summon(739b8af1-643d-4cc9-b5bd-3628cd3acc40, -1,,,UNSUMMON_ABLE,SHADOWCURSE_SUMMON_CHECK);GROUND:Summon(739b8af1-643d-4cc9-b5bd-3628cd3acc40, -1,,,UNSUMMON_ABLE,SHADOWCURSE_SUMMON_CHECK);GROUND:Summon(739b8af1-643d-4cc9-b5bd-3628cd3acc40, -1,,,UNSUMMON_ABLE,SHADOWCURSE_SUMMON_CHECK);GROUND:Summon(739b8af1-643d-4cc9-b5bd-3628cd3acc40, -1,,,UNSUMMON_ABLE,SHADOWCURSE_SUMMON_CHECK);GROUND:Summon(739b8af1-643d-4cc9-b5bd-3628cd3acc40, -1,,,UNSUMMON_ABLE,SHADOWCURSE_SUMMON_CHECK);GROUND:Summon(739b8af1-643d-4cc9-b5bd-3628cd3acc40, -1,,,UNSUMMON_ABLE,SHADOWCURSE_SUMMON_CHECK);GROUND:Summon(739b8af1-643d-4cc9-b5bd-3628cd3acc40, -1,,,UNSUMMON_ABLE,SHADOWCURSE_SUMMON_CHECK)"
+
+    new entry "Target_FlockOfFamiliars_Imp_3"
+    type "SpellData"
+    data "SpellType" "Target"
+    using "Target_FlockOfFamiliars_Imp_3"
+    data "SpellProperties" "GROUND:IF(IsImprovedPactOfTheChain()):Summon(308da8fd-fb8e-4078-8991-a8ee678b49da, -1,,,'FindFamiliarStack',UNSUMMON_ABLE,EXTRA_ATTACK_THIRSTING_BLADE,SHADOWCURSE_SUMMON_CHECK);GROUND:IF(not IsImprovedPactOfTheChain()):Summon(308da8fd-fb8e-4078-8991-a8ee678b49da, -1,,,'FindFamiliarStack',UNSUMMON_ABLE,SHADOWCURSE_SUMMON_CHECK);GROUND:IF(IsImprovedPactOfTheChain()):Summon(308da8fd-fb8e-4078-8991-a8ee678b49da, -1,,,,UNSUMMON_ABLE,EXTRA_ATTACK_THIRSTING_BLADE,SHADOWCURSE_SUMMON_CHECK);GROUND:IF(not IsImprovedPactOfTheChain()):Summon(308da8fd-fb8e-4078-8991-a8ee678b49da, -1,,,,UNSUMMON_ABLE,SHADOWCURSE_SUMMON_CHECK);GROUND:IF(IsImprovedPactOfTheChain()):Summon(308da8fd-fb8e-4078-8991-a8ee678b49da, -1,,,,UNSUMMON_ABLE,EXTRA_ATTACK_THIRSTING_BLADE,SHADOWCURSE_SUMMON_CHECK);GROUND:IF(not IsImprovedPactOfTheChain()):Summon(308da8fd-fb8e-4078-8991-a8ee678b49da, -1,,,,UNSUMMON_ABLE,SHADOWCURSE_SUMMON_CHECK);GROUND:IF(IsImprovedPactOfTheChain()):Summon(308da8fd-fb8e-4078-8991-a8ee678b49da, -1,,,,UNSUMMON_ABLE,EXTRA_ATTACK_THIRSTING_BLADE,SHADOWCURSE_SUMMON_CHECK);GROUND:IF(not IsImprovedPactOfTheChain()):Summon(308da8fd-fb8e-4078-8991-a8ee678b49da, -1,,,,UNSUMMON_ABLE,SHADOWCURSE_SUMMON_CHECK)"
+
+    new entry "Target_FlockOfFamiliars_Imp_4"
+    type "SpellData"
+    data "SpellType" "Target"
+    using "Target_FlockOfFamiliars_Imp_4"
+    data "SpellProperties" "GROUND:IF(IsImprovedPactOfTheChain()):Summon(308da8fd-fb8e-4078-8991-a8ee678b49da, -1,,,'FindFamiliarStack',UNSUMMON_ABLE,EXTRA_ATTACK_THIRSTING_BLADE,SHADOWCURSE_SUMMON_CHECK);GROUND:IF(not IsImprovedPactOfTheChain()):Summon(308da8fd-fb8e-4078-8991-a8ee678b49da, -1,,,'FindFamiliarStack',UNSUMMON_ABLE,SHADOWCURSE_SUMMON_CHECK);GROUND:IF(IsImprovedPactOfTheChain()):Summon(308da8fd-fb8e-4078-8991-a8ee678b49da, -1,,,,UNSUMMON_ABLE,EXTRA_ATTACK_THIRSTING_BLADE,SHADOWCURSE_SUMMON_CHECK);GROUND:IF(not IsImprovedPactOfTheChain()):Summon(308da8fd-fb8e-4078-8991-a8ee678b49da, -1,,,,UNSUMMON_ABLE,SHADOWCURSE_SUMMON_CHECK);GROUND:IF(IsImprovedPactOfTheChain()):Summon(308da8fd-fb8e-4078-8991-a8ee678b49da, -1,,,,UNSUMMON_ABLE,EXTRA_ATTACK_THIRSTING_BLADE,SHADOWCURSE_SUMMON_CHECK);GROUND:IF(not IsImprovedPactOfTheChain()):Summon(308da8fd-fb8e-4078-8991-a8ee678b49da, -1,,,,UNSUMMON_ABLE,SHADOWCURSE_SUMMON_CHECK);GROUND:IF(IsImprovedPactOfTheChain()):Summon(308da8fd-fb8e-4078-8991-a8ee678b49da, -1,,,,UNSUMMON_ABLE,EXTRA_ATTACK_THIRSTING_BLADE,SHADOWCURSE_SUMMON_CHECK);GROUND:IF(not IsImprovedPactOfTheChain()):Summon(308da8fd-fb8e-4078-8991-a8ee678b49da, -1,,,,UNSUMMON_ABLE,SHADOWCURSE_SUMMON_CHECK);GROUND:IF(IsImprovedPactOfTheChain()):Summon(308da8fd-fb8e-4078-8991-a8ee678b49da, -1,,,,UNSUMMON_ABLE,EXTRA_ATTACK_THIRSTING_BLADE,SHADOWCURSE_SUMMON_CHECK);GROUND:IF(not IsImprovedPactOfTheChain()):Summon(308da8fd-fb8e-4078-8991-a8ee678b49da, -1,,,,UNSUMMON_ABLE,SHADOWCURSE_SUMMON_CHECK)"
+
+    new entry "Target_FlockOfFamiliars_Imp_5"
+    type "SpellData"
+    data "SpellType" "Target"
+    using "Target_FlockOfFamiliars_Imp_5"
+    data "SpellProperties" "GROUND:IF(IsImprovedPactOfTheChain()):Summon(308da8fd-fb8e-4078-8991-a8ee678b49da, -1,,,'FindFamiliarStack',UNSUMMON_ABLE,EXTRA_ATTACK_THIRSTING_BLADE,SHADOWCURSE_SUMMON_CHECK);GROUND:IF(not IsImprovedPactOfTheChain()):Summon(308da8fd-fb8e-4078-8991-a8ee678b49da, -1,,,'FindFamiliarStack',UNSUMMON_ABLE,SHADOWCURSE_SUMMON_CHECK);GROUND:IF(IsImprovedPactOfTheChain()):Summon(308da8fd-fb8e-4078-8991-a8ee678b49da, -1,,,,UNSUMMON_ABLE,EXTRA_ATTACK_THIRSTING_BLADE,SHADOWCURSE_SUMMON_CHECK);GROUND:IF(not IsImprovedPactOfTheChain()):Summon(308da8fd-fb8e-4078-8991-a8ee678b49da, -1,,,,UNSUMMON_ABLE,SHADOWCURSE_SUMMON_CHECK);GROUND:IF(IsImprovedPactOfTheChain()):Summon(308da8fd-fb8e-4078-8991-a8ee678b49da, -1,,,,UNSUMMON_ABLE,EXTRA_ATTACK_THIRSTING_BLADE,SHADOWCURSE_SUMMON_CHECK);GROUND:IF(not IsImprovedPactOfTheChain()):Summon(308da8fd-fb8e-4078-8991-a8ee678b49da, -1,,,,UNSUMMON_ABLE,SHADOWCURSE_SUMMON_CHECK);GROUND:IF(IsImprovedPactOfTheChain()):Summon(308da8fd-fb8e-4078-8991-a8ee678b49da, -1,,,,UNSUMMON_ABLE,EXTRA_ATTACK_THIRSTING_BLADE,SHADOWCURSE_SUMMON_CHECK);GROUND:IF(not IsImprovedPactOfTheChain()):Summon(308da8fd-fb8e-4078-8991-a8ee678b49da, -1,,,,UNSUMMON_ABLE,SHADOWCURSE_SUMMON_CHECK);GROUND:IF(IsImprovedPactOfTheChain()):Summon(308da8fd-fb8e-4078-8991-a8ee678b49da, -1,,,,UNSUMMON_ABLE,EXTRA_ATTACK_THIRSTING_BLADE,SHADOWCURSE_SUMMON_CHECK);GROUND:IF(not IsImprovedPactOfTheChain()):Summon(308da8fd-fb8e-4078-8991-a8ee678b49da, -1,,,,UNSUMMON_ABLE,SHADOWCURSE_SUMMON_CHECK);GROUND:IF(IsImprovedPactOfTheChain()):Summon(308da8fd-fb8e-4078-8991-a8ee678b49da, -1,,,,UNSUMMON_ABLE,EXTRA_ATTACK_THIRSTING_BLADE,SHADOWCURSE_SUMMON_CHECK);GROUND:IF(not IsImprovedPactOfTheChain()):Summon(308da8fd-fb8e-4078-8991-a8ee678b49da, -1,,,,UNSUMMON_ABLE,SHADOWCURSE_SUMMON_CHECK)"
+
+    new entry "Target_FlockOfFamiliars_Imp_6"
+    type "SpellData"
+    data "SpellType" "Target"
+    using "Target_FlockOfFamiliars_Imp_6"
+    data "SpellProperties" "GROUND:IF(IsImprovedPactOfTheChain()):Summon(308da8fd-fb8e-4078-8991-a8ee678b49da, -1,,,'FindFamiliarStack',UNSUMMON_ABLE,EXTRA_ATTACK_THIRSTING_BLADE,SHADOWCURSE_SUMMON_CHECK);GROUND:IF(not IsImprovedPactOfTheChain()):Summon(308da8fd-fb8e-4078-8991-a8ee678b49da, -1,,,'FindFamiliarStack',UNSUMMON_ABLE,SHADOWCURSE_SUMMON_CHECK);GROUND:IF(IsImprovedPactOfTheChain()):Summon(308da8fd-fb8e-4078-8991-a8ee678b49da, -1,,,,UNSUMMON_ABLE,EXTRA_ATTACK_THIRSTING_BLADE,SHADOWCURSE_SUMMON_CHECK);GROUND:IF(not IsImprovedPactOfTheChain()):Summon(308da8fd-fb8e-4078-8991-a8ee678b49da, -1,,,,UNSUMMON_ABLE,SHADOWCURSE_SUMMON_CHECK);GROUND:IF(IsImprovedPactOfTheChain()):Summon(308da8fd-fb8e-4078-8991-a8ee678b49da, -1,,,,UNSUMMON_ABLE,EXTRA_ATTACK_THIRSTING_BLADE,SHADOWCURSE_SUMMON_CHECK);GROUND:IF(not IsImprovedPactOfTheChain()):Summon(308da8fd-fb8e-4078-8991-a8ee678b49da, -1,,,,UNSUMMON_ABLE,SHADOWCURSE_SUMMON_CHECK);GROUND:IF(IsImprovedPactOfTheChain()):Summon(308da8fd-fb8e-4078-8991-a8ee678b49da, -1,,,,UNSUMMON_ABLE,EXTRA_ATTACK_THIRSTING_BLADE,SHADOWCURSE_SUMMON_CHECK);GROUND:IF(not IsImprovedPactOfTheChain()):Summon(308da8fd-fb8e-4078-8991-a8ee678b49da, -1,,,,UNSUMMON_ABLE,SHADOWCURSE_SUMMON_CHECK);GROUND:IF(IsImprovedPactOfTheChain()):Summon(308da8fd-fb8e-4078-8991-a8ee678b49da, -1,,,,UNSUMMON_ABLE,EXTRA_ATTACK_THIRSTING_BLADE,SHADOWCURSE_SUMMON_CHECK);GROUND:IF(not IsImprovedPactOfTheChain()):Summon(308da8fd-fb8e-4078-8991-a8ee678b49da, -1,,,,UNSUMMON_ABLE,SHADOWCURSE_SUMMON_CHECK);GROUND:IF(IsImprovedPactOfTheChain()):Summon(308da8fd-fb8e-4078-8991-a8ee678b49da, -1,,,,UNSUMMON_ABLE,EXTRA_ATTACK_THIRSTING_BLADE,SHADOWCURSE_SUMMON_CHECK);GROUND:IF(not IsImprovedPactOfTheChain()):Summon(308da8fd-fb8e-4078-8991-a8ee678b49da, -1,,,,UNSUMMON_ABLE,SHADOWCURSE_SUMMON_CHECK);GROUND:IF(IsImprovedPactOfTheChain()):Summon(308da8fd-fb8e-4078-8991-a8ee678b49da, -1,,,,UNSUMMON_ABLE,EXTRA_ATTACK_THIRSTING_BLADE,SHADOWCURSE_SUMMON_CHECK);GROUND:IF(not IsImprovedPactOfTheChain()):Summon(308da8fd-fb8e-4078-8991-a8ee678b49da, -1,,,,UNSUMMON_ABLE,SHADOWCURSE_SUMMON_CHECK)"
+
+    new entry "Target_FlockOfFamiliars_Imp_7"
+    type "SpellData"
+    data "SpellType" "Target"
+    using "Target_FlockOfFamiliars_Imp_7"
+    data "SpellProperties" "GROUND:IF(IsImprovedPactOfTheChain()):Summon(308da8fd-fb8e-4078-8991-a8ee678b49da, -1,,,'FindFamiliarStack',UNSUMMON_ABLE,EXTRA_ATTACK_THIRSTING_BLADE,SHADOWCURSE_SUMMON_CHECK);GROUND:IF(not IsImprovedPactOfTheChain()):Summon(308da8fd-fb8e-4078-8991-a8ee678b49da, -1,,,'FindFamiliarStack',UNSUMMON_ABLE,SHADOWCURSE_SUMMON_CHECK);GROUND:IF(IsImprovedPactOfTheChain()):Summon(308da8fd-fb8e-4078-8991-a8ee678b49da, -1,,,,UNSUMMON_ABLE,EXTRA_ATTACK_THIRSTING_BLADE,SHADOWCURSE_SUMMON_CHECK);GROUND:IF(not IsImprovedPactOfTheChain()):Summon(308da8fd-fb8e-4078-8991-a8ee678b49da, -1,,,,UNSUMMON_ABLE,SHADOWCURSE_SUMMON_CHECK);GROUND:IF(IsImprovedPactOfTheChain()):Summon(308da8fd-fb8e-4078-8991-a8ee678b49da, -1,,,,UNSUMMON_ABLE,EXTRA_ATTACK_THIRSTING_BLADE,SHADOWCURSE_SUMMON_CHECK);GROUND:IF(not IsImprovedPactOfTheChain()):Summon(308da8fd-fb8e-4078-8991-a8ee678b49da, -1,,,,UNSUMMON_ABLE,SHADOWCURSE_SUMMON_CHECK);GROUND:IF(IsImprovedPactOfTheChain()):Summon(308da8fd-fb8e-4078-8991-a8ee678b49da, -1,,,,UNSUMMON_ABLE,EXTRA_ATTACK_THIRSTING_BLADE,SHADOWCURSE_SUMMON_CHECK);GROUND:IF(not IsImprovedPactOfTheChain()):Summon(308da8fd-fb8e-4078-8991-a8ee678b49da, -1,,,,UNSUMMON_ABLE,SHADOWCURSE_SUMMON_CHECK);GROUND:IF(IsImprovedPactOfTheChain()):Summon(308da8fd-fb8e-4078-8991-a8ee678b49da, -1,,,,UNSUMMON_ABLE,EXTRA_ATTACK_THIRSTING_BLADE,SHADOWCURSE_SUMMON_CHECK);GROUND:IF(not IsImprovedPactOfTheChain()):Summon(308da8fd-fb8e-4078-8991-a8ee678b49da, -1,,,,UNSUMMON_ABLE,SHADOWCURSE_SUMMON_CHECK);GROUND:IF(IsImprovedPactOfTheChain()):Summon(308da8fd-fb8e-4078-8991-a8ee678b49da, -1,,,,UNSUMMON_ABLE,EXTRA_ATTACK_THIRSTING_BLADE,SHADOWCURSE_SUMMON_CHECK);GROUND:IF(not IsImprovedPactOfTheChain()):Summon(308da8fd-fb8e-4078-8991-a8ee678b49da, -1,,,,UNSUMMON_ABLE,SHADOWCURSE_SUMMON_CHECK);GROUND:IF(IsImprovedPactOfTheChain()):Summon(308da8fd-fb8e-4078-8991-a8ee678b49da, -1,,,,UNSUMMON_ABLE,EXTRA_ATTACK_THIRSTING_BLADE,SHADOWCURSE_SUMMON_CHECK);GROUND:IF(not IsImprovedPactOfTheChain()):Summon(308da8fd-fb8e-4078-8991-a8ee678b49da, -1,,,,UNSUMMON_ABLE,SHADOWCURSE_SUMMON_CHECK);GROUND:IF(IsImprovedPactOfTheChain()):Summon(308da8fd-fb8e-4078-8991-a8ee678b49da, -1,,,,UNSUMMON_ABLE,EXTRA_ATTACK_THIRSTING_BLADE,SHADOWCURSE_SUMMON_CHECK);GROUND:IF(not IsImprovedPactOfTheChain()):Summon(308da8fd-fb8e-4078-8991-a8ee678b49da, -1,,,,UNSUMMON_ABLE,SHADOWCURSE_SUMMON_CHECK)"
+
+    new entry "Target_FlockOfFamiliars_Imp_8"
+    type "SpellData"
+    data "SpellType" "Target"
+    using "Target_FlockOfFamiliars_Imp_8"
+    data "SpellProperties" "GROUND:IF(IsImprovedPactOfTheChain()):Summon(308da8fd-fb8e-4078-8991-a8ee678b49da, -1,,,'FindFamiliarStack',UNSUMMON_ABLE,EXTRA_ATTACK_THIRSTING_BLADE,SHADOWCURSE_SUMMON_CHECK);GROUND:IF(not IsImprovedPactOfTheChain()):Summon(308da8fd-fb8e-4078-8991-a8ee678b49da, -1,,,'FindFamiliarStack',UNSUMMON_ABLE,SHADOWCURSE_SUMMON_CHECK);GROUND:IF(IsImprovedPactOfTheChain()):Summon(308da8fd-fb8e-4078-8991-a8ee678b49da, -1,,,,UNSUMMON_ABLE,EXTRA_ATTACK_THIRSTING_BLADE,SHADOWCURSE_SUMMON_CHECK);GROUND:IF(not IsImprovedPactOfTheChain()):Summon(308da8fd-fb8e-4078-8991-a8ee678b49da, -1,,,,UNSUMMON_ABLE,SHADOWCURSE_SUMMON_CHECK);GROUND:IF(IsImprovedPactOfTheChain()):Summon(308da8fd-fb8e-4078-8991-a8ee678b49da, -1,,,,UNSUMMON_ABLE,EXTRA_ATTACK_THIRSTING_BLADE,SHADOWCURSE_SUMMON_CHECK);GROUND:IF(not IsImprovedPactOfTheChain()):Summon(308da8fd-fb8e-4078-8991-a8ee678b49da, -1,,,,UNSUMMON_ABLE,SHADOWCURSE_SUMMON_CHECK);GROUND:IF(IsImprovedPactOfTheChain()):Summon(308da8fd-fb8e-4078-8991-a8ee678b49da, -1,,,,UNSUMMON_ABLE,EXTRA_ATTACK_THIRSTING_BLADE,SHADOWCURSE_SUMMON_CHECK);GROUND:IF(not IsImprovedPactOfTheChain()):Summon(308da8fd-fb8e-4078-8991-a8ee678b49da, -1,,,,UNSUMMON_ABLE,SHADOWCURSE_SUMMON_CHECK);GROUND:IF(IsImprovedPactOfTheChain()):Summon(308da8fd-fb8e-4078-8991-a8ee678b49da, -1,,,,UNSUMMON_ABLE,EXTRA_ATTACK_THIRSTING_BLADE,SHADOWCURSE_SUMMON_CHECK);GROUND:IF(not IsImprovedPactOfTheChain()):Summon(308da8fd-fb8e-4078-8991-a8ee678b49da, -1,,,,UNSUMMON_ABLE,SHADOWCURSE_SUMMON_CHECK);GROUND:IF(IsImprovedPactOfTheChain()):Summon(308da8fd-fb8e-4078-8991-a8ee678b49da, -1,,,,UNSUMMON_ABLE,EXTRA_ATTACK_THIRSTING_BLADE,SHADOWCURSE_SUMMON_CHECK);GROUND:IF(not IsImprovedPactOfTheChain()):Summon(308da8fd-fb8e-4078-8991-a8ee678b49da, -1,,,,UNSUMMON_ABLE,SHADOWCURSE_SUMMON_CHECK);GROUND:IF(IsImprovedPactOfTheChain()):Summon(308da8fd-fb8e-4078-8991-a8ee678b49da, -1,,,,UNSUMMON_ABLE,EXTRA_ATTACK_THIRSTING_BLADE,SHADOWCURSE_SUMMON_CHECK);GROUND:IF(not IsImprovedPactOfTheChain()):Summon(308da8fd-fb8e-4078-8991-a8ee678b49da, -1,,,,UNSUMMON_ABLE,SHADOWCURSE_SUMMON_CHECK);GROUND:IF(IsImprovedPactOfTheChain()):Summon(308da8fd-fb8e-4078-8991-a8ee678b49da, -1,,,,UNSUMMON_ABLE,EXTRA_ATTACK_THIRSTING_BLADE,SHADOWCURSE_SUMMON_CHECK);GROUND:IF(not IsImprovedPactOfTheChain()):Summon(308da8fd-fb8e-4078-8991-a8ee678b49da, -1,,,,UNSUMMON_ABLE,SHADOWCURSE_SUMMON_CHECK);GROUND:IF(IsImprovedPactOfTheChain()):Summon(308da8fd-fb8e-4078-8991-a8ee678b49da, -1,,,,UNSUMMON_ABLE,EXTRA_ATTACK_THIRSTING_BLADE,SHADOWCURSE_SUMMON_CHECK);GROUND:IF(not IsImprovedPactOfTheChain()):Summon(308da8fd-fb8e-4078-8991-a8ee678b49da, -1,,,,UNSUMMON_ABLE,SHADOWCURSE_SUMMON_CHECK)"
+
+    new entry "Target_FlockOfFamiliars_Imp_9"
+    type "SpellData"
+    data "SpellType" "Target"
+    using "Target_FlockOfFamiliars_Imp_9"
+    data "SpellProperties" "GROUND:IF(IsImprovedPactOfTheChain()):Summon(308da8fd-fb8e-4078-8991-a8ee678b49da, -1,,,'FindFamiliarStack',UNSUMMON_ABLE,EXTRA_ATTACK_THIRSTING_BLADE,SHADOWCURSE_SUMMON_CHECK);GROUND:IF(not IsImprovedPactOfTheChain()):Summon(308da8fd-fb8e-4078-8991-a8ee678b49da, -1,,,'FindFamiliarStack',UNSUMMON_ABLE,SHADOWCURSE_SUMMON_CHECK);GROUND:IF(IsImprovedPactOfTheChain()):Summon(308da8fd-fb8e-4078-8991-a8ee678b49da, -1,,,,UNSUMMON_ABLE,EXTRA_ATTACK_THIRSTING_BLADE,SHADOWCURSE_SUMMON_CHECK);GROUND:IF(not IsImprovedPactOfTheChain()):Summon(308da8fd-fb8e-4078-8991-a8ee678b49da, -1,,,,UNSUMMON_ABLE,SHADOWCURSE_SUMMON_CHECK);GROUND:IF(IsImprovedPactOfTheChain()):Summon(308da8fd-fb8e-4078-8991-a8ee678b49da, -1,,,,UNSUMMON_ABLE,EXTRA_ATTACK_THIRSTING_BLADE,SHADOWCURSE_SUMMON_CHECK);GROUND:IF(not IsImprovedPactOfTheChain()):Summon(308da8fd-fb8e-4078-8991-a8ee678b49da, -1,,,,UNSUMMON_ABLE,SHADOWCURSE_SUMMON_CHECK);GROUND:IF(IsImprovedPactOfTheChain()):Summon(308da8fd-fb8e-4078-8991-a8ee678b49da, -1,,,,UNSUMMON_ABLE,EXTRA_ATTACK_THIRSTING_BLADE,SHADOWCURSE_SUMMON_CHECK);GROUND:IF(not IsImprovedPactOfTheChain()):Summon(308da8fd-fb8e-4078-8991-a8ee678b49da, -1,,,,UNSUMMON_ABLE,SHADOWCURSE_SUMMON_CHECK);GROUND:IF(IsImprovedPactOfTheChain()):Summon(308da8fd-fb8e-4078-8991-a8ee678b49da, -1,,,,UNSUMMON_ABLE,EXTRA_ATTACK_THIRSTING_BLADE,SHADOWCURSE_SUMMON_CHECK);GROUND:IF(not IsImprovedPactOfTheChain()):Summon(308da8fd-fb8e-4078-8991-a8ee678b49da, -1,,,,UNSUMMON_ABLE,SHADOWCURSE_SUMMON_CHECK);GROUND:IF(IsImprovedPactOfTheChain()):Summon(308da8fd-fb8e-4078-8991-a8ee678b49da, -1,,,,UNSUMMON_ABLE,EXTRA_ATTACK_THIRSTING_BLADE,SHADOWCURSE_SUMMON_CHECK);GROUND:IF(not IsImprovedPactOfTheChain()):Summon(308da8fd-fb8e-4078-8991-a8ee678b49da, -1,,,,UNSUMMON_ABLE,SHADOWCURSE_SUMMON_CHECK);GROUND:IF(IsImprovedPactOfTheChain()):Summon(308da8fd-fb8e-4078-8991-a8ee678b49da, -1,,,,UNSUMMON_ABLE,EXTRA_ATTACK_THIRSTING_BLADE,SHADOWCURSE_SUMMON_CHECK);GROUND:IF(not IsImprovedPactOfTheChain()):Summon(308da8fd-fb8e-4078-8991-a8ee678b49da, -1,,,,UNSUMMON_ABLE,SHADOWCURSE_SUMMON_CHECK);GROUND:IF(IsImprovedPactOfTheChain()):Summon(308da8fd-fb8e-4078-8991-a8ee678b49da, -1,,,,UNSUMMON_ABLE,EXTRA_ATTACK_THIRSTING_BLADE,SHADOWCURSE_SUMMON_CHECK);GROUND:IF(not IsImprovedPactOfTheChain()):Summon(308da8fd-fb8e-4078-8991-a8ee678b49da, -1,,,,UNSUMMON_ABLE,SHADOWCURSE_SUMMON_CHECK);GROUND:IF(IsImprovedPactOfTheChain()):Summon(308da8fd-fb8e-4078-8991-a8ee678b49da, -1,,,,UNSUMMON_ABLE,EXTRA_ATTACK_THIRSTING_BLADE,SHADOWCURSE_SUMMON_CHECK);GROUND:IF(not IsImprovedPactOfTheChain()):Summon(308da8fd-fb8e-4078-8991-a8ee678b49da, -1,,,,UNSUMMON_ABLE,SHADOWCURSE_SUMMON_CHECK);GROUND:IF(IsImprovedPactOfTheChain()):Summon(308da8fd-fb8e-4078-8991-a8ee678b49da, -1,,,,UNSUMMON_ABLE,EXTRA_ATTACK_THIRSTING_BLADE,SHADOWCURSE_SUMMON_CHECK);GROUND:IF(not IsImprovedPactOfTheChain()):Summon(308da8fd-fb8e-4078-8991-a8ee678b49da, -1,,,,UNSUMMON_ABLE,SHADOWCURSE_SUMMON_CHECK)"
+
+    new entry "Target_FlockOfFamiliars_Quasit_3"
+    type "SpellData"
+    data "SpellType" "Target"
+    using "Target_FlockOfFamiliars_Quasit_3"
+    data "SpellProperties" "GROUND:IF(IsImprovedPactOfTheChain()):Summon(03f340c1-a26e-427e-968a-94c795015965, -1,,,'FindFamiliarStack',UNSUMMON_ABLE,EXTRA_ATTACK_THIRSTING_BLADE,SHADOWCURSE_SUMMON_CHECK);GROUND:IF(not IsImprovedPactOfTheChain()):Summon(03f340c1-a26e-427e-968a-94c795015965, -1,,,'FindFamiliarStack',UNSUMMON_ABLE,SHADOWCURSE_SUMMON_CHECK);GROUND:IF(IsImprovedPactOfTheChain()):Summon(03f340c1-a26e-427e-968a-94c795015965, -1,,,,UNSUMMON_ABLE,EXTRA_ATTACK_THIRSTING_BLADE,SHADOWCURSE_SUMMON_CHECK);GROUND:IF(not IsImprovedPactOfTheChain()):Summon(03f340c1-a26e-427e-968a-94c795015965, -1,,,,UNSUMMON_ABLE,SHADOWCURSE_SUMMON_CHECK);GROUND:IF(IsImprovedPactOfTheChain()):Summon(03f340c1-a26e-427e-968a-94c795015965, -1,,,,UNSUMMON_ABLE,EXTRA_ATTACK_THIRSTING_BLADE,SHADOWCURSE_SUMMON_CHECK);GROUND:IF(not IsImprovedPactOfTheChain()):Summon(03f340c1-a26e-427e-968a-94c795015965, -1,,,,UNSUMMON_ABLE,SHADOWCURSE_SUMMON_CHECK);GROUND:IF(IsImprovedPactOfTheChain()):Summon(03f340c1-a26e-427e-968a-94c795015965, -1,,,,UNSUMMON_ABLE,EXTRA_ATTACK_THIRSTING_BLADE,SHADOWCURSE_SUMMON_CHECK);GROUND:IF(not IsImprovedPactOfTheChain()):Summon(03f340c1-a26e-427e-968a-94c795015965, -1,,,,UNSUMMON_ABLE,SHADOWCURSE_SUMMON_CHECK)"
+
+    new entry "Target_FlockOfFamiliars_Quasit_4"
+    type "SpellData"
+    data "SpellType" "Target"
+    using "Target_FlockOfFamiliars_Quasit_4"
+    data "SpellProperties" "GROUND:IF(IsImprovedPactOfTheChain()):Summon(03f340c1-a26e-427e-968a-94c795015965, -1,,,'FindFamiliarStack',UNSUMMON_ABLE,EXTRA_ATTACK_THIRSTING_BLADE,SHADOWCURSE_SUMMON_CHECK);GROUND:IF(not IsImprovedPactOfTheChain()):Summon(03f340c1-a26e-427e-968a-94c795015965, -1,,,'FindFamiliarStack',UNSUMMON_ABLE,SHADOWCURSE_SUMMON_CHECK);GROUND:IF(IsImprovedPactOfTheChain()):Summon(03f340c1-a26e-427e-968a-94c795015965, -1,,,,UNSUMMON_ABLE,EXTRA_ATTACK_THIRSTING_BLADE,SHADOWCURSE_SUMMON_CHECK);GROUND:IF(not IsImprovedPactOfTheChain()):Summon(03f340c1-a26e-427e-968a-94c795015965, -1,,,,UNSUMMON_ABLE,SHADOWCURSE_SUMMON_CHECK);GROUND:IF(IsImprovedPactOfTheChain()):Summon(03f340c1-a26e-427e-968a-94c795015965, -1,,,,UNSUMMON_ABLE,EXTRA_ATTACK_THIRSTING_BLADE,SHADOWCURSE_SUMMON_CHECK);GROUND:IF(not IsImprovedPactOfTheChain()):Summon(03f340c1-a26e-427e-968a-94c795015965, -1,,,,UNSUMMON_ABLE,SHADOWCURSE_SUMMON_CHECK);GROUND:IF(IsImprovedPactOfTheChain()):Summon(03f340c1-a26e-427e-968a-94c795015965, -1,,,,UNSUMMON_ABLE,EXTRA_ATTACK_THIRSTING_BLADE,SHADOWCURSE_SUMMON_CHECK);GROUND:IF(not IsImprovedPactOfTheChain()):Summon(03f340c1-a26e-427e-968a-94c795015965, -1,,,,UNSUMMON_ABLE,SHADOWCURSE_SUMMON_CHECK);GROUND:IF(IsImprovedPactOfTheChain()):Summon(03f340c1-a26e-427e-968a-94c795015965, -1,,,,UNSUMMON_ABLE,EXTRA_ATTACK_THIRSTING_BLADE,SHADOWCURSE_SUMMON_CHECK);GROUND:IF(not IsImprovedPactOfTheChain()):Summon(03f340c1-a26e-427e-968a-94c795015965, -1,,,,UNSUMMON_ABLE,SHADOWCURSE_SUMMON_CHECK)"
+
+    new entry "Target_FlockOfFamiliars_Quasit_5"
+    type "SpellData"
+    data "SpellType" "Target"
+    using "Target_FlockOfFamiliars_Quasit_5"
+    data "SpellProperties" "GROUND:IF(IsImprovedPactOfTheChain()):Summon(03f340c1-a26e-427e-968a-94c795015965, -1,,,'FindFamiliarStack',UNSUMMON_ABLE,EXTRA_ATTACK_THIRSTING_BLADE,SHADOWCURSE_SUMMON_CHECK);GROUND:IF(not IsImprovedPactOfTheChain()):Summon(03f340c1-a26e-427e-968a-94c795015965, -1,,,'FindFamiliarStack',UNSUMMON_ABLE,SHADOWCURSE_SUMMON_CHECK);GROUND:IF(IsImprovedPactOfTheChain()):Summon(03f340c1-a26e-427e-968a-94c795015965, -1,,,,UNSUMMON_ABLE,EXTRA_ATTACK_THIRSTING_BLADE,SHADOWCURSE_SUMMON_CHECK);GROUND:IF(not IsImprovedPactOfTheChain()):Summon(03f340c1-a26e-427e-968a-94c795015965, -1,,,,UNSUMMON_ABLE,SHADOWCURSE_SUMMON_CHECK);GROUND:IF(IsImprovedPactOfTheChain()):Summon(03f340c1-a26e-427e-968a-94c795015965, -1,,,,UNSUMMON_ABLE,EXTRA_ATTACK_THIRSTING_BLADE,SHADOWCURSE_SUMMON_CHECK);GROUND:IF(not IsImprovedPactOfTheChain()):Summon(03f340c1-a26e-427e-968a-94c795015965, -1,,,,UNSUMMON_ABLE,SHADOWCURSE_SUMMON_CHECK);GROUND:IF(IsImprovedPactOfTheChain()):Summon(03f340c1-a26e-427e-968a-94c795015965, -1,,,,UNSUMMON_ABLE,EXTRA_ATTACK_THIRSTING_BLADE,SHADOWCURSE_SUMMON_CHECK);GROUND:IF(not IsImprovedPactOfTheChain()):Summon(03f340c1-a26e-427e-968a-94c795015965, -1,,,,UNSUMMON_ABLE,SHADOWCURSE_SUMMON_CHECK);GROUND:IF(IsImprovedPactOfTheChain()):Summon(03f340c1-a26e-427e-968a-94c795015965, -1,,,,UNSUMMON_ABLE,EXTRA_ATTACK_THIRSTING_BLADE,SHADOWCURSE_SUMMON_CHECK);GROUND:IF(not IsImprovedPactOfTheChain()):Summon(03f340c1-a26e-427e-968a-94c795015965, -1,,,,UNSUMMON_ABLE,SHADOWCURSE_SUMMON_CHECK);GROUND:IF(IsImprovedPactOfTheChain()):Summon(03f340c1-a26e-427e-968a-94c795015965, -1,,,,UNSUMMON_ABLE,EXTRA_ATTACK_THIRSTING_BLADE,SHADOWCURSE_SUMMON_CHECK);GROUND:IF(not IsImprovedPactOfTheChain()):Summon(03f340c1-a26e-427e-968a-94c795015965, -1,,,,UNSUMMON_ABLE,SHADOWCURSE_SUMMON_CHECK)"
+
+    new entry "Target_FlockOfFamiliars_Quasit_6"
+    type "SpellData"
+    data "SpellType" "Target"
+    using "Target_FlockOfFamiliars_Quasit_6"
+    data "SpellProperties" "GROUND:IF(IsImprovedPactOfTheChain()):Summon(03f340c1-a26e-427e-968a-94c795015965, -1,,,'FindFamiliarStack',UNSUMMON_ABLE,EXTRA_ATTACK_THIRSTING_BLADE,SHADOWCURSE_SUMMON_CHECK);GROUND:IF(not IsImprovedPactOfTheChain()):Summon(03f340c1-a26e-427e-968a-94c795015965, -1,,,'FindFamiliarStack',UNSUMMON_ABLE,SHADOWCURSE_SUMMON_CHECK);GROUND:IF(IsImprovedPactOfTheChain()):Summon(03f340c1-a26e-427e-968a-94c795015965, -1,,,,UNSUMMON_ABLE,EXTRA_ATTACK_THIRSTING_BLADE,SHADOWCURSE_SUMMON_CHECK);GROUND:IF(not IsImprovedPactOfTheChain()):Summon(03f340c1-a26e-427e-968a-94c795015965, -1,,,,UNSUMMON_ABLE,SHADOWCURSE_SUMMON_CHECK);GROUND:IF(IsImprovedPactOfTheChain()):Summon(03f340c1-a26e-427e-968a-94c795015965, -1,,,,UNSUMMON_ABLE,EXTRA_ATTACK_THIRSTING_BLADE,SHADOWCURSE_SUMMON_CHECK);GROUND:IF(not IsImprovedPactOfTheChain()):Summon(03f340c1-a26e-427e-968a-94c795015965, -1,,,,UNSUMMON_ABLE,SHADOWCURSE_SUMMON_CHECK);GROUND:IF(IsImprovedPactOfTheChain()):Summon(03f340c1-a26e-427e-968a-94c795015965, -1,,,,UNSUMMON_ABLE,EXTRA_ATTACK_THIRSTING_BLADE,SHADOWCURSE_SUMMON_CHECK);GROUND:IF(not IsImprovedPactOfTheChain()):Summon(03f340c1-a26e-427e-968a-94c795015965, -1,,,,UNSUMMON_ABLE,SHADOWCURSE_SUMMON_CHECK);GROUND:IF(IsImprovedPactOfTheChain()):Summon(03f340c1-a26e-427e-968a-94c795015965, -1,,,,UNSUMMON_ABLE,EXTRA_ATTACK_THIRSTING_BLADE,SHADOWCURSE_SUMMON_CHECK);GROUND:IF(not IsImprovedPactOfTheChain()):Summon(03f340c1-a26e-427e-968a-94c795015965, -1,,,,UNSUMMON_ABLE,SHADOWCURSE_SUMMON_CHECK);GROUND:IF(IsImprovedPactOfTheChain()):Summon(03f340c1-a26e-427e-968a-94c795015965, -1,,,,UNSUMMON_ABLE,EXTRA_ATTACK_THIRSTING_BLADE,SHADOWCURSE_SUMMON_CHECK);GROUND:IF(not IsImprovedPactOfTheChain()):Summon(03f340c1-a26e-427e-968a-94c795015965, -1,,,,UNSUMMON_ABLE,SHADOWCURSE_SUMMON_CHECK);GROUND:IF(IsImprovedPactOfTheChain()):Summon(03f340c1-a26e-427e-968a-94c795015965, -1,,,,UNSUMMON_ABLE,EXTRA_ATTACK_THIRSTING_BLADE,SHADOWCURSE_SUMMON_CHECK);GROUND:IF(not IsImprovedPactOfTheChain()):Summon(03f340c1-a26e-427e-968a-94c795015965, -1,,,,UNSUMMON_ABLE,SHADOWCURSE_SUMMON_CHECK)"
+
+    new entry "Target_FlockOfFamiliars_Quasit_7"
+    type "SpellData"
+    data "SpellType" "Target"
+    using "Target_FlockOfFamiliars_Quasit_7"
+    data "SpellProperties" "GROUND:IF(IsImprovedPactOfTheChain()):Summon(03f340c1-a26e-427e-968a-94c795015965, -1,,,'FindFamiliarStack',UNSUMMON_ABLE,EXTRA_ATTACK_THIRSTING_BLADE,SHADOWCURSE_SUMMON_CHECK);GROUND:IF(not IsImprovedPactOfTheChain()):Summon(03f340c1-a26e-427e-968a-94c795015965, -1,,,'FindFamiliarStack',UNSUMMON_ABLE,SHADOWCURSE_SUMMON_CHECK);GROUND:IF(IsImprovedPactOfTheChain()):Summon(03f340c1-a26e-427e-968a-94c795015965, -1,,,,UNSUMMON_ABLE,EXTRA_ATTACK_THIRSTING_BLADE,SHADOWCURSE_SUMMON_CHECK);GROUND:IF(not IsImprovedPactOfTheChain()):Summon(03f340c1-a26e-427e-968a-94c795015965, -1,,,,UNSUMMON_ABLE,SHADOWCURSE_SUMMON_CHECK);GROUND:IF(IsImprovedPactOfTheChain()):Summon(03f340c1-a26e-427e-968a-94c795015965, -1,,,,UNSUMMON_ABLE,EXTRA_ATTACK_THIRSTING_BLADE,SHADOWCURSE_SUMMON_CHECK);GROUND:IF(not IsImprovedPactOfTheChain()):Summon(03f340c1-a26e-427e-968a-94c795015965, -1,,,,UNSUMMON_ABLE,SHADOWCURSE_SUMMON_CHECK);GROUND:IF(IsImprovedPactOfTheChain()):Summon(03f340c1-a26e-427e-968a-94c795015965, -1,,,,UNSUMMON_ABLE,EXTRA_ATTACK_THIRSTING_BLADE,SHADOWCURSE_SUMMON_CHECK);GROUND:IF(not IsImprovedPactOfTheChain()):Summon(03f340c1-a26e-427e-968a-94c795015965, -1,,,,UNSUMMON_ABLE,SHADOWCURSE_SUMMON_CHECK);GROUND:IF(IsImprovedPactOfTheChain()):Summon(03f340c1-a26e-427e-968a-94c795015965, -1,,,,UNSUMMON_ABLE,EXTRA_ATTACK_THIRSTING_BLADE,SHADOWCURSE_SUMMON_CHECK);GROUND:IF(not IsImprovedPactOfTheChain()):Summon(03f340c1-a26e-427e-968a-94c795015965, -1,,,,UNSUMMON_ABLE,SHADOWCURSE_SUMMON_CHECK);GROUND:IF(IsImprovedPactOfTheChain()):Summon(03f340c1-a26e-427e-968a-94c795015965, -1,,,,UNSUMMON_ABLE,EXTRA_ATTACK_THIRSTING_BLADE,SHADOWCURSE_SUMMON_CHECK);GROUND:IF(not IsImprovedPactOfTheChain()):Summon(03f340c1-a26e-427e-968a-94c795015965, -1,,,,UNSUMMON_ABLE,SHADOWCURSE_SUMMON_CHECK);GROUND:IF(IsImprovedPactOfTheChain()):Summon(03f340c1-a26e-427e-968a-94c795015965, -1,,,,UNSUMMON_ABLE,EXTRA_ATTACK_THIRSTING_BLADE,SHADOWCURSE_SUMMON_CHECK);GROUND:IF(not IsImprovedPactOfTheChain()):Summon(03f340c1-a26e-427e-968a-94c795015965, -1,,,,UNSUMMON_ABLE,SHADOWCURSE_SUMMON_CHECK);GROUND:IF(IsImprovedPactOfTheChain()):Summon(03f340c1-a26e-427e-968a-94c795015965, -1,,,,UNSUMMON_ABLE,EXTRA_ATTACK_THIRSTING_BLADE,SHADOWCURSE_SUMMON_CHECK);GROUND:IF(not IsImprovedPactOfTheChain()):Summon(03f340c1-a26e-427e-968a-94c795015965, -1,,,,UNSUMMON_ABLE,SHADOWCURSE_SUMMON_CHECK)"
+
+    new entry "Target_FlockOfFamiliars_Quasit_8"
+    type "SpellData"
+    data "SpellType" "Target"
+    using "Target_FlockOfFamiliars_Quasit_8"
+    data "SpellProperties" "GROUND:IF(IsImprovedPactOfTheChain()):Summon(03f340c1-a26e-427e-968a-94c795015965, -1,,,'FindFamiliarStack',UNSUMMON_ABLE,EXTRA_ATTACK_THIRSTING_BLADE,SHADOWCURSE_SUMMON_CHECK);GROUND:IF(not IsImprovedPactOfTheChain()):Summon(03f340c1-a26e-427e-968a-94c795015965, -1,,,'FindFamiliarStack',UNSUMMON_ABLE,SHADOWCURSE_SUMMON_CHECK);GROUND:IF(IsImprovedPactOfTheChain()):Summon(03f340c1-a26e-427e-968a-94c795015965, -1,,,,UNSUMMON_ABLE,EXTRA_ATTACK_THIRSTING_BLADE,SHADOWCURSE_SUMMON_CHECK);GROUND:IF(not IsImprovedPactOfTheChain()):Summon(03f340c1-a26e-427e-968a-94c795015965, -1,,,,UNSUMMON_ABLE,SHADOWCURSE_SUMMON_CHECK);GROUND:IF(IsImprovedPactOfTheChain()):Summon(03f340c1-a26e-427e-968a-94c795015965, -1,,,,UNSUMMON_ABLE,EXTRA_ATTACK_THIRSTING_BLADE,SHADOWCURSE_SUMMON_CHECK);GROUND:IF(not IsImprovedPactOfTheChain()):Summon(03f340c1-a26e-427e-968a-94c795015965, -1,,,,UNSUMMON_ABLE,SHADOWCURSE_SUMMON_CHECK);GROUND:IF(IsImprovedPactOfTheChain()):Summon(03f340c1-a26e-427e-968a-94c795015965, -1,,,,UNSUMMON_ABLE,EXTRA_ATTACK_THIRSTING_BLADE,SHADOWCURSE_SUMMON_CHECK);GROUND:IF(not IsImprovedPactOfTheChain()):Summon(03f340c1-a26e-427e-968a-94c795015965, -1,,,,UNSUMMON_ABLE,SHADOWCURSE_SUMMON_CHECK);GROUND:IF(IsImprovedPactOfTheChain()):Summon(03f340c1-a26e-427e-968a-94c795015965, -1,,,,UNSUMMON_ABLE,EXTRA_ATTACK_THIRSTING_BLADE,SHADOWCURSE_SUMMON_CHECK);GROUND:IF(not IsImprovedPactOfTheChain()):Summon(03f340c1-a26e-427e-968a-94c795015965, -1,,,,UNSUMMON_ABLE,SHADOWCURSE_SUMMON_CHECK);GROUND:IF(IsImprovedPactOfTheChain()):Summon(03f340c1-a26e-427e-968a-94c795015965, -1,,,,UNSUMMON_ABLE,EXTRA_ATTACK_THIRSTING_BLADE,SHADOWCURSE_SUMMON_CHECK);GROUND:IF(not IsImprovedPactOfTheChain()):Summon(03f340c1-a26e-427e-968a-94c795015965, -1,,,,UNSUMMON_ABLE,SHADOWCURSE_SUMMON_CHECK);GROUND:IF(IsImprovedPactOfTheChain()):Summon(03f340c1-a26e-427e-968a-94c795015965, -1,,,,UNSUMMON_ABLE,EXTRA_ATTACK_THIRSTING_BLADE,SHADOWCURSE_SUMMON_CHECK);GROUND:IF(not IsImprovedPactOfTheChain()):Summon(03f340c1-a26e-427e-968a-94c795015965, -1,,,,UNSUMMON_ABLE,SHADOWCURSE_SUMMON_CHECK);GROUND:IF(IsImprovedPactOfTheChain()):Summon(03f340c1-a26e-427e-968a-94c795015965, -1,,,,UNSUMMON_ABLE,EXTRA_ATTACK_THIRSTING_BLADE,SHADOWCURSE_SUMMON_CHECK);GROUND:IF(not IsImprovedPactOfTheChain()):Summon(03f340c1-a26e-427e-968a-94c795015965, -1,,,,UNSUMMON_ABLE,SHADOWCURSE_SUMMON_CHECK);GROUND:IF(IsImprovedPactOfTheChain()):Summon(03f340c1-a26e-427e-968a-94c795015965, -1,,,,UNSUMMON_ABLE,EXTRA_ATTACK_THIRSTING_BLADE,SHADOWCURSE_SUMMON_CHECK);GROUND:IF(not IsImprovedPactOfTheChain()):Summon(03f340c1-a26e-427e-968a-94c795015965, -1,,,,UNSUMMON_ABLE,SHADOWCURSE_SUMMON_CHECK)"
+
+    new entry "Target_FlockOfFamiliars_Quasit_9"
+    type "SpellData"
+    data "SpellType" "Target"
+    using "Target_FlockOfFamiliars_Quasit_9"
+    data "SpellProperties" "GROUND:IF(IsImprovedPactOfTheChain()):Summon(03f340c1-a26e-427e-968a-94c795015965, -1,,,'FindFamiliarStack',UNSUMMON_ABLE,EXTRA_ATTACK_THIRSTING_BLADE,SHADOWCURSE_SUMMON_CHECK);GROUND:IF(not IsImprovedPactOfTheChain()):Summon(03f340c1-a26e-427e-968a-94c795015965, -1,,,'FindFamiliarStack',UNSUMMON_ABLE,SHADOWCURSE_SUMMON_CHECK);GROUND:IF(IsImprovedPactOfTheChain()):Summon(03f340c1-a26e-427e-968a-94c795015965, -1,,,,UNSUMMON_ABLE,EXTRA_ATTACK_THIRSTING_BLADE,SHADOWCURSE_SUMMON_CHECK);GROUND:IF(not IsImprovedPactOfTheChain()):Summon(03f340c1-a26e-427e-968a-94c795015965, -1,,,,UNSUMMON_ABLE,SHADOWCURSE_SUMMON_CHECK);GROUND:IF(IsImprovedPactOfTheChain()):Summon(03f340c1-a26e-427e-968a-94c795015965, -1,,,,UNSUMMON_ABLE,EXTRA_ATTACK_THIRSTING_BLADE,SHADOWCURSE_SUMMON_CHECK);GROUND:IF(not IsImprovedPactOfTheChain()):Summon(03f340c1-a26e-427e-968a-94c795015965, -1,,,,UNSUMMON_ABLE,SHADOWCURSE_SUMMON_CHECK);GROUND:IF(IsImprovedPactOfTheChain()):Summon(03f340c1-a26e-427e-968a-94c795015965, -1,,,,UNSUMMON_ABLE,EXTRA_ATTACK_THIRSTING_BLADE,SHADOWCURSE_SUMMON_CHECK);GROUND:IF(not IsImprovedPactOfTheChain()):Summon(03f340c1-a26e-427e-968a-94c795015965, -1,,,,UNSUMMON_ABLE,SHADOWCURSE_SUMMON_CHECK);GROUND:IF(IsImprovedPactOfTheChain()):Summon(03f340c1-a26e-427e-968a-94c795015965, -1,,,,UNSUMMON_ABLE,EXTRA_ATTACK_THIRSTING_BLADE,SHADOWCURSE_SUMMON_CHECK);GROUND:IF(not IsImprovedPactOfTheChain()):Summon(03f340c1-a26e-427e-968a-94c795015965, -1,,,,UNSUMMON_ABLE,SHADOWCURSE_SUMMON_CHECK);GROUND:IF(IsImprovedPactOfTheChain()):Summon(03f340c1-a26e-427e-968a-94c795015965, -1,,,,UNSUMMON_ABLE,EXTRA_ATTACK_THIRSTING_BLADE,SHADOWCURSE_SUMMON_CHECK);GROUND:IF(not IsImprovedPactOfTheChain()):Summon(03f340c1-a26e-427e-968a-94c795015965, -1,,,,UNSUMMON_ABLE,SHADOWCURSE_SUMMON_CHECK);GROUND:IF(IsImprovedPactOfTheChain()):Summon(03f340c1-a26e-427e-968a-94c795015965, -1,,,,UNSUMMON_ABLE,EXTRA_ATTACK_THIRSTING_BLADE,SHADOWCURSE_SUMMON_CHECK);GROUND:IF(not IsImprovedPactOfTheChain()):Summon(03f340c1-a26e-427e-968a-94c795015965, -1,,,,UNSUMMON_ABLE,SHADOWCURSE_SUMMON_CHECK);GROUND:IF(IsImprovedPactOfTheChain()):Summon(03f340c1-a26e-427e-968a-94c795015965, -1,,,,UNSUMMON_ABLE,EXTRA_ATTACK_THIRSTING_BLADE,SHADOWCURSE_SUMMON_CHECK);GROUND:IF(not IsImprovedPactOfTheChain()):Summon(03f340c1-a26e-427e-968a-94c795015965, -1,,,,UNSUMMON_ABLE,SHADOWCURSE_SUMMON_CHECK);GROUND:IF(IsImprovedPactOfTheChain()):Summon(03f340c1-a26e-427e-968a-94c795015965, -1,,,,UNSUMMON_ABLE,EXTRA_ATTACK_THIRSTING_BLADE,SHADOWCURSE_SUMMON_CHECK);GROUND:IF(not IsImprovedPactOfTheChain()):Summon(03f340c1-a26e-427e-968a-94c795015965, -1,,,,UNSUMMON_ABLE,SHADOWCURSE_SUMMON_CHECK);GROUND:IF(IsImprovedPactOfTheChain()):Summon(03f340c1-a26e-427e-968a-94c795015965, -1,,,,UNSUMMON_ABLE,EXTRA_ATTACK_THIRSTING_BLADE,SHADOWCURSE_SUMMON_CHECK);GROUND:IF(not IsImprovedPactOfTheChain()):Summon(03f340c1-a26e-427e-968a-94c795015965, -1,,,,UNSUMMON_ABLE,SHADOWCURSE_SUMMON_CHECK)"
+
+//  --------------------------------------------------------  \\
+//  -----                Fortune's Favor                ----  \\
+//  --------------------------------------------------------  \\
+
+    new entry "Target_FortunesFavor"
+    type "SpellData"
+    data "SpellType" "Target"
+    using "Target_FortunesFavor"
+    data "RitualCosts" "ActionPoint:1"
+
+//  --------------------------------------------------------  \\
+//  -----                 Invisibility                  ----  \\
+//  --------------------------------------------------------  \\
+
+    new entry "Target_Invisibility"
+    type "SpellData"
+    data "SpellType" "Target"
+    using "Target_Invisibility"
+    data "SpellProperties" "AI_IGNORE:ApplyStatus(INVISIBILITY,100,-1);AI_ONLY:ApplyStatus(INVISIBILITY,100,2)"
+    data "TooltipStatusApply" "ApplyStatus(INVISIBILITY,100,10)"
+    
+//  --------------------------------------------------------  \\
+//  -----              Lesser Restoration               ----  \\
+//  --------------------------------------------------------  \\
+
+    new entry "Target_LesserRestoration"
+    type "SpellData"
+    data "SpellType" "Target"
+    using "Target_LesserRestoration"
+    data "RitualCosts" "ActionPoint:1"
+    
+//  --------------------------------------------------------  \\
+//  -----                 Magic Weapon                  ----  \\
+//  --------------------------------------------------------  \\
+
+    new entry "Target_MagicWeapon"
+    type "SpellData"
+    data "SpellType" "Target"
+    using "Target_MagicWeapon"
+    data "SpellFlags" "IsSpell;HasVerbalComponent;HasSomaticComponent;IsMelee"
+
+//  --------------------------------------------------------  \\
+//  -----                  Mind Spike                   ----  \\
+//  --------------------------------------------------------  \\
+
+    new entry "Target_MindSpike_MindMaster"
+    type "SpellData"
+    data "SpellType" "Target"
+    using "Target_MindSpike_NPC"
+    data "SpellSuccess" "DealDamage(2d8,Psychic); ApplyStatus(MENTAL_ARROW, 100, -1)"
+    data "TooltipStatusApply" "ApplyStatus(MENTAL_ARROW, 100, -1)"
+
+//  --------------------------------------------------------  \\
+//  -----               Prayer of Healing               ----  \\
+//  --------------------------------------------------------  \\
+
+    new entry "Shout_PrayerOfHealing"
+    type "SpellData"
+    data "SpellType" "Shout"
+    using "Shout_PrayerOfHealing"
+    data "RitualCosts" "ActionPoint:1"
+
+//  --------------------------------------------------------  \\
+//  -----                 Summon Beast                  ----  \\
+//  --------------------------------------------------------  \\
+
+    new entry "Target_SummonBeast_Air"
+    type "SpellData"
+    data "SpellType" "Target"
+    using "Target_SummonBeast_Air"
+    data "SpellProperties" "GROUND:IF(ConditionResult(context.Source.ProficiencyBonus == 2)):Summon(b745f288-36ed-4f62-b667-eebfbfb7566d, -1,,,SummonBeastStack,SUMMON_BEAST,UNSUMMON_ABLE,SHARE_SUMMONER_INITIATIVE,SHADOWCURSE_SUMMON_CHECK); GROUND:IF(ConditionResult(context.Source.ProficiencyBonus == 3)):Summon(b745f288-36ed-4f62-b667-eebfbfb7566d, -1,,,SummonBeastStack,SUMMON_BEAST_5TH,UNSUMMON_ABLE,SHARE_SUMMONER_INITIATIVE,SHADOWCURSE_SUMMON_CHECK); GROUND:IF(ConditionResult(context.Source.ProficiencyBonus == 4)):Summon(b745f288-36ed-4f62-b667-eebfbfb7566d, -1,,,SummonBeastStack,SUMMON_BEAST_9TH,UNSUMMON_ABLE,SHARE_SUMMONER_INITIATIVE,SHADOWCURSE_SUMMON_CHECK); GROUND:IF(ConditionResult(context.Source.ProficiencyBonus == 5)):Summon(b745f288-36ed-4f62-b667-eebfbfb7566d, -1,,,SummonBeastStack,SUMMON_BEAST_13TH,UNSUMMON_ABLE,SHARE_SUMMONER_INITIATIVE,SHADOWCURSE_SUMMON_CHECK); GROUND:IF(ConditionResult(context.Source.ProficiencyBonus == 6)):Summon(b745f288-36ed-4f62-b667-eebfbfb7566d, -1,,,SummonBeastStack,SUMMON_BEAST_17TH,UNSUMMON_ABLE,SHARE_SUMMONER_INITIATIVE,SHADOWCURSE_SUMMON_CHECK)"
+
+    new entry "Target_SummonBeast_Air_9"
+    type "SpellData"
+    data "SpellType" "Target"
+    using "Target_SummonBeast_Air_9"
+    data "SpellProperties" "GROUND:IF(ConditionResult(context.Source.ProficiencyBonus == 2)):Summon(b745f288-36ed-4f62-b667-eebfbfb7566d, -1,,,SummonBeastStack,SUMMON_BEAST_9,UNSUMMON_ABLE,SHARE_SUMMONER_INITIATIVE,SHADOWCURSE_SUMMON_CHECK); GROUND:IF(ConditionResult(context.Source.ProficiencyBonus == 3)):Summon(b745f288-36ed-4f62-b667-eebfbfb7566d, -1,,,SummonBeastStack,SUMMON_BEAST_9_5TH,UNSUMMON_ABLE,SHARE_SUMMONER_INITIATIVE,SHADOWCURSE_SUMMON_CHECK); GROUND:IF(ConditionResult(context.Source.ProficiencyBonus == 4)):Summon(b745f288-36ed-4f62-b667-eebfbfb7566d, -1,,,SummonBeastStack,SUMMON_BEAST_9_9TH,UNSUMMON_ABLE,SHARE_SUMMONER_INITIATIVE,SHADOWCURSE_SUMMON_CHECK); GROUND:IF(ConditionResult(context.Source.ProficiencyBonus == 5)):Summon(b745f288-36ed-4f62-b667-eebfbfb7566d, -1,,,SummonBeastStack,SUMMON_BEAST_9_13TH,UNSUMMON_ABLE,SHARE_SUMMONER_INITIATIVE,SHADOWCURSE_SUMMON_CHECK); GROUND:IF(ConditionResult(context.Source.ProficiencyBonus == 6)):Summon(b745f288-36ed-4f62-b667-eebfbfb7566d, -1,,,SummonBeastStack,SUMMON_BEAST_9_17TH,UNSUMMON_ABLE,SHARE_SUMMONER_INITIATIVE,SHADOWCURSE_SUMMON_CHECK)"
+
+    new entry "Target_SummonBeast_Air_8"
+    type "SpellData"
+    data "SpellType" "Target"
+    using "Target_SummonBeast_Air_8"
+    data "SpellProperties" "GROUND:IF(ConditionResult(context.Source.ProficiencyBonus == 2)):Summon(b745f288-36ed-4f62-b667-eebfbfb7566d, -1,,,SummonBeastStack,SUMMON_BEAST_8,UNSUMMON_ABLE,SHARE_SUMMONER_INITIATIVE,SHADOWCURSE_SUMMON_CHECK); GROUND:IF(ConditionResult(context.Source.ProficiencyBonus == 3)):Summon(b745f288-36ed-4f62-b667-eebfbfb7566d, -1,,,SummonBeastStack,SUMMON_BEAST_8_5TH,UNSUMMON_ABLE,SHARE_SUMMONER_INITIATIVE,SHADOWCURSE_SUMMON_CHECK); GROUND:IF(ConditionResult(context.Source.ProficiencyBonus == 4)):Summon(b745f288-36ed-4f62-b667-eebfbfb7566d, -1,,,SummonBeastStack,SUMMON_BEAST_8_9TH,UNSUMMON_ABLE,SHARE_SUMMONER_INITIATIVE,SHADOWCURSE_SUMMON_CHECK); GROUND:IF(ConditionResult(context.Source.ProficiencyBonus == 5)):Summon(b745f288-36ed-4f62-b667-eebfbfb7566d, -1,,,SummonBeastStack,SUMMON_BEAST_8_13TH,UNSUMMON_ABLE,SHARE_SUMMONER_INITIATIVE,SHADOWCURSE_SUMMON_CHECK); GROUND:IF(ConditionResult(context.Source.ProficiencyBonus == 6)):Summon(b745f288-36ed-4f62-b667-eebfbfb7566d, -1,,,SummonBeastStack,SUMMON_BEAST_8_17TH,UNSUMMON_ABLE,SHARE_SUMMONER_INITIATIVE,SHADOWCURSE_SUMMON_CHECK)"
+
+    new entry "Target_SummonBeast_Air_7"
+    type "SpellData"
+    data "SpellType" "Target"
+    using "Target_SummonBeast_Air_7"
+    data "SpellProperties" "GROUND:IF(ConditionResult(context.Source.ProficiencyBonus == 2)):Summon(b745f288-36ed-4f62-b667-eebfbfb7566d, -1,,,SummonBeastStack,SUMMON_BEAST_7,UNSUMMON_ABLE,SHARE_SUMMONER_INITIATIVE,SHADOWCURSE_SUMMON_CHECK); GROUND:IF(ConditionResult(context.Source.ProficiencyBonus == 3)):Summon(b745f288-36ed-4f62-b667-eebfbfb7566d, -1,,,SummonBeastStack,SUMMON_BEAST_7_5TH,UNSUMMON_ABLE,SHARE_SUMMONER_INITIATIVE,SHADOWCURSE_SUMMON_CHECK); GROUND:IF(ConditionResult(context.Source.ProficiencyBonus == 4)):Summon(b745f288-36ed-4f62-b667-eebfbfb7566d, -1,,,SummonBeastStack,SUMMON_BEAST_7_9TH,UNSUMMON_ABLE,SHARE_SUMMONER_INITIATIVE,SHADOWCURSE_SUMMON_CHECK); GROUND:IF(ConditionResult(context.Source.ProficiencyBonus == 5)):Summon(b745f288-36ed-4f62-b667-eebfbfb7566d, -1,,,SummonBeastStack,SUMMON_BEAST_7_13TH,UNSUMMON_ABLE,SHARE_SUMMONER_INITIATIVE,SHADOWCURSE_SUMMON_CHECK); GROUND:IF(ConditionResult(context.Source.ProficiencyBonus == 6)):Summon(b745f288-36ed-4f62-b667-eebfbfb7566d, -1,,,SummonBeastStack,SUMMON_BEAST_7_17TH,UNSUMMON_ABLE,SHARE_SUMMONER_INITIATIVE,SHADOWCURSE_SUMMON_CHECK)"
+
+    new entry "Target_SummonBeast_Air_6"
+    type "SpellData"
+    data "SpellType" "Target"
+    using "Target_SummonBeast_Air_6"
+    data "SpellProperties" "GROUND:IF(ConditionResult(context.Source.ProficiencyBonus == 2)):Summon(b745f288-36ed-4f62-b667-eebfbfb7566d, -1,,,SummonBeastStack,SUMMON_BEAST_6,UNSUMMON_ABLE,SHARE_SUMMONER_INITIATIVE,SHADOWCURSE_SUMMON_CHECK); GROUND:IF(ConditionResult(context.Source.ProficiencyBonus == 3)):Summon(b745f288-36ed-4f62-b667-eebfbfb7566d, -1,,,SummonBeastStack,SUMMON_BEAST_6_5TH,UNSUMMON_ABLE,SHARE_SUMMONER_INITIATIVE,SHADOWCURSE_SUMMON_CHECK); GROUND:IF(ConditionResult(context.Source.ProficiencyBonus == 4)):Summon(b745f288-36ed-4f62-b667-eebfbfb7566d, -1,,,SummonBeastStack,SUMMON_BEAST_6_9TH,UNSUMMON_ABLE,SHARE_SUMMONER_INITIATIVE,SHADOWCURSE_SUMMON_CHECK); GROUND:IF(ConditionResult(context.Source.ProficiencyBonus == 5)):Summon(b745f288-36ed-4f62-b667-eebfbfb7566d, -1,,,SummonBeastStack,SUMMON_BEAST_6_13TH,UNSUMMON_ABLE,SHARE_SUMMONER_INITIATIVE,SHADOWCURSE_SUMMON_CHECK); GROUND:IF(ConditionResult(context.Source.ProficiencyBonus == 6)):Summon(b745f288-36ed-4f62-b667-eebfbfb7566d, -1,,,SummonBeastStack,SUMMON_BEAST_6_17TH,UNSUMMON_ABLE,SHARE_SUMMONER_INITIATIVE,SHADOWCURSE_SUMMON_CHECK)"
+
+    new entry "Target_SummonBeast_Air_5"
+    type "SpellData"
+    data "SpellType" "Target"
+    using "Target_SummonBeast_Air_5"
+    data "SpellProperties" "GROUND:IF(ConditionResult(context.Source.ProficiencyBonus == 2)):Summon(b745f288-36ed-4f62-b667-eebfbfb7566d, -1,,,SummonBeastStack,SUMMON_BEAST_5,UNSUMMON_ABLE,SHARE_SUMMONER_INITIATIVE,SHADOWCURSE_SUMMON_CHECK); GROUND:IF(ConditionResult(context.Source.ProficiencyBonus == 3)):Summon(b745f288-36ed-4f62-b667-eebfbfb7566d, -1,,,SummonBeastStack,SUMMON_BEAST_5_5TH,UNSUMMON_ABLE,SHARE_SUMMONER_INITIATIVE,SHADOWCURSE_SUMMON_CHECK); GROUND:IF(ConditionResult(context.Source.ProficiencyBonus == 4)):Summon(b745f288-36ed-4f62-b667-eebfbfb7566d, -1,,,SummonBeastStack,SUMMON_BEAST_5_9TH,UNSUMMON_ABLE,SHARE_SUMMONER_INITIATIVE,SHADOWCURSE_SUMMON_CHECK); GROUND:IF(ConditionResult(context.Source.ProficiencyBonus == 5)):Summon(b745f288-36ed-4f62-b667-eebfbfb7566d, -1,,,SummonBeastStack,SUMMON_BEAST_5_13TH,UNSUMMON_ABLE,SHARE_SUMMONER_INITIATIVE,SHADOWCURSE_SUMMON_CHECK); GROUND:IF(ConditionResult(context.Source.ProficiencyBonus == 6)):Summon(b745f288-36ed-4f62-b667-eebfbfb7566d, -1,,,SummonBeastStack,SUMMON_BEAST_5_17TH,UNSUMMON_ABLE,SHARE_SUMMONER_INITIATIVE,SHADOWCURSE_SUMMON_CHECK)"
+
+    new entry "Target_SummonBeast_Air_4"
+    type "SpellData"
+    data "SpellType" "Target"
+    using "Target_SummonBeast_Air_4"
+    data "SpellProperties" "GROUND:IF(ConditionResult(context.Source.ProficiencyBonus == 2)):Summon(b745f288-36ed-4f62-b667-eebfbfb7566d, -1,,,SummonBeastStack,SUMMON_BEAST_4,UNSUMMON_ABLE,SHARE_SUMMONER_INITIATIVE,SHADOWCURSE_SUMMON_CHECK); GROUND:IF(ConditionResult(context.Source.ProficiencyBonus == 3)):Summon(b745f288-36ed-4f62-b667-eebfbfb7566d, -1,,,SummonBeastStack,SUMMON_BEAST_4_5TH,UNSUMMON_ABLE,SHARE_SUMMONER_INITIATIVE,SHADOWCURSE_SUMMON_CHECK); GROUND:IF(ConditionResult(context.Source.ProficiencyBonus == 4)):Summon(b745f288-36ed-4f62-b667-eebfbfb7566d, -1,,,SummonBeastStack,SUMMON_BEAST_4_9TH,UNSUMMON_ABLE,SHARE_SUMMONER_INITIATIVE,SHADOWCURSE_SUMMON_CHECK); GROUND:IF(ConditionResult(context.Source.ProficiencyBonus == 5)):Summon(b745f288-36ed-4f62-b667-eebfbfb7566d, -1,,,SummonBeastStack,SUMMON_BEAST_4_13TH,UNSUMMON_ABLE,SHARE_SUMMONER_INITIATIVE,SHADOWCURSE_SUMMON_CHECK); GROUND:IF(ConditionResult(context.Source.ProficiencyBonus == 6)):Summon(b745f288-36ed-4f62-b667-eebfbfb7566d, -1,,,SummonBeastStack,SUMMON_BEAST_4_17TH,UNSUMMON_ABLE,SHARE_SUMMONER_INITIATIVE,SHADOWCURSE_SUMMON_CHECK)"
+
+    new entry "Target_SummonBeast_Air_3"
+    type "SpellData"
+    data "SpellType" "Target"
+    using "Target_SummonBeast_Air_3"
+    data "SpellProperties" "GROUND:IF(ConditionResult(context.Source.ProficiencyBonus == 2)):Summon(b745f288-36ed-4f62-b667-eebfbfb7566d, -1,,,SummonBeastStack,SUMMON_BEAST_3,UNSUMMON_ABLE,SHARE_SUMMONER_INITIATIVE,SHADOWCURSE_SUMMON_CHECK); GROUND:IF(ConditionResult(context.Source.ProficiencyBonus == 3)):Summon(b745f288-36ed-4f62-b667-eebfbfb7566d, -1,,,SummonBeastStack,SUMMON_BEAST_3_5TH,UNSUMMON_ABLE,SHARE_SUMMONER_INITIATIVE,SHADOWCURSE_SUMMON_CHECK); GROUND:IF(ConditionResult(context.Source.ProficiencyBonus == 4)):Summon(b745f288-36ed-4f62-b667-eebfbfb7566d, -1,,,SummonBeastStack,SUMMON_BEAST_3_9TH,UNSUMMON_ABLE,SHARE_SUMMONER_INITIATIVE,SHADOWCURSE_SUMMON_CHECK); GROUND:IF(ConditionResult(context.Source.ProficiencyBonus == 5)):Summon(b745f288-36ed-4f62-b667-eebfbfb7566d, -1,,,SummonBeastStack,SUMMON_BEAST_3_13TH,UNSUMMON_ABLE,SHARE_SUMMONER_INITIATIVE,SHADOWCURSE_SUMMON_CHECK); GROUND:IF(ConditionResult(context.Source.ProficiencyBonus == 6)):Summon(b745f288-36ed-4f62-b667-eebfbfb7566d, -1,,,SummonBeastStack,SUMMON_BEAST_3_17TH,UNSUMMON_ABLE,SHARE_SUMMONER_INITIATIVE,SHADOWCURSE_SUMMON_CHECK)"
+
+    new entry "Target_SummonBeast_Land"
+    type "SpellData"
+    data "SpellType" "Target"
+    using "Target_SummonBeast_Land"
+    data "SpellProperties" "GROUND:IF(ConditionResult(context.Source.ProficiencyBonus == 2)):Summon(56df0785-ab6b-4f23-b8a0-baa574080a7e, -1,,,SummonBeastStack,SUMMON_BEAST,UNSUMMON_ABLE,SHARE_SUMMONER_INITIATIVE,SHADOWCURSE_SUMMON_CHECK); GROUND:IF(ConditionResult(context.Source.ProficiencyBonus == 3)):Summon(56df0785-ab6b-4f23-b8a0-baa574080a7e, -1,,,SummonBeastStack,SUMMON_BEAST_5TH,UNSUMMON_ABLE,SHARE_SUMMONER_INITIATIVE,SHADOWCURSE_SUMMON_CHECK); GROUND:IF(ConditionResult(context.Source.ProficiencyBonus == 4)):Summon(56df0785-ab6b-4f23-b8a0-baa574080a7e, -1,,,SummonBeastStack,SUMMON_BEAST_9TH,UNSUMMON_ABLE,SHARE_SUMMONER_INITIATIVE,SHADOWCURSE_SUMMON_CHECK); GROUND:IF(ConditionResult(context.Source.ProficiencyBonus == 5)):Summon(56df0785-ab6b-4f23-b8a0-baa574080a7e, -1,,,SummonBeastStack,SUMMON_BEAST_13TH,UNSUMMON_ABLE,SHARE_SUMMONER_INITIATIVE,SHADOWCURSE_SUMMON_CHECK); GROUND:IF(ConditionResult(context.Source.ProficiencyBonus == 6)):Summon(56df0785-ab6b-4f23-b8a0-baa574080a7e, -1,,,SummonBeastStack,SUMMON_BEAST_17TH,UNSUMMON_ABLE,SHARE_SUMMONER_INITIATIVE,SHADOWCURSE_SUMMON_CHECK)"
+
+    new entry "Target_SummonBeast_Land_9"
+    type "SpellData"
+    data "SpellType" "Target"
+    using "Target_SummonBeast_Land_9"
+    data "SpellProperties" "GROUND:IF(ConditionResult(context.Source.ProficiencyBonus == 2)):Summon(56df0785-ab6b-4f23-b8a0-baa574080a7e, -1,,,SummonBeastStack,SUMMON_BEAST_9,UNSUMMON_ABLE,SHARE_SUMMONER_INITIATIVE,SHADOWCURSE_SUMMON_CHECK); GROUND:IF(ConditionResult(context.Source.ProficiencyBonus == 3)):Summon(56df0785-ab6b-4f23-b8a0-baa574080a7e, -1,,,SummonBeastStack,SUMMON_BEAST_9_5TH,UNSUMMON_ABLE,SHARE_SUMMONER_INITIATIVE,SHADOWCURSE_SUMMON_CHECK); GROUND:IF(ConditionResult(context.Source.ProficiencyBonus == 4)):Summon(56df0785-ab6b-4f23-b8a0-baa574080a7e, -1,,,SummonBeastStack,SUMMON_BEAST_9_9TH,UNSUMMON_ABLE,SHARE_SUMMONER_INITIATIVE,SHADOWCURSE_SUMMON_CHECK); GROUND:IF(ConditionResult(context.Source.ProficiencyBonus == 5)):Summon(56df0785-ab6b-4f23-b8a0-baa574080a7e, -1,,,SummonBeastStack,SUMMON_BEAST_9_13TH,UNSUMMON_ABLE,SHARE_SUMMONER_INITIATIVE,SHADOWCURSE_SUMMON_CHECK); GROUND:IF(ConditionResult(context.Source.ProficiencyBonus == 6)):Summon(56df0785-ab6b-4f23-b8a0-baa574080a7e, -1,,,SummonBeastStack,SUMMON_BEAST_9_17TH,UNSUMMON_ABLE,SHARE_SUMMONER_INITIATIVE,SHADOWCURSE_SUMMON_CHECK);GROUND:IF(ConditionResult(context.Source.ProficiencyBonus == 2) and NinjaSageSummoner()):Summon(56df0785-ab6b-4f23-b8a0-baa574080a7e, -1,,,SummonBeastStack,SUMMON_BEAST_9,UNSUMMON_ABLE,SHARE_SUMMONER_INITIATIVE,SHADOWCURSE_SUMMON_CHECK); GROUND:IF(ConditionResult(context.Source.ProficiencyBonus == 3) and NinjaSageSummoner()):Summon(56df0785-ab6b-4f23-b8a0-baa574080a7e, -1,,,SummonBeastStack,SUMMON_BEAST_9_5TH,UNSUMMON_ABLE,SHARE_SUMMONER_INITIATIVE,SHADOWCURSE_SUMMON_CHECK); GROUND:IF(ConditionResult(context.Source.ProficiencyBonus == 4) and NinjaSageSummoner()):Summon(56df0785-ab6b-4f23-b8a0-baa574080a7e, -1,,,SummonBeastStack,SUMMON_BEAST_9_9TH,UNSUMMON_ABLE,SHARE_SUMMONER_INITIATIVE,SHADOWCURSE_SUMMON_CHECK); GROUND:IF(ConditionResult(context.Source.ProficiencyBonus == 5) and NinjaSageSummoner()):Summon(56df0785-ab6b-4f23-b8a0-baa574080a7e, -1,,,SummonBeastStack,SUMMON_BEAST_9_13TH,UNSUMMON_ABLE,SHARE_SUMMONER_INITIATIVE,SHADOWCURSE_SUMMON_CHECK); GROUND:IF(ConditionResult(context.Source.ProficiencyBonus == 6) and NinjaSageSummoner()):Summon(56df0785-ab6b-4f23-b8a0-baa574080a7e, -1,,,SummonBeastStack,SUMMON_BEAST_9_17TH,UNSUMMON_ABLE,SHARE_SUMMONER_INITIATIVE,SHADOWCURSE_SUMMON_CHECK)"
+
+    new entry "Target_SummonBeast_Land_8"
+    type "SpellData"
+    data "SpellType" "Target"
+    using "Target_SummonBeast_Land_8"
+    data "SpellProperties" "GROUND:IF(ConditionResult(context.Source.ProficiencyBonus == 2)):Summon(56df0785-ab6b-4f23-b8a0-baa574080a7e, -1,,,SummonBeastStack,SUMMON_BEAST_8,UNSUMMON_ABLE,SHARE_SUMMONER_INITIATIVE,SHADOWCURSE_SUMMON_CHECK); GROUND:IF(ConditionResult(context.Source.ProficiencyBonus == 3)):Summon(56df0785-ab6b-4f23-b8a0-baa574080a7e, -1,,,SummonBeastStack,SUMMON_BEAST_8_5TH,UNSUMMON_ABLE,SHARE_SUMMONER_INITIATIVE,SHADOWCURSE_SUMMON_CHECK); GROUND:IF(ConditionResult(context.Source.ProficiencyBonus == 4)):Summon(56df0785-ab6b-4f23-b8a0-baa574080a7e, -1,,,SummonBeastStack,SUMMON_BEAST_8_9TH,UNSUMMON_ABLE,SHARE_SUMMONER_INITIATIVE,SHADOWCURSE_SUMMON_CHECK); GROUND:IF(ConditionResult(context.Source.ProficiencyBonus == 5)):Summon(56df0785-ab6b-4f23-b8a0-baa574080a7e, -1,,,SummonBeastStack,SUMMON_BEAST_8_13TH,UNSUMMON_ABLE,SHARE_SUMMONER_INITIATIVE,SHADOWCURSE_SUMMON_CHECK); GROUND:IF(ConditionResult(context.Source.ProficiencyBonus == 6)):Summon(56df0785-ab6b-4f23-b8a0-baa574080a7e, -1,,,SummonBeastStack,SUMMON_BEAST_8_17TH,UNSUMMON_ABLE,SHARE_SUMMONER_INITIATIVE,SHADOWCURSE_SUMMON_CHECK)"
+
+    new entry "Target_SummonBeast_Land_7"
+    type "SpellData"
+    data "SpellType" "Target"
+    using "Target_SummonBeast_Land_7"
+    data "SpellProperties" "GROUND:IF(ConditionResult(context.Source.ProficiencyBonus == 2)):Summon(56df0785-ab6b-4f23-b8a0-baa574080a7e, -1,,,SummonBeastStack,SUMMON_BEAST_7,UNSUMMON_ABLE,SHARE_SUMMONER_INITIATIVE,SHADOWCURSE_SUMMON_CHECK); GROUND:IF(ConditionResult(context.Source.ProficiencyBonus == 3)):Summon(56df0785-ab6b-4f23-b8a0-baa574080a7e, -1,,,SummonBeastStack,SUMMON_BEAST_7_5TH,UNSUMMON_ABLE,SHARE_SUMMONER_INITIATIVE,SHADOWCURSE_SUMMON_CHECK); GROUND:IF(ConditionResult(context.Source.ProficiencyBonus == 4)):Summon(56df0785-ab6b-4f23-b8a0-baa574080a7e, -1,,,SummonBeastStack,SUMMON_BEAST_7_9TH,UNSUMMON_ABLE,SHARE_SUMMONER_INITIATIVE,SHADOWCURSE_SUMMON_CHECK); GROUND:IF(ConditionResult(context.Source.ProficiencyBonus == 5)):Summon(56df0785-ab6b-4f23-b8a0-baa574080a7e, -1,,,SummonBeastStack,SUMMON_BEAST_7_13TH,UNSUMMON_ABLE,SHARE_SUMMONER_INITIATIVE,SHADOWCURSE_SUMMON_CHECK); GROUND:IF(ConditionResult(context.Source.ProficiencyBonus == 6)):Summon(56df0785-ab6b-4f23-b8a0-baa574080a7e, -1,,,SummonBeastStack,SUMMON_BEAST_7_17TH,UNSUMMON_ABLE,SHARE_SUMMONER_INITIATIVE,SHADOWCURSE_SUMMON_CHECK)"
+
+    new entry "Target_SummonBeast_Land_6"
+    type "SpellData"
+    data "SpellType" "Target"
+    using "Target_SummonBeast_Land_6"
+    data "SpellProperties" "GROUND:IF(ConditionResult(context.Source.ProficiencyBonus == 2)):Summon(56df0785-ab6b-4f23-b8a0-baa574080a7e, -1,,,SummonBeastStack,SUMMON_BEAST_6,UNSUMMON_ABLE,SHARE_SUMMONER_INITIATIVE,SHADOWCURSE_SUMMON_CHECK); GROUND:IF(ConditionResult(context.Source.ProficiencyBonus == 3)):Summon(56df0785-ab6b-4f23-b8a0-baa574080a7e, -1,,,SummonBeastStack,SUMMON_BEAST_6_5TH,UNSUMMON_ABLE,SHARE_SUMMONER_INITIATIVE,SHADOWCURSE_SUMMON_CHECK); GROUND:IF(ConditionResult(context.Source.ProficiencyBonus == 4)):Summon(56df0785-ab6b-4f23-b8a0-baa574080a7e, -1,,,SummonBeastStack,SUMMON_BEAST_6_9TH,UNSUMMON_ABLE,SHARE_SUMMONER_INITIATIVE,SHADOWCURSE_SUMMON_CHECK); GROUND:IF(ConditionResult(context.Source.ProficiencyBonus == 5)):Summon(56df0785-ab6b-4f23-b8a0-baa574080a7e, -1,,,SummonBeastStack,SUMMON_BEAST_6_13TH,UNSUMMON_ABLE,SHARE_SUMMONER_INITIATIVE,SHADOWCURSE_SUMMON_CHECK); GROUND:IF(ConditionResult(context.Source.ProficiencyBonus == 6)):Summon(56df0785-ab6b-4f23-b8a0-baa574080a7e, -1,,,SummonBeastStack,SUMMON_BEAST_6_17TH,UNSUMMON_ABLE,SHARE_SUMMONER_INITIATIVE,SHADOWCURSE_SUMMON_CHECK)"
+
+    new entry "Target_SummonBeast_Land_5"
+    type "SpellData"
+    data "SpellType" "Target"
+    using "Target_SummonBeast_Land_5"
+    data "SpellProperties" "GROUND:IF(ConditionResult(context.Source.ProficiencyBonus == 2)):Summon(56df0785-ab6b-4f23-b8a0-baa574080a7e, -1,,,SummonBeastStack,SUMMON_BEAST_5,UNSUMMON_ABLE,SHARE_SUMMONER_INITIATIVE,SHADOWCURSE_SUMMON_CHECK); GROUND:IF(ConditionResult(context.Source.ProficiencyBonus == 3)):Summon(56df0785-ab6b-4f23-b8a0-baa574080a7e, -1,,,SummonBeastStack,SUMMON_BEAST_5_5TH,UNSUMMON_ABLE,SHARE_SUMMONER_INITIATIVE,SHADOWCURSE_SUMMON_CHECK); GROUND:IF(ConditionResult(context.Source.ProficiencyBonus == 4)):Summon(56df0785-ab6b-4f23-b8a0-baa574080a7e, -1,,,SummonBeastStack,SUMMON_BEAST_5_9TH,UNSUMMON_ABLE,SHARE_SUMMONER_INITIATIVE,SHADOWCURSE_SUMMON_CHECK); GROUND:IF(ConditionResult(context.Source.ProficiencyBonus == 5)):Summon(56df0785-ab6b-4f23-b8a0-baa574080a7e, -1,,,SummonBeastStack,SUMMON_BEAST_5_13TH,UNSUMMON_ABLE,SHARE_SUMMONER_INITIATIVE,SHADOWCURSE_SUMMON_CHECK); GROUND:IF(ConditionResult(context.Source.ProficiencyBonus == 6)):Summon(56df0785-ab6b-4f23-b8a0-baa574080a7e, -1,,,SummonBeastStack,SUMMON_BEAST_5_17TH,UNSUMMON_ABLE,SHARE_SUMMONER_INITIATIVE,SHADOWCURSE_SUMMON_CHECK)"
+
+    new entry "Target_SummonBeast_Land_4"
+    type "SpellData"
+    data "SpellType" "Target"
+    using "Target_SummonBeast_Land_4"
+    data "SpellProperties" "GROUND:IF(ConditionResult(context.Source.ProficiencyBonus == 2)):Summon(56df0785-ab6b-4f23-b8a0-baa574080a7e, -1,,,SummonBeastStack,SUMMON_BEAST_4,UNSUMMON_ABLE,SHARE_SUMMONER_INITIATIVE,SHADOWCURSE_SUMMON_CHECK); GROUND:IF(ConditionResult(context.Source.ProficiencyBonus == 3)):Summon(56df0785-ab6b-4f23-b8a0-baa574080a7e, -1,,,SummonBeastStack,SUMMON_BEAST_4_5TH,UNSUMMON_ABLE,SHARE_SUMMONER_INITIATIVE,SHADOWCURSE_SUMMON_CHECK); GROUND:IF(ConditionResult(context.Source.ProficiencyBonus == 4)):Summon(56df0785-ab6b-4f23-b8a0-baa574080a7e, -1,,,SummonBeastStack,SUMMON_BEAST_4_9TH,UNSUMMON_ABLE,SHARE_SUMMONER_INITIATIVE,SHADOWCURSE_SUMMON_CHECK); GROUND:IF(ConditionResult(context.Source.ProficiencyBonus == 5)):Summon(56df0785-ab6b-4f23-b8a0-baa574080a7e, -1,,,SummonBeastStack,SUMMON_BEAST_4_13TH,UNSUMMON_ABLE,SHARE_SUMMONER_INITIATIVE,SHADOWCURSE_SUMMON_CHECK); GROUND:IF(ConditionResult(context.Source.ProficiencyBonus == 6)):Summon(56df0785-ab6b-4f23-b8a0-baa574080a7e, -1,,,SummonBeastStack,SUMMON_BEAST_4_17TH,UNSUMMON_ABLE,SHARE_SUMMONER_INITIATIVE,SHADOWCURSE_SUMMON_CHECK)"
+
+    new entry "Target_SummonBeast_Land_3"
+    type "SpellData"
+    data "SpellType" "Target"
+    using "Target_SummonBeast_Land_3"
+    data "SpellProperties" "GROUND:IF(ConditionResult(context.Source.ProficiencyBonus == 2)):Summon(56df0785-ab6b-4f23-b8a0-baa574080a7e, -1,,,SummonBeastStack,SUMMON_BEAST_3,UNSUMMON_ABLE,SHARE_SUMMONER_INITIATIVE,SHADOWCURSE_SUMMON_CHECK); GROUND:IF(ConditionResult(context.Source.ProficiencyBonus == 3)):Summon(56df0785-ab6b-4f23-b8a0-baa574080a7e, -1,,,SummonBeastStack,SUMMON_BEAST_3_5TH,UNSUMMON_ABLE,SHARE_SUMMONER_INITIATIVE,SHADOWCURSE_SUMMON_CHECK); GROUND:IF(ConditionResult(context.Source.ProficiencyBonus == 4)):Summon(56df0785-ab6b-4f23-b8a0-baa574080a7e, -1,,,SummonBeastStack,SUMMON_BEAST_3_9TH,UNSUMMON_ABLE,SHARE_SUMMONER_INITIATIVE,SHADOWCURSE_SUMMON_CHECK); GROUND:IF(ConditionResult(context.Source.ProficiencyBonus == 5)):Summon(56df0785-ab6b-4f23-b8a0-baa574080a7e, -1,,,SummonBeastStack,SUMMON_BEAST_3_13TH,UNSUMMON_ABLE,SHARE_SUMMONER_INITIATIVE,SHADOWCURSE_SUMMON_CHECK); GROUND:IF(ConditionResult(context.Source.ProficiencyBonus == 6)):Summon(56df0785-ab6b-4f23-b8a0-baa574080a7e, -1,,,SummonBeastStack,SUMMON_BEAST_3_17TH,UNSUMMON_ABLE,SHARE_SUMMONER_INITIATIVE,SHADOWCURSE_SUMMON_CHECK)"
+
+//  --------------------------------------------------------  \\
+//  -----                      Web                      ----  \\
+//  --------------------------------------------------------  \\
+
+    new entry "Target_Web"
+    type "SpellData"
+    data "SpellType" "Target"
+    using "Target_Web"
+    data "SpellProperties" "GROUND:CreateSurface(4,-1,Web,true)"
