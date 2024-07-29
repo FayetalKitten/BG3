@@ -1,0 +1,34 @@
+game.configs.ProjectileTurret = Config{
+    params={
+        VFX = {
+            type = EParamType.String,
+            help = [[VFX played when spell is cast.]],
+            required = false,
+        },
+        Spell = {
+            type = EParamType.String,
+            help = [[Spell cast.]],
+            required = true,
+        },
+        Offset = {
+            type = EParamType.Vector3,
+            help = [[Offset from which the projectile will fire (world coordinates by default, set OffsetIsLocal to true for local coordinates).]],
+            required = false,
+            default = math.Vector3(0, 0, 0)
+        },
+        OffsetIsLocal = {
+            type = EParamType.Bool,
+            help = [[Interpret the Offset as relative to the forward direction of the turret]],
+            required = false,
+            default = false
+        },
+    },
+    root=StateRef{game.roots.DefaultTrap,
+        logic = StateRef{game.states.ProjectileTurret,
+            Offset = params.Offset,
+            OffsetIsLocal = params.OffsetIsLocal,
+            Spell = params.Spell,
+            VFX = params.VFX,
+        },
+    }
+}

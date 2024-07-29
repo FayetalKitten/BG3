@@ -1,0 +1,100 @@
+game.configs.ZoneTurret = Config{
+    params={
+        SoundOn = {
+            type = EParamType.String,
+            help = [[Sound when trap is turned on]],
+            required = false,
+            default = [[PUZ_Trap_Mechanical_On]]
+        },
+        VFXOnBone = {
+            type = EParamType.String,
+            help = [[Bone on which the the VFX is played.]],
+            required = false,
+            default = [[Dummy_FX]]
+        },
+        VFXOn = {
+            type = EParamType.String,
+            help = [[VFX while item is on.]],
+            required = true,
+        },
+        SoundOff = {
+            type = EParamType.String,
+            help = [[Sound when trap is turned off]],
+            required = false,
+            default = [[PUZ_Trap_Mechanical_Off]]
+        },
+        StartEnabled = {
+            type = EParamType.Bool,
+            help = [[Does the trap start on?]],
+            required = false,
+            default = true
+        },
+        DC = {
+            type = EParamType.String,
+            help = [[Perception check DC.]],
+            required = false,
+            default = [[DC_Legacy_15_bddbb9b8-a242-4c3e-a2eb-3fd274c0c539]]
+        },
+        Spell = {
+            type = EParamType.String,
+            help = [[Zone Spell]],
+            required = true,
+        },
+        PerceptionType = {
+            type = EParamType.String,
+            help = [[                Type of invisibility. Options:
+                None: No perception logic.
+                Invisible: Object is invisible until discovered
+                Interactable: Object is uninteractable (like scenery) until discovered. Also hides 'trapped' state, if object is trapped.
+                Trapped: Hides trapped state until discovered.
+                Highlight: Object is highlighted when noticed.
+            ]],
+            required = false,
+            default = [[Interactable]]
+        },
+        PerceptionSkill = {
+            type = EParamType.String,
+            help = [[The skill DC used for the "Type" parameter check.]],
+            required = false,
+            default = [[Perception]]
+        },
+        MinDistance = {
+            type = EParamType.Number,
+            help = [[Minimum distance that players are required to be in for the skill check. A distance of 0 disables the check.]],
+            required = false,
+            default = 6
+        },
+        VFX = {
+            type = EParamType.String,
+            help = [[VFX played when the zone spell fires]],
+            required = false,
+        },
+    },
+    root=StateRef{game.roots.DefaultTrap,
+        logic = StateRef{game.states.ZoneTurret,
+            DC = params.DC,
+            MinDistance = params.MinDistance,
+            PerceptionSkill = params.PerceptionSkill,
+            PerceptionType = params.PerceptionType,
+            SoundOff = params.SoundOff,
+            SoundOn = params.SoundOn,
+            Spell = params.Spell,
+            StartEnabled = params.StartEnabled,
+            VFX = params.VFX,
+            VFXOn = params.VFXOn,
+            VFXOnBone = params.VFXOnBone,
+        },
+    },
+    inputs={
+        Trigger=ExtSocket{description=[[]],{SocketRef{[[root.logic.inputs.Trigger]]}}},
+        Reveal=ExtSocket{description=[[]],{SocketRef{[[root.logic.inputs.Reveal]]}}},
+        Enable=ExtSocket{description=[[]],{SocketRef{[[root.logic.inputs.Enable]]}}},
+        Disable=ExtSocket{description=[[]],{SocketRef{[[root.logic.inputs.Disable]]}}},
+    },
+    outputs={
+        DisarmFailed=ExtSocket{description=[[]],{SocketRef{[[root.logic.outputs.DisarmFailed]]}}},
+        Disarmed=ExtSocket{description=[[]],{SocketRef{[[root.logic.outputs.Disarmed]]}}},
+        Enabled=ExtSocket{description=[[]],{SocketRef{[[root.logic.outputs.Enabled]]}}},
+        Disabled=ExtSocket{description=[[]],{SocketRef{[[root.logic.outputs.Disabled]]}}},
+    }
+}
